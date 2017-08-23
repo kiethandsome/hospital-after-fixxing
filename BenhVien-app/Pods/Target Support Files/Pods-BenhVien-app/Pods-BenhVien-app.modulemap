@@ -1,0 +1,6 @@
+framework module Pods_BenhVien_app {
+  umbrella header "Pods-BenhVien-app-umbrella.h"
+
+  export *
+  module * { export * }
+}
