@@ -202,20 +202,20 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="splash-bg" translatesAutoresizingMaskIntoConstraints="NO" id="VM7-tN-sUq">
-                                                    <rect key="frame" x="10" y="11" width="70" height="70"/>
+                                                    <rect key="frame" x="10" y="10" width="70" height="70"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="70" id="Peo-FM-Ynf"/>
                                                         <constraint firstAttribute="height" constant="70" id="dem-1N-K43"/>
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Địa chỉ: 292 Trần Hưng Đạo Phường 1, Quận" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FxJ-zF-iaf" userLabel="Hospital Address">
-                                                    <rect key="frame" x="90" y="50" width="245" height="14"/>
+                                                    <rect key="frame" x="90" y="49" width="245" height="14"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="11"/>
                                                     <color key="textColor" red="0.35249352331606221" green="0.35249352331606221" blue="0.35249352331606221" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Điện thoại: 01206567579" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Fi-0a-QOm" userLabel="Hospital Phone">
-                                                    <rect key="frame" x="90" y="67" width="245" height="14"/>
+                                                    <rect key="frame" x="90" y="66" width="245" height="14"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="11"/>
                                                     <color key="textColor" red="0.35249352331606221" green="0.35249352331606221" blue="0.35249352331606221" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
@@ -346,6 +346,39 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Wtr-Vn-Mu4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1721" y="-144"/>
+        </scene>
+        <!--Location View Controller-->
+        <scene sceneID="9bG-Jj-gbW">
+            <objects>
+                <viewController id="VtJ-3p-wYo" customClass="LocationViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Wvl-IO-pmd"/>
+                        <viewControllerLayoutGuide type="bottom" id="OYW-rS-JJq"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="S5c-mK-XEu">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6uN-Q2-BAt" customClass="GMSMapView">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <color key="backgroundColor" red="0.71528412217660875" green="0.93624466946527063" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="6uN-Q2-BAt" secondAttribute="trailing" id="A2K-pK-Fhe"/>
+                            <constraint firstItem="6uN-Q2-BAt" firstAttribute="leading" secondItem="S5c-mK-XEu" secondAttribute="leading" id="Oer-fu-WgG"/>
+                            <constraint firstItem="6uN-Q2-BAt" firstAttribute="top" secondItem="Wvl-IO-pmd" secondAttribute="bottom" id="fmf-8b-ZHR"/>
+                            <constraint firstItem="OYW-rS-JJq" firstAttribute="top" secondItem="6uN-Q2-BAt" secondAttribute="bottom" id="tL9-SZ-ouX"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="mapView" destination="6uN-Q2-BAt" id="BNb-JH-0Oa"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="r7Q-Xn-6CC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2401" y="-152"/>
         </scene>
     </scenes>
     <resources>

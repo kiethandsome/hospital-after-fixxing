@@ -35,6 +35,7 @@
 		524763161F47260100A47ABC /* SearchResultViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 524763141F47260100A47ABC /* SearchResultViewController.m */; };
 		5257AACF1F41CFBF003B2118 /* CIty.m in Sources */ = {isa = PBXBuildFile; fileRef = 5257AACE1F41CFBF003B2118 /* CIty.m */; };
 		5257AAD11F41D081003B2118 /* cities.json in Resources */ = {isa = PBXBuildFile; fileRef = 5257AAD01F41D081003B2118 /* cities.json */; };
+		52A3DBDE1F4DBFE100802BFB /* LocationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 52A3DBDD1F4DBFE100802BFB /* LocationViewController.m */; };
 		52EF79501F2F5B1600522CB6 /* Hospital.m in Sources */ = {isa = PBXBuildFile; fileRef = 52EF794F1F2F5B1600522CB6 /* Hospital.m */; };
 		52EF795B1F2F6B2700522CB6 /* HLTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 52EF79561F2F6B2700522CB6 /* HLTableView.m */; };
 		52EF795C1F2F6B2700522CB6 /* HLTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 52EF79581F2F6B2700522CB6 /* HLTableViewCell.m */; };
@@ -108,6 +109,8 @@
 		5257AACD1F41CFBF003B2118 /* CIty.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CIty.h; sourceTree = "<group>"; };
 		5257AACE1F41CFBF003B2118 /* CIty.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CIty.m; sourceTree = "<group>"; };
 		5257AAD01F41D081003B2118 /* cities.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = cities.json; sourceTree = "<group>"; };
+		52A3DBDC1F4DBFE100802BFB /* LocationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocationViewController.h; sourceTree = "<group>"; };
+		52A3DBDD1F4DBFE100802BFB /* LocationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocationViewController.m; sourceTree = "<group>"; };
 		52EF794E1F2F5B1600522CB6 /* Hospital.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Hospital.h; sourceTree = "<group>"; };
 		52EF794F1F2F5B1600522CB6 /* Hospital.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Hospital.m; sourceTree = "<group>"; };
 		52EF79551F2F6B2700522CB6 /* HLTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HLTableView.h; sourceTree = "<group>"; };
@@ -184,6 +187,7 @@
 		524762C31F47251000A47ABC /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				52A3DBDB1F4DBFE100802BFB /* Location */,
 				524762F21F47251000A47ABC /* Home */,
 				5247630F1F47260100A47ABC /* SearchResult */,
 				524762C41F47251000A47ABC /* AdvanceSearch */,
@@ -330,6 +334,15 @@
 				524763121F47260100A47ABC /* HospitalTableViewCell.m */,
 			);
 			path = Cells;
+			sourceTree = "<group>";
+		};
+		52A3DBDB1F4DBFE100802BFB /* Location */ = {
+			isa = PBXGroup;
+			children = (
+				52A3DBDC1F4DBFE100802BFB /* LocationViewController.h */,
+				52A3DBDD1F4DBFE100802BFB /* LocationViewController.m */,
+			);
+			path = Location;
 			sourceTree = "<group>";
 		};
 		52EF794D1F2F5B0500522CB6 /* Model */ = {
@@ -626,6 +639,7 @@
 				524762FF1F47251000A47ABC /* MapCell.m in Sources */,
 				52EFEDA01F2B5A1C009F0E78 /* UITextField+Padding.m in Sources */,
 				524763151F47260100A47ABC /* HospitalTableViewCell.m in Sources */,
+				52A3DBDE1F4DBFE100802BFB /* LocationViewController.m in Sources */,
 				524762C01F47225600A47ABC /* ApiManager.m in Sources */,
 				5247630C1F47251000A47ABC /* SlideShowModel.m in Sources */,
 				52EFED7F1F2B5859009F0E78 /* AppDelegate.m in Sources */,

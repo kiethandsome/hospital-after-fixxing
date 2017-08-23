@@ -45,7 +45,6 @@
 -(void)setupApplicationTheme {
     [UINavigationBar appearance].barTintColor = [UIColor colorWithHex:0xd2232a];
     [UINavigationBar appearance].tintColor = [UIColor whiteColor];
-    
     NSDictionary *tittleAtrr = [[NSDictionary alloc] initWithObjectsAndKeys:[UIColor whiteColor], NSForegroundColorAttributeName, nil];
     [UINavigationBar appearance].titleTextAttributes = tittleAtrr;
 }

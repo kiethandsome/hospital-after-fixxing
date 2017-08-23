@@ -48,8 +48,23 @@
 
         // Hiển thị nút tìm đường.
 - (void)showLocationFindingButton {
-    UIBarButtonItem *findingLocationButton = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"direction-icon"] style:UIBarButtonItemStylePlain target:self action:@selector(findingLocationButtonPressed:)];
-    self.navigationItem.rightBarButtonItem = findingLocationButton;
+//    UIBarButtonItem *findingLocationButton = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"direction-icon"] style:UIBarButtonItemStylePlain target:self action:@selector(findingLocationButtonPressed:)];
+//    self.navigationItem.rightBarButtonItem = findingLocationButton;
+    [self._placesClient currentPlaceWithCallback:^(GMSPlaceLikelihoodList *placeLikelihoodList, NSError *error){
+        if (error != nil) {
+            NSLog(@"Pick Place error %@", [error localizedDescription]);
+            return;
+        }
+        
+        if (placeLikelihoodList != nil) {
+            GMSPlace *place = [[[placeLikelihoodList likelihoods] firstObject] place];
+            if (place != nil) {
+//                self.nameLabel.text = place.name;
+//                self.addressLabel.text = [[place.formattedAddress componentsSeparatedByString:@", "]
+//                                          componentsJoinedByString:@"\n"];
+            }
+        }
+    }];
 }
 
 - (IBAction)findingLocationButtonPressed:(id)sender{
