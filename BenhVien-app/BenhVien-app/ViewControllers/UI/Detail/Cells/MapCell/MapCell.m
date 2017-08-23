@@ -18,5 +18,22 @@
     [super setSelected:selected animated:animated];
 }
 
+- (void)configureCell:(id)model {
+    MapModel *mapModel = (MapModel *)model;
+    if (mapModel) {
+        // Create a GMSCameraPosition that tells the map to display the
+        // coordinate at zoom level 6.
+        GMSCameraPosition *camera = [GMSCameraPosition cameraWithLatitude: mapModel.latitude
+                                                                longitude: mapModel.longatitude
+                                                                     zoom:15];
+        self.mapView.camera = camera;
+        self.mapView.myLocationEnabled = YES;
+        
+        // Creates a marker in the center of the map.
+        GMSMarker *marker = [[GMSMarker alloc] init];
+        marker.position = CLLocationCoordinate2DMake(mapModel.latitude, mapModel.longatitude);
+        marker.map = self.mapView;
+    }
+}
 
 @end

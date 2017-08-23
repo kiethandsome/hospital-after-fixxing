@@ -9,6 +9,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>GoogleMapsKit.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>IQDropDownTextField.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -47,7 +52,7 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>014BEB3EBECCD44D6E4208A89DE8A1DC</key>
+		<key>16008109445A77F4CBEDF85C8569183B</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -62,7 +67,7 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>72017D1A8FEA092368E3F011750C780F</key>
+		<key>68AD48F5ECBA912AC3CF4DEF5C9F2250</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -83,6 +88,11 @@
 			<true/>
 		</dict>
 		<key>CF671F7E57B92905F1CC91D036D6B4A7</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>FE50813A5702CADED418954B75B16F36</key>
 		<dict>
 			<key>primary</key>
 			<true/>

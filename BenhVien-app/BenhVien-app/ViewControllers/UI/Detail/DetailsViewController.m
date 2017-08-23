@@ -20,10 +20,11 @@
     [self setUpUserInterface];
     [self loadHospitalData];
     
-    // HLTableView.
+            // HLTableView.
     self.searchResultTableView.rowHeight = UITableViewAutomaticDimension;
     self.searchResultTableView.estimatedRowHeight = 100.0;
-    // Đăng kí cell với lớp tương ứng quản lí.
+            // Đăng kí cell với lớp tương ứng quản lí.
+    self.searchResultTableView.allowsSelection = NO;  // ko cho click chon.
     [self.searchResultTableView registerCell:[SlideShowCell class] forModel:[SlideShowModel class]];
     [self.searchResultTableView registerCell:[HospitalNameCell class] forModel:[HospitalNameModel class]];
     [self.searchResultTableView registerCell:[HospitalAddressCell class] forModel:[HospitalAddressModel class]];
@@ -115,10 +116,12 @@
     [data addObject:phoneNumber];
     
     HospitalDescriptionModel *hospitalDescription = [HospitalDescriptionModel new];
-    hospitalDescription.hospitalDescription = hospital.description;
+    hospitalDescription.hospitalDescription = hospital.hospitalDescription;
     [data addObject:hospitalDescription];
     
     MapModel *map = [MapModel new];
+    map.longatitude = hospital.longitude;
+    map.latitude = hospital.latitude;
     [data addObject:map];
     
     [self.searchResultTableView addItems:data];

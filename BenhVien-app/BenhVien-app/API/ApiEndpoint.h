@@ -17,5 +17,6 @@
 #define searchByTheCityName @"hospitals-city"
 #define LoadHospitalById    @"hospitalinfo"
 
+#define GoogleApiKey        @"AIzaSyCk77_rbSukbCgHqzUW4mWT2D92JhnuacE"
 
 #endif /* ApiEndpoint_h */

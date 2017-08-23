@@ -11,6 +11,8 @@
 #import "UIViewController+Storyboard.h"
 #import "BaseNavigationController.h"
 #import "UIColor+Hex.h"
+#import <GooglePlaces/GooglePlaces.h>
+#import "ApiEndpoint.h"
 @interface AppDelegate ()
 
 @end
@@ -21,6 +23,10 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     [self setupHomeScreen];
     [self setupApplicationTheme];
+            // Google map places.
+    [GMSPlacesClient provideAPIKey:GoogleApiKey];
+            // Google maps view.
+    [GMSServices provideAPIKey:GoogleApiKey];
     return YES;
 }
 

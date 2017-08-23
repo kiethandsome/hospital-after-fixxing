@@ -35,7 +35,6 @@
     for (NSString *URL in images) {
         [self.imagesDatasource addObject:[NSURL URLWithString:URL]];
     }
-    
     _slideShow.datasource = self;
     _slideShow.delegate = self;
     [_slideShow setDelay: 0.5]; // Delay between transitions

@@ -48,13 +48,18 @@
 
 + (void)searchTheHospitalByTheCityName:(NSString *)cityName completion:(ApiCompletionBlock)completion {
     NSDictionary *parameters = @{@"city":cityName};
-    [[ApiManager sharedClient] requestApiWithEndpoint:searchByTheCityName method:GET parameters:parameters completion:completion];
+    [[ApiManager sharedClient] requestApiWithEndpoint:searchByTheCityName
+                                               method:GET
+                                           parameters:parameters
+                                           completion:completion];
 }
 
 + (void)loadHospitalInfById:(NSString *)ID completion:(ApiCompletionBlock)completion {
     NSDictionary *pr = @{@"id":ID};
-    [[ApiManager sharedClient] requestApiWithEndpoint:LoadHospitalById method:GET parameters:pr completion:completion];
-
+    [[ApiManager sharedClient] requestApiWithEndpoint:LoadHospitalById
+                                               method:GET
+                                           parameters:pr
+                                           completion:completion];
 }
 
 

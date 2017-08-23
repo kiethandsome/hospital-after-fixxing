@@ -14,6 +14,17 @@ PODS:
   - AFNetworking/Serialization (3.1.0)
   - AFNetworking/UIKit (3.1.0):
     - AFNetworking/NSURLSession
+  - GoogleMaps (2.2.0):
+    - GoogleMaps/Maps (= 2.2.0)
+  - GoogleMaps/Base (2.2.0)
+  - GoogleMaps/Maps (2.2.0):
+    - GoogleMaps/Base
+  - GoogleMapsKit (1.0.5)
+  - GooglePlacePicker (2.2.0):
+    - GoogleMaps (= 2.2.0)
+    - GooglePlaces (= 2.2.0)
+  - GooglePlaces (2.2.0):
+    - GoogleMaps/Base (= 2.2.0)
   - IQDropDownTextField (1.1.0)
   - IQKeyboardManager (4.0.8)
   - KASlideShow (3.0.0):
@@ -26,6 +37,10 @@ PODS:
 
 DEPENDENCIES:
   - AFNetworking (~> 3.0)
+  - GoogleMaps
+  - GoogleMapsKit (~> 1.0)
+  - GooglePlacePicker
+  - GooglePlaces
   - IQDropDownTextField (~> 1.1)
   - IQKeyboardManager (~> 4.0)
   - KASlideShow (~> 3.0)
@@ -35,6 +50,10 @@ DEPENDENCIES:
 
 SPEC CHECKSUMS:
   AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
+  GoogleMaps: 104c418d61ab8a05dff06ed0784c25ea9d37da45
+  GoogleMapsKit: b5630c6678909797fc6169d7edda63cb9050d7e9
+  GooglePlacePicker: 345b1aabd42c9d6d9bf2369c1bae1234d903e764
+  GooglePlaces: bca867d5e9da15384c794b945e4226848bc6e9d9
   IQDropDownTextField: 614f79ca905529c992045eaa112d0fc9ebb875d1
   IQKeyboardManager: 1a8189fa153bf09044355ee0ad36826f6767e7f7
   KASlideShow: d737c734ee603ed4fc7de09876d5193192e74ee4
@@ -42,6 +61,6 @@ SPEC CHECKSUMS:
   PureLayout: 4d550abe49a94f24c2808b9b95db9131685fe4cd
   SDWebImage: 098e97e6176540799c27e804c96653ee0833d13c
 
-PODFILE CHECKSUM: b129fdeffbd05c1943ff425abff0407ccea33f68
+PODFILE CHECKSUM: 4f061edf47665f775f0418861674519d18aa537a
 
 COCOAPODS: 1.2.1

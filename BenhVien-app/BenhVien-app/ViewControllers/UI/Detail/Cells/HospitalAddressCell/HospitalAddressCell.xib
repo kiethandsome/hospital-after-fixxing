@@ -23,8 +23,8 @@
                         <constraints>
                             <constraint firstAttribute="height" constant="35" id="bKf-Zb-tBf"/>
                         </constraints>
-                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                        <color key="textColor" red="0.4782828691709845" green="0.4782828691709845" blue="0.4782828691709845" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <color key="textColor" white="0.40000000000000002" alpha="1" colorSpace="calibratedWhite"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="location-red-icon" translatesAutoresizingMaskIntoConstraints="NO" id="Tei-yo-rNg">

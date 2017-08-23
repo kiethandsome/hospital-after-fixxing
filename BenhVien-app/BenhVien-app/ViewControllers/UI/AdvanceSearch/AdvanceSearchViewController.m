@@ -86,7 +86,7 @@
 - (NSArray *)getDistrictNameFromCity:(CIty *)city {
     NSMutableArray *districtName = [NSMutableArray new];
     [districtName addObjectsFromArray:city.district];
-    [districtName insertObject:@"Tất cả quận, huyện" atIndex:0];
+    [districtName insertObject:@"Tất cả Quận/Huyện" atIndex:0];
     return [districtName mutableCopy];
 }
 
@@ -137,7 +137,7 @@
     NSString *cityName = self.cityPicker.selectedItem;
     NSString *districtName = self.districtPicker.selectedItem;
     
-    if ([districtName isEqualToString:@"Tất cả quận, huyện"]){
+    if ([districtName isEqualToString:@"Tất cả Quận/Huyện"]){
         [self searchHospitalByCityName:cityName];
     }else {
         [self searchHospitalByCityName:cityName district:districtName];
