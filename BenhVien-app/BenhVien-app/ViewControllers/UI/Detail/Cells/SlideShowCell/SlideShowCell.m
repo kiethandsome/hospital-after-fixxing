@@ -12,9 +12,9 @@
 
 - (void)awakeFromNib {
     [super awakeFromNib];
-    dispatch_async(dispatch_get_main_queue(), ^{
-        [self setupSlideShow:self.imagesDatasource];
-    });
+//    dispatch_async(dispatch_get_main_queue(), ^{
+//        [self setupSlideShow:self.imagesDatasource];
+//    });
 //    [self setupSlideShow:_imagesDatasource];
 
     

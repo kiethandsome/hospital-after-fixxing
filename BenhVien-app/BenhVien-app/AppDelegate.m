@@ -11,8 +11,13 @@
 #import "UIViewController+Storyboard.h"
 #import "BaseNavigationController.h"
 #import "UIColor+Hex.h"
-#import <GooglePlaces/GooglePlaces.h>
 #import "ApiEndpoint.h"
+
+        // Google maps Importing.
+#import <GoogleMaps/GoogleMaps.h>
+#import <GooglePlaces/GooglePlaces.h>
+#import <OCGoogleDirectionsAPI/OCGoogleDirectionsAPI.h>
+
 @interface AppDelegate ()
 
 @end
@@ -27,6 +32,8 @@
     [GMSPlacesClient provideAPIKey:GoogleApiKey];
             // Google maps view.
     [GMSServices provideAPIKey:GoogleApiKey];
+
+
     return YES;
 }
 
@@ -48,7 +55,6 @@
     NSDictionary *tittleAtrr = [[NSDictionary alloc] initWithObjectsAndKeys:[UIColor whiteColor], NSForegroundColorAttributeName, nil];
     [UINavigationBar appearance].titleTextAttributes = tittleAtrr;
 }
-
 
 
 @end

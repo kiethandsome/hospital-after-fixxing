@@ -22,7 +22,7 @@
     MapModel *mapModel = (MapModel *)model;
     if (mapModel) {
         // Create a GMSCameraPosition that tells the map to display the
-        // coordinate at zoom level 6.
+        // coordinate at zoom level 15.
         GMSCameraPosition *camera = [GMSCameraPosition cameraWithLatitude: mapModel.latitude
                                                                 longitude: mapModel.longatitude
                                                                      zoom:15];

@@ -10,6 +10,7 @@
 #import "BaseViewController.h"
 #import "ApiRequest.h"
 #import "Hospital.h"
+#import "LocationViewController.h"
 
     // cells impporting.
 #import "SlideShowCell.h"
@@ -31,13 +32,12 @@
     // googe maps and places importing.
 #import <GooglePlaces/GooglePlaces.h>
 #import <GoogleMaps/GoogleMaps.h>
+#import <OCGoogleDirectionsAPI/OCGoogleDirectionsAPI.h>
 
 @interface DetailsViewController : BaseViewController
 
 @property (weak, nonatomic) IBOutlet HLTableView *searchResultTableView;
 @property (nonatomic, strong) Hospital *currentHospital;
 
-    // Places Client Object.
-@property (nonatomic) GMSPlacesClient *_placesClient;
 
 @end

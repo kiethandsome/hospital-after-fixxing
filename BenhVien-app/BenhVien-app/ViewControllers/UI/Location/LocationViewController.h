@@ -7,11 +7,19 @@
 //
 
 #import "BaseViewController.h"
+#import "ApiEndpoint.h"
+#import "Hospital.h"
+
 #import <GooglePlaces/GooglePlaces.h>
 #import <GoogleMaps/GoogleMaps.h>
+#import <OCGoogleDirectionsAPI/OCGoogleDirectionsAPI.h>
 
 @interface LocationViewController : BaseViewController
 
 @property (weak, nonatomic) IBOutlet GMSMapView *mapView;
+
+@property (weak, nonatomic) IBOutlet UILabel *nameLabel;
+
+@property (nonatomic) Hospital *currentHospital;
 
 @end

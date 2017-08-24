@@ -48,54 +48,14 @@
 
         // Hiển thị nút tìm đường.
 - (void)showLocationFindingButton {
-//    UIBarButtonItem *findingLocationButton = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"direction-icon"] style:UIBarButtonItemStylePlain target:self action:@selector(findingLocationButtonPressed:)];
-//    self.navigationItem.rightBarButtonItem = findingLocationButton;
-    [self._placesClient currentPlaceWithCallback:^(GMSPlaceLikelihoodList *placeLikelihoodList, NSError *error){
-        if (error != nil) {
-            NSLog(@"Pick Place error %@", [error localizedDescription]);
-            return;
-        }
-        
-        if (placeLikelihoodList != nil) {
-            GMSPlace *place = [[[placeLikelihoodList likelihoods] firstObject] place];
-            if (place != nil) {
-//                self.nameLabel.text = place.name;
-//                self.addressLabel.text = [[place.formattedAddress componentsSeparatedByString:@", "]
-//                                          componentsJoinedByString:@"\n"];
-            }
-        }
-    }];
+    UIBarButtonItem *findingLocationButton = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"direction-icon"] style:UIBarButtonItemStylePlain target:self action:@selector(findingLocationButtonPressed:)];
+    self.navigationItem.rightBarButtonItem = findingLocationButton;
 }
 
 - (IBAction)findingLocationButtonPressed:(id)sender{
-    UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"cc" message:@"con cac" preferredStyle:UIAlertControllerStyleAlert];
-    UIAlertAction *action = [UIAlertAction actionWithTitle:@"chich" style:UIAlertActionStyleCancel handler:nil];
-    [alert addAction:action];
-    [self presentViewController:alert animated:true completion:nil];
-}
-
-- (NSArray *)setData {
-    NSMutableArray *data = [NSMutableArray new];
-    
-    SlideShowModel *slideShow = [SlideShowModel new];
-    [data addObject:slideShow];
-    
-    HospitalNameModel *hospitalName = [HospitalNameModel new];
-    [data addObject:hospitalName];
-    
-    HospitalAddressModel *hospitalAddress = [HospitalAddressModel new];
-    [data addObject:hospitalAddress];
-    
-    PhoneNumberModel *phoneNumber = [PhoneNumberModel new];
-    [data addObject:phoneNumber];
-    
-    HospitalDescriptionModel *hospitalDescription = [HospitalDescriptionModel new];
-        [data addObject:hospitalDescription];
-    
-    MapModel *map = [MapModel new];
-    [data addObject:map];
-    
-    return data;
+    LocationViewController *nextView = [self.storyboard instantiateViewControllerWithIdentifier:@"LocationViewController"];
+    nextView.currentHospital = self.currentHospital;
+    [self.navigationController pushViewController: nextView animated: true];
 }
 
 - (void)loadHospitalData {
