@@ -6,111 +6,16 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "BenhVien-app/ViewControllers/UI/Detail/Cells/SlideShowCell/SlideShowCell.m"
-            timestampString = "525018208.46468"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "30"
-            endingLineNumber = "30"
-            landmarkName = "-configureCell:"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "__31-[SlideShowCell configureCell:]_block_invoke"
-                  moduleName = "BenhVien-app"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/test/Desktop/BenhVien-app/BenhVien-app/BenhVien-app/ViewControllers/UI/Detail/Cells/SlideShowCell/SlideShowCell.m"
-                  timestampString = "525018209.118659"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "30"
-                  endingLineNumber = "30"
-                  offsetFromSymbolStart = "86">
-               </Location>
-               <Location
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "__copy_helper_block_.9"
-                  moduleName = "BenhVien-app"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/test/Desktop/BenhVien-app/BenhVien-app/BenhVien-app/ViewControllers/UI/Detail/Cells/SlideShowCell/SlideShowCell.m"
-                  timestampString = "525018209.120631"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "30"
-                  endingLineNumber = "30"
-                  offsetFromSymbolStart = "108">
-               </Location>
-               <Location
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "__destroy_helper_block_.10"
-                  moduleName = "BenhVien-app"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/test/Desktop/BenhVien-app/BenhVien-app/BenhVien-app/ViewControllers/UI/Detail/Cells/SlideShowCell/SlideShowCell.m"
-                  timestampString = "525018209.122528"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "30"
-                  endingLineNumber = "30"
-                  offsetFromSymbolStart = "59">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "BenhVien-app/ViewControllers/UI/Detail/Cells/SlideShowCell/SlideShowCell.m"
-            timestampString = "525018218.984308"
+            filePath = "BenhVien-app/ViewControllers/UI/AdvanceSearch/AdvanceSearchViewController.m"
+            timestampString = "525349369.015221"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "35"
-            endingLineNumber = "35"
-            landmarkName = "-setupSlideShow:"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "BenhVien-app/ViewControllers/UI/Detail/Cells/HospitalDescriptionCell/HospitalDescriptionCell.m"
-            timestampString = "525181007.841377"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "25"
-            endingLineNumber = "25"
-            landmarkName = "-configureCell:"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "BenhVien-app/ViewControllers/UI/Detail/Cells/HospitalDescriptionCell/HospitalDescriptionCell.m"
-            timestampString = "525181008.881343"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "23"
-            endingLineNumber = "23"
-            landmarkName = "-configureCell:"
+            startingLineNumber = "171"
+            endingLineNumber = "171"
+            landmarkName = "-searchHospitalByCityName:"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -121,59 +26,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BenhVien-app/ViewControllers/UI/Detail/DetailsViewController.m"
-            timestampString = "525181858.048156"
+            timestampString = "525353725.566707"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "88"
-            endingLineNumber = "88"
-            landmarkName = "-loadHospitalData"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "-[DetailsViewController loadHospitalData]"
-                  moduleName = "BenhVien-app"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/test/Desktop/hospital-after-fixxing/BenhVien-app/BenhVien-app/ViewControllers/UI/Detail/DetailsViewController.m"
-                  timestampString = "525181090.10245"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "87"
-                  endingLineNumber = "87"
-                  offsetFromSymbolStart = "47">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "__41-[DetailsViewController loadHospitalData]_block_invoke"
-                  moduleName = "BenhVien-app"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/test/Desktop/hospital-after-fixxing/BenhVien-app/BenhVien-app/ViewControllers/UI/Detail/DetailsViewController.m"
-                  timestampString = "525181090.10424"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "87"
-                  endingLineNumber = "87"
-                  offsetFromSymbolStart = "16">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "BenhVien-app/ViewControllers/UI/Detail/DetailsViewController.m"
-            timestampString = "525181858.048156"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "87"
-            endingLineNumber = "87"
+            startingLineNumber = "68"
+            endingLineNumber = "68"
             landmarkName = "-loadHospitalData"
             landmarkType = "7">
          </BreakpointContent>
@@ -185,76 +42,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BenhVien-app/ViewControllers/UI/Detail/DetailsViewController.m"
-            timestampString = "525181858.048156"
+            timestampString = "525353774.957455"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "91"
-            endingLineNumber = "91"
-            landmarkName = "-loadHospitalData"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "BenhVien-app/ViewControllers/UI/Detail/DetailsViewController.m"
-            timestampString = "525181858.048156"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "94"
-            endingLineNumber = "94"
-            landmarkName = "-loadHospitalData"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "BenhVien-app/ViewControllers/UI/Detail/DetailsViewController.m"
-            timestampString = "525181858.048156"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "92"
-            endingLineNumber = "92"
-            landmarkName = "-loadHospitalData"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "BenhVien-app/ViewControllers/UI/Detail/DetailsViewController.m"
-            timestampString = "525181858.048156"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "119"
-            endingLineNumber = "119"
+            startingLineNumber = "80"
+            endingLineNumber = "80"
             landmarkName = "-displayHospitalInfo:"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "BenhVien-app/ViewControllers/UI/Detail/Cells/HospitalDescriptionCell/HospitalDescriptionCell.m"
-            timestampString = "525181215.180841"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "26"
-            endingLineNumber = "26"
-            landmarkName = "-configureCell:"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

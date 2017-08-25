@@ -184,24 +184,6 @@
     }];
 }
 
-//#pragma mark - Get the Cities by link
-//
-//- (NSMutableArray *)getTheCitiesByLink {
-//    NSMutableArray *cities = [NSMutableArray new];
-//    
-//    NSData *data = [NSData dataWithContentsOfURL:[NSURL URLWithString:@"https://benhvien-app.herokuapp.com/api/v1/cities"]];
-//                    
-//    NSDictionary *JSONDIict = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:nil];
-//    
-//    NSDictionary *dataDict = [JSONDIict valueForKey:@"data"];
-//    
-//    NSDictionary *cityArray = [dataDict objectForKey:@"cities"];
-//    for (NSDictionary *citiesDict in cityArray) {
-//        CIty *city = [CIty initWithData:citiesDict];
-//        [cities addObject:city];
-//    }
-//    return cities;
-//}
 
 @end
 

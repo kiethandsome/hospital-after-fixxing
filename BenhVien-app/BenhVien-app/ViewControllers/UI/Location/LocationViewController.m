@@ -8,7 +8,11 @@
 
 #import "LocationViewController.h"
 
-@interface LocationViewController ()
+@interface LocationViewController ()<CLLocationManagerDelegate>
+{
+    CLLocationManager *locationManager;
+    CLLocationCoordinate2D currentLocation;
+}
 
 @end
 
@@ -16,47 +20,100 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // OCGoogleDirectionAPI
-    [OCDirectionsAPIClient provideAPIKey:GoogleApiKey];  
-    [self viewUserLocation];
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
 }
+
+- (void)viewWillAppear:(BOOL)animated {
+    [self getCurrentLocation];
+}
+
+- (void)setUpUserInterface {
+    [self showBackButtonItem];
+    if (self.currentHospital) {
+        self.title = self.currentHospital.name;
         
-        // OCGoogleDirectionAPI
-- (void)viewUserLocation {
-    OCDirectionsRequest *request = [OCDirectionsRequest requestWithOriginString:@"<ORIGIN>" andDestinationString:@"<DESTINATION>"];
-    
+    }
+}
+
+- (void)getCurrentLocation {
+            // Codes make app be able to use google map.
+            // then get the User current locations.
+    locationManager = [[CLLocationManager alloc] init];
+    locationManager.delegate = self;
+    locationManager.distanceFilter = kCLDistanceFilterNone;
+    locationManager.desiredAccuracy = kCLLocationAccuracyHundredMeters;
+    [locationManager requestWhenInUseAuthorization];
+    [locationManager startUpdatingLocation];
+}
+
+            	// OC Google Direction API.
+
+- (void)showDirectionFromOriginLocation:(CLLocation *)originLocation andDestinateLocation:(CLLocation *)destinateLocation {
+            // Make a request with user location and hospotal location to the Sever.
+    OCDirectionsRequest *request = [OCDirectionsRequest requestWithOriginLocation: originLocation
+                                                           andDestinationLocation: destinateLocation];
+
     OCDirectionsAPIClient *client = [OCDirectionsAPIClient new];
     [client directions:request response:^(OCDirectionsResponse *response, NSError *error) {
         
         dispatch_async(dispatch_get_main_queue(), ^{
-            // e.g.
             if (error) {
                 return;
             }
             if (response.status != OCDirectionsResponseStatusOK) {
-                // Create a GMSCameraPosition that tells the map to display the
-                // coordinate at zoom level 20.
-                GMSCameraPosition *camera = [GMSCameraPosition cameraWithLatitude:self.currentHospital.latitude
-                                                                        longitude:self.currentHospital.longitude
-                                                                             zoom:20];
-                self.mapView.camera = camera;
-                self.mapView.myLocationEnabled = YES;
-                
-                // Creates a marker in the center of the map.
-                GMSMarker *marker = [[GMSMarker alloc] init];
-                marker.position = CLLocationCoordinate2DMake(self.currentHospital.latitude,self.currentHospital.longitude);
-                marker.map = self.mapView;
+                return;
             }
-
+            
+                // Get the Routes to the Hospital.
+            NSArray *routesArray = response.routes;
+            GMSPolyline *polyline = nil;
+            if (routesArray.count > 0) {
+                OCDirectionsRoute *route = [response route];
+                OCDirectionsPolyline *overViewPolyline = route.overviewPolyline;
+                NSString *points = overViewPolyline.points;
+                GMSPath *path = [GMSPath pathFromEncodedPath:points];
+                polyline = [GMSPolyline polylineWithPath:path];
+                polyline.strokeWidth = 3.0;
+            }
+            if (polyline) {
+                GMSMarker *marker = [GMSMarker new];
+                marker.position = CLLocationCoordinate2DMake(self.currentHospital.latitude, self.currentHospital.longitude);
+                marker.map = _mapView;
+                polyline.map = _mapView;
+            }
         });
-        
     }];
 }
 
 
+#pragma mark - CL Location Manager Delegate.
+
+- (void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray<CLLocation *> *)locations {
+    
+    currentLocation = locations.lastObject.coordinate;
+    GMSCameraPosition *camera = [GMSCameraPosition cameraWithTarget:currentLocation zoom: 15.0];
+    self.mapView.camera = camera;
+    self.mapView.myLocationEnabled = YES;
+    [locationManager stopUpdatingLocation];
+    
+        // Get the hospital Location.
+    CLLocation *hospialLocation = [[CLLocation alloc] initWithLatitude:_currentHospital.latitude
+                                                             longitude:_currentHospital.longitude];
+    
+        // Draw the Direction to the Hospital.
+    [self showDirectionFromOriginLocation:[[CLLocation alloc] initWithLatitude:currentLocation.latitude
+                                                                     longitude:currentLocation.longitude] andDestinateLocation:hospialLocation];
+}
 
 @end
+
+
+
+
+
+
+
+

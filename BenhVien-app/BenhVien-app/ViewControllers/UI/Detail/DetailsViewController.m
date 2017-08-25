@@ -17,7 +17,6 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self setUpUserInterface];
     [self loadHospitalData];
     
             // HLTableView.
@@ -31,8 +30,8 @@
     [self.searchResultTableView registerCell:[PhoneNumberCell class] forModel:[PhoneNumberModel class]];
     [self.searchResultTableView registerCell:[HospitalDescriptionCell class] forModel:[HospitalDescriptionModel class]];
     [self.searchResultTableView registerCell:[MapCell class] forModel:[MapModel class]];
-    
 }
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
@@ -46,6 +45,7 @@
     }
 }
 
+
         // Hiển thị nút tìm đường.
 - (void)showLocationFindingButton {
     UIBarButtonItem *findingLocationButton = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"direction-icon"] style:UIBarButtonItemStylePlain target:self action:@selector(findingLocationButtonPressed:)];
@@ -58,6 +58,7 @@
     [self.navigationController pushViewController: nextView animated: true];
 }
 
+
 - (void)loadHospitalData {
     [self showHUD];
     [ApiRequest loadHospitalInfById:self.currentHospital._id completion:^(ApiResponse *response, NSError *error) {
@@ -65,6 +66,11 @@
         if (!error){
             Hospital *hospital = [Hospital initWithResponse:[response.data objectForKey:@"hospitalInfo"]];
             [self displayHospitalInfo:hospital];
+            
+                // Bcause the currentHospital from the SearchResult doesnt have longgitude and latitude,
+                // this code Line below assign the hospital from 'hospitalInfo' to the currentHospital.
+            self.currentHospital = hospital;
+            
         } else {
             [self showAlertWithTitle:@"Lỗi" message:response.message];
         }
@@ -97,10 +103,12 @@
     MapModel *map = [MapModel new];
     map.longatitude = hospital.longitude;
     map.latitude = hospital.latitude;
+    map.hospitalName = hospital.name;
     [data addObject:map];
     
     [self.searchResultTableView addItems:data];
 }
+
 
 @end
 

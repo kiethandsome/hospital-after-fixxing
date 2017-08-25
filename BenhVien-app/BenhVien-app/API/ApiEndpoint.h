@@ -9,14 +9,14 @@
 #ifndef ApiEndpoint_h
 #define ApiEndpoint_h
 
-#define BaseURL             @"http://benhvien-app.herokuapp.com/api/v1/"
-#define Login               @"authenticate"
-#define SearchByName        @"hospitals-name"
-#define Cities              @"cities"
-#define HospitalDistrict    @"hospitals-district-city"
-#define searchByTheCityName @"hospitals-city"
-#define LoadHospitalById    @"hospitalinfo"
+#define BaseURL                 @"http://benhvien-app.herokuapp.com/api/v1/"
+#define Login                   @"authenticate"
+#define SearchByName            @"hospitals-name"
+#define Cities                  @"cities"
+#define HospitalDistrict        @"hospitals-district-city"
+#define searchByTheCityName     @"hospitals-city"
+#define LoadHospitalById        @"hospitalinfo"
 
-#define GoogleApiKey        @"AIzaSyCk77_rbSukbCgHqzUW4mWT2D92JhnuacE"
+#define GoogleApiKey            @"AIzaSyCk77_rbSukbCgHqzUW4mWT2D92JhnuacE"
 
 #endif /* ApiEndpoint_h */

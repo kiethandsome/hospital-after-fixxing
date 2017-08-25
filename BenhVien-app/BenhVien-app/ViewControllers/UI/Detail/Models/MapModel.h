@@ -12,5 +12,6 @@
 
 @property (nonatomic) double longatitude;
 @property (nonatomic) double latitude;
+@property (nonatomic) NSString *hospitalName;
 
 @end

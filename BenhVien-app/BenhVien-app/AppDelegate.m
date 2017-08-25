@@ -32,6 +32,8 @@
     [GMSPlacesClient provideAPIKey:GoogleApiKey];
             // Google maps view.
     [GMSServices provideAPIKey:GoogleApiKey];
+            // OC Google Direction API.
+    [OCDirectionsAPIClient provideAPIKey:GoogleApiKey];
 
 
     return YES;

@@ -18,19 +18,22 @@
     [super setSelected:selected animated:animated];
 }
 
+        /*_________________About the Google maps_______________*/
+
 - (void)configureCell:(id)model {
     MapModel *mapModel = (MapModel *)model;
     if (mapModel) {
-        // Create a GMSCameraPosition that tells the map to display the
-        // coordinate at zoom level 15.
+            // Create a GMSCameraPosition that tells the map to display the
+            // coordinate at zoom level 15.
         GMSCameraPosition *camera = [GMSCameraPosition cameraWithLatitude: mapModel.latitude
                                                                 longitude: mapModel.longatitude
-                                                                     zoom:15];
+                                                                     zoom: 15];
         self.mapView.camera = camera;
         self.mapView.myLocationEnabled = YES;
         
-        // Creates a marker in the center of the map.
+            // Creates a marker in the center of the map.
         GMSMarker *marker = [[GMSMarker alloc] init];
+        marker.title = mapModel.hospitalName;
         marker.position = CLLocationCoordinate2DMake(mapModel.latitude, mapModel.longatitude);
         marker.map = self.mapView;
     }

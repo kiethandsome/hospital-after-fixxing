@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		521538FD1F504F8000DD937A /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 521538FC1F504F8000DD937A /* MapKit.framework */; };
 		524762C01F47225600A47ABC /* ApiManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 524762BB1F47225600A47ABC /* ApiManager.m */; };
 		524762C11F47225600A47ABC /* ApiRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 524762BD1F47225600A47ABC /* ApiRequest.m */; };
 		524762C21F47225600A47ABC /* ApiResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 524762BF1F47225600A47ABC /* ApiResponse.m */; };
@@ -59,6 +60,8 @@
 
 /* Begin PBXFileReference section */
 		32569B39575D99C95F48922C /* Pods_BenhVien_app.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BenhVien_app.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		521538FB1F503F7300DD937A /* MyLocation.gpx */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = MyLocation.gpx; sourceTree = "<group>"; };
+		521538FC1F504F8000DD937A /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		524762B91F47225600A47ABC /* ApiEndpoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ApiEndpoint.h; sourceTree = "<group>"; };
 		524762BA1F47225600A47ABC /* ApiManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ApiManager.h; sourceTree = "<group>"; };
 		524762BB1F47225600A47ABC /* ApiManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ApiManager.m; sourceTree = "<group>"; };
@@ -154,6 +157,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				521538FD1F504F8000DD937A /* MapKit.framework in Frameworks */,
 				9DC49232E66798C28F9A53DB /* Pods_BenhVien_app.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -187,11 +191,11 @@
 		524762C31F47251000A47ABC /* UI */ = {
 			isa = PBXGroup;
 			children = (
-				52A3DBDB1F4DBFE100802BFB /* Location */,
 				524762F21F47251000A47ABC /* Home */,
-				5247630F1F47260100A47ABC /* SearchResult */,
 				524762C41F47251000A47ABC /* AdvanceSearch */,
+				5247630F1F47260100A47ABC /* SearchResult */,
 				524762C71F47251000A47ABC /* Detail */,
+				52A3DBDB1F4DBFE100802BFB /* Location */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -320,9 +324,9 @@
 		5247630F1F47260100A47ABC /* SearchResult */ = {
 			isa = PBXGroup;
 			children = (
-				524763101F47260100A47ABC /* Cells */,
 				524763131F47260100A47ABC /* SearchResultViewController.h */,
 				524763141F47260100A47ABC /* SearchResultViewController.m */,
+				524763101F47260100A47ABC /* Cells */,
 			);
 			path = SearchResult;
 			sourceTree = "<group>";
@@ -400,6 +404,7 @@
 				52EFED911F2B5A1C009F0E78 /* Libraries */,
 				52EFED7D1F2B5859009F0E78 /* AppDelegate.h */,
 				52EFED7E1F2B5859009F0E78 /* AppDelegate.m */,
+				521538FB1F503F7300DD937A /* MyLocation.gpx */,
 				52EFED831F2B5859009F0E78 /* Main.storyboard */,
 				52EFED861F2B5859009F0E78 /* Assets.xcassets */,
 				52EFED881F2B5859009F0E78 /* LaunchScreen.storyboard */,
@@ -485,6 +490,7 @@
 		E40C7788F4828548EBF192FB /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				521538FC1F504F8000DD937A /* MapKit.framework */,
 				32569B39575D99C95F48922C /* Pods_BenhVien_app.framework */,
 			);
 			name = Frameworks;

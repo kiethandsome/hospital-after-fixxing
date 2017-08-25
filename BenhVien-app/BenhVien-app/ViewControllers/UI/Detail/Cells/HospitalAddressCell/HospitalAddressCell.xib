@@ -36,11 +36,12 @@
                     </imageView>
                 </subviews>
                 <constraints>
+                    <constraint firstItem="Tei-yo-rNg" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="7EL-mq-5Ud"/>
+                    <constraint firstAttribute="bottom" secondItem="oel-ed-A1d" secondAttribute="bottom" id="GSS-JF-xFM"/>
                     <constraint firstAttribute="trailing" secondItem="oel-ed-A1d" secondAttribute="trailing" constant="10" id="Igm-Bv-2W0"/>
-                    <constraint firstItem="oel-ed-A1d" firstAttribute="centerY" secondItem="Tei-yo-rNg" secondAttribute="centerY" id="NUX-sF-pzc"/>
                     <constraint firstItem="Tei-yo-rNg" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="bQZ-ra-zz4"/>
+                    <constraint firstItem="oel-ed-A1d" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="jRK-3J-iek"/>
                     <constraint firstItem="oel-ed-A1d" firstAttribute="leading" secondItem="Tei-yo-rNg" secondAttribute="trailing" constant="10" id="nYw-jH-IuD"/>
-                    <constraint firstItem="Tei-yo-rNg" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="yUk-ah-AjX"/>
                 </constraints>
             </tableViewCellContentView>
             <connections>
