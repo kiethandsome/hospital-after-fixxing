@@ -34,31 +34,36 @@
     [self showBackButtonItem];
     if (self.currentHospital) {
         self.title = self.currentHospital.name;
-        
     }
 }
 
 - (void)getCurrentLocation {
-            // Codes make app be able to use google map.
-            // then get the User current locations.
+                                //// Codes make app be able to use google map.
+                                //// then get the User current locations.
     locationManager = [[CLLocationManager alloc] init];
     locationManager.delegate = self;
     locationManager.distanceFilter = kCLDistanceFilterNone;
     locationManager.desiredAccuracy = kCLLocationAccuracyHundredMeters;
     [locationManager requestWhenInUseAuthorization];
     [locationManager startUpdatingLocation];
+                                                        // (NOTE)
 }
+
 
             	// OC Google Direction API.
 
 - (void)showDirectionFromOriginLocation:(CLLocation *)originLocation andDestinateLocation:(CLLocation *)destinateLocation {
-            // Make a request with user location and hospotal location to the Sever.
+    
+            //// Make a request with user location 
+            //// and hospital location to the Server.
     OCDirectionsRequest *request = [OCDirectionsRequest requestWithOriginLocation: originLocation
                                                            andDestinationLocation: destinateLocation];
 
     OCDirectionsAPIClient *client = [OCDirectionsAPIClient new];
-    [client directions:request response:^(OCDirectionsResponse *response, NSError *error) {
+    [client directions:request 
+              response:^(OCDirectionsResponse *response, NSError *error) {
         
+            //// Make the request running on main queue.
         dispatch_async(dispatch_get_main_queue(), ^{
             if (error) {
                 return;
@@ -67,7 +72,7 @@
                 return;
             }
             
-                // Get the Routes to the Hospital.
+                //// Get the Routes to the Hospital.
             NSArray *routesArray = response.routes;
             GMSPolyline *polyline = nil;
             if (routesArray.count > 0) {
@@ -76,11 +81,14 @@
                 NSString *points = overViewPolyline.points;
                 GMSPath *path = [GMSPath pathFromEncodedPath:points];
                 polyline = [GMSPolyline polylineWithPath:path];
-                polyline.strokeWidth = 3.0;
+                polyline.strokeWidth = 3.5;
             }
             if (polyline) {
                 GMSMarker *marker = [GMSMarker new];
+                            //// Display the hospital location with a Marker.
                 marker.position = CLLocationCoordinate2DMake(self.currentHospital.latitude, self.currentHospital.longitude);
+                            //// Marker animation, but dont see.
+                [marker setAppearAnimation:kGMSMarkerAnimationPop];
                 marker.map = _mapView;
                 polyline.map = _mapView;
             }
@@ -99,11 +107,11 @@
     self.mapView.myLocationEnabled = YES;
     [locationManager stopUpdatingLocation];
     
-        // Get the hospital Location.
+        //// Get the hospital Location.
     CLLocation *hospialLocation = [[CLLocation alloc] initWithLatitude:_currentHospital.latitude
                                                              longitude:_currentHospital.longitude];
     
-        // Draw the Direction to the Hospital.
+        //// Draw the Direction to the Hospital.
     [self showDirectionFromOriginLocation:[[CLLocation alloc] initWithLatitude:currentLocation.latitude
                                                                      longitude:currentLocation.longitude] andDestinateLocation:hospialLocation];
 }
