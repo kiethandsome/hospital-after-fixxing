@@ -390,6 +390,43 @@
             </objects>
             <point key="canvasLocation" x="2400.8000000000002" y="-152.47376311844079"/>
         </scene>
+        <!--App Info View Controller-->
+        <scene sceneID="dTb-wy-5ZC">
+            <objects>
+                <viewController storyboardIdentifier="AppInfoViewController" id="Wsa-3c-g3m" customClass="AppInfoViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="v7Y-wI-zd9"/>
+                        <viewControllerLayoutGuide type="bottom" id="tad-3J-7JI"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="zbL-N2-7lu">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a8T-MV-boJ">
+                                <rect key="frame" x="20" y="40" width="335" height="301"/>
+                                <mutableString key="text">Ứng dụng bệnh viện cho điện thoại iOS giúp bạn tìm kiếm thông tin và đường đi đến một bệnh viện nhanh chóng và dễ dàng hơn bao giờ hết. Sau khi tìm thấy một bệnh viện tốt nhất bạn có thể nhanh chóng liên hệ đến bệnh viện tốt nhất bạn có thể nhanh chóng liên hệ đến bênh viện đó ngay trong ứng dụng để dặt chỗ khám chữa bệnh.
+1) Bao gồm nhiều bệnh viện và phòng khám tại Việt Nam. 
+2) Chức năng tìm kiếm bệnh viện sẽ dễ sử dụng và hiệu quả cao.
+3) Hiển thị thong tin chi tiết của các cơ sở khám chữa bệnh.
+4) Hiển thị dường đi một cách rõ ràng, giúp bạn đến các cơ sở khám chữa bệnh một cách nhanh nhất.
+5) Dữ liệu được cập nhật thường xuyên, bạn cũng có thế đóng góp bằng cách thêm vào bệnh viện mới.</mutableString>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" red="0.29572971204188481" green="0.29572971204188481" blue="0.29572971204188481" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="a8T-MV-boJ" firstAttribute="leading" secondItem="zbL-N2-7lu" secondAttribute="leading" constant="20" id="PhI-yS-zIs"/>
+                            <constraint firstItem="a8T-MV-boJ" firstAttribute="top" secondItem="v7Y-wI-zd9" secondAttribute="bottom" constant="20" id="aek-bA-J7v"/>
+                            <constraint firstAttribute="trailing" secondItem="a8T-MV-boJ" secondAttribute="trailing" constant="20" id="h6e-5W-zPk"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OQu-Xn-eYo" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3073" y="-152"/>
+        </scene>
     </scenes>
     <resources>
         <image name="caret-down" width="20" height="12"/>

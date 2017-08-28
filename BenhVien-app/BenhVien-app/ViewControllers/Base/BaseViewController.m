@@ -9,6 +9,7 @@
 #import "BaseViewController.h"
 #import <MBProgressHUD/MBProgressHUD.h>
 #import "UIAlertController+Blocks.h"
+#import "BaseTabbarController.h"
 
 @interface BaseViewController ()
 
@@ -38,7 +39,8 @@
 }
 
 - (IBAction)menuButtonPressed:(id)sender{
-    
+    BaseTabbarController *tab = (BaseTabbarController *)self.tabBarController;
+    [tab animatedMenu:!tab.menuDisplayed];
 }
 
 - (IBAction)backButtonPressed:(id)sender {

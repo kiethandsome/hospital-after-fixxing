@@ -8,6 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		521538FD1F504F8000DD937A /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 521538FC1F504F8000DD937A /* MapKit.framework */; };
+		524267F31F5436E800D02685 /* MenuView.m in Sources */ = {isa = PBXBuildFile; fileRef = 524267F11F5436E800D02685 /* MenuView.m */; };
+		524267F41F5436E800D02685 /* MenuView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 524267F21F5436E800D02685 /* MenuView.xib */; };
+		524267F81F5439BB00D02685 /* MenuViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 524267F61F5439BB00D02685 /* MenuViewCell.m */; };
+		524267F91F5439BB00D02685 /* MenuViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 524267F71F5439BB00D02685 /* MenuViewCell.xib */; };
+		524267FD1F543E2000D02685 /* AppInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 524267FC1F543E2000D02685 /* AppInfoViewController.m */; };
 		524762C01F47225600A47ABC /* ApiManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 524762BB1F47225600A47ABC /* ApiManager.m */; };
 		524762C11F47225600A47ABC /* ApiRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 524762BD1F47225600A47ABC /* ApiRequest.m */; };
 		524762C21F47225600A47ABC /* ApiResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 524762BF1F47225600A47ABC /* ApiResponse.m */; };
@@ -62,6 +67,14 @@
 		32569B39575D99C95F48922C /* Pods_BenhVien_app.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BenhVien_app.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		521538FB1F503F7300DD937A /* MyLocation.gpx */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = MyLocation.gpx; sourceTree = "<group>"; };
 		521538FC1F504F8000DD937A /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		524267F01F5436E800D02685 /* MenuView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuView.h; sourceTree = "<group>"; };
+		524267F11F5436E800D02685 /* MenuView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuView.m; sourceTree = "<group>"; };
+		524267F21F5436E800D02685 /* MenuView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MenuView.xib; sourceTree = "<group>"; };
+		524267F51F5439BB00D02685 /* MenuViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuViewCell.h; sourceTree = "<group>"; };
+		524267F61F5439BB00D02685 /* MenuViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuViewCell.m; sourceTree = "<group>"; };
+		524267F71F5439BB00D02685 /* MenuViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MenuViewCell.xib; sourceTree = "<group>"; };
+		524267FB1F543E2000D02685 /* AppInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppInfoViewController.h; sourceTree = "<group>"; };
+		524267FC1F543E2000D02685 /* AppInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppInfoViewController.m; sourceTree = "<group>"; };
 		524762B91F47225600A47ABC /* ApiEndpoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ApiEndpoint.h; sourceTree = "<group>"; };
 		524762BA1F47225600A47ABC /* ApiManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ApiManager.h; sourceTree = "<group>"; };
 		524762BB1F47225600A47ABC /* ApiManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ApiManager.m; sourceTree = "<group>"; };
@@ -174,6 +187,28 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		524267EF1F5436AA00D02685 /* MenuViews */ = {
+			isa = PBXGroup;
+			children = (
+				524267F01F5436E800D02685 /* MenuView.h */,
+				524267F11F5436E800D02685 /* MenuView.m */,
+				524267F21F5436E800D02685 /* MenuView.xib */,
+				524267F51F5439BB00D02685 /* MenuViewCell.h */,
+				524267F61F5439BB00D02685 /* MenuViewCell.m */,
+				524267F71F5439BB00D02685 /* MenuViewCell.xib */,
+			);
+			path = MenuViews;
+			sourceTree = "<group>";
+		};
+		524267FA1F543E0300D02685 /* AppInfo */ = {
+			isa = PBXGroup;
+			children = (
+				524267FB1F543E2000D02685 /* AppInfoViewController.h */,
+				524267FC1F543E2000D02685 /* AppInfoViewController.m */,
+			);
+			path = AppInfo;
+			sourceTree = "<group>";
+		};
 		524762B81F47225600A47ABC /* API */ = {
 			isa = PBXGroup;
 			children = (
@@ -191,6 +226,7 @@
 		524762C31F47251000A47ABC /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				524267FA1F543E0300D02685 /* AppInfo */,
 				524762F21F47251000A47ABC /* Home */,
 				524762C41F47251000A47ABC /* AdvanceSearch */,
 				5247630F1F47260100A47ABC /* SearchResult */,
@@ -397,6 +433,7 @@
 			isa = PBXGroup;
 			children = (
 				F68103A41F38CC0500DF48AD /* Declaration.h */,
+				524267EF1F5436AA00D02685 /* MenuViews */,
 				524762B81F47225600A47ABC /* API */,
 				52EF794D1F2F5B0500522CB6 /* Model */,
 				52EFEDBB1F2B760D009F0E78 /* Storyboards */,
@@ -558,6 +595,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				524762FC1F47251000A47ABC /* HospitalAddressCell.xib in Resources */,
+				524267F41F5436E800D02685 /* MenuView.xib in Resources */,
 				52EFED8A1F2B5859009F0E78 /* LaunchScreen.storyboard in Resources */,
 				524763041F47251000A47ABC /* SlideShowCell.xib in Resources */,
 				52EFEDBD1F2B760D009F0E78 /* Home.storyboard in Resources */,
@@ -568,6 +606,7 @@
 				524762FA1F47251000A47ABC /* HospitalNameCell.xib in Resources */,
 				52EFED851F2B5859009F0E78 /* Main.storyboard in Resources */,
 				524763001F47251000A47ABC /* MapCell.xib in Resources */,
+				524267F91F5439BB00D02685 /* MenuViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -632,6 +671,7 @@
 				524763161F47260100A47ABC /* SearchResultViewController.m in Sources */,
 				524763011F47251000A47ABC /* PhoneNumberCell.m in Sources */,
 				52EF795B1F2F6B2700522CB6 /* HLTableView.m in Sources */,
+				524267F31F5436E800D02685 /* MenuView.m in Sources */,
 				524763031F47251000A47ABC /* SlideShowCell.m in Sources */,
 				52EFEDA21F2B5A1C009F0E78 /* UIViewController+Storyboard.m in Sources */,
 				5247630D1F47251000A47ABC /* HomeViewController.m in Sources */,
@@ -641,6 +681,7 @@
 				52EFED9F1F2B5A1C009F0E78 /* UIColor+Hex.m in Sources */,
 				524763081F47251000A47ABC /* HospitalDescriptionModel.m in Sources */,
 				52EFEDB11F2B5B2E009F0E78 /* BaseTabbarController.m in Sources */,
+				524267FD1F543E2000D02685 /* AppInfoViewController.m in Sources */,
 				52EF795D1F2F6B2700522CB6 /* HLTableViewSection.m in Sources */,
 				524762FF1F47251000A47ABC /* MapCell.m in Sources */,
 				52EFEDA01F2B5A1C009F0E78 /* UITextField+Padding.m in Sources */,
@@ -652,6 +693,7 @@
 				524762FB1F47251000A47ABC /* HospitalAddressCell.m in Sources */,
 				524762C21F47225600A47ABC /* ApiResponse.m in Sources */,
 				52EF79501F2F5B1600522CB6 /* Hospital.m in Sources */,
+				524267F81F5439BB00D02685 /* MenuViewCell.m in Sources */,
 				52EFED7C1F2B5859009F0E78 /* main.m in Sources */,
 				524763071F47251000A47ABC /* HospitalAddressModel.m in Sources */,
 				524762F91F47251000A47ABC /* HopitalNameCell.m in Sources */,

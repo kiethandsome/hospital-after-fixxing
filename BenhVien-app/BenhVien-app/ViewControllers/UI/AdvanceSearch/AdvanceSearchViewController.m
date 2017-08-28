@@ -175,6 +175,8 @@
                 Hospital *aHospital = [Hospital initWithResponse:dict];
                 [hosArray addObject:aHospital];
             }
+                //// Using this code line below,
+                //// we dont need to name the identifier for the View controller.
             SearchResultViewController *vc = (SearchResultViewController *)[SearchResultViewController instanceFromStoryboardName:@"Home"];
             vc.hospitals = hosArray;
             [self.navigationController pushViewController:vc animated:true];

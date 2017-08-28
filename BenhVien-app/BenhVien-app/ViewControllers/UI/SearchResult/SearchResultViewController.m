@@ -66,7 +66,7 @@
 #pragma mark table view data source
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-//    [tableView deselectRowAtIndexPath:indexPath animated:true];
+    //[tableView deselectRowAtIndexPath:indexPath animated:true];
     DetailsViewController *view = [self.storyboard instantiateViewControllerWithIdentifier:@"DetailsViewController"];
     view.currentHospital = self.hospitals[indexPath.row];
     [self.navigationController pushViewController:view animated:true];

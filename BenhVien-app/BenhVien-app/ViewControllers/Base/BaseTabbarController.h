@@ -7,7 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "MenuView.h"
 
 @interface BaseTabbarController : UITabBarController
 
+@property (assign, nonatomic) BOOL menuDisplayed;
+
+- (void)animatedMenu:(BOOL)menuDisplayed;
 @end

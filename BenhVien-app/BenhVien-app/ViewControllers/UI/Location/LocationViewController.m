@@ -82,6 +82,9 @@
                 GMSPath *path = [GMSPath pathFromEncodedPath:points];
                 polyline = [GMSPolyline polylineWithPath:path];
                 polyline.strokeWidth = 3.5;
+                polyline.geodesic = true;
+                GMSStrokeStyle *blueBlack = [GMSStrokeStyle gradientFromColor:[UIColor darkGrayColor] toColor:[UIColor yellowColor]];
+                polyline.spans = @[[GMSStyleSpan spanWithStyle:blueBlack]];
             }
             if (polyline) {
                 GMSMarker *marker = [GMSMarker new];
@@ -92,6 +95,7 @@
                 marker.map = _mapView;
                 polyline.map = _mapView;
             }
+            
         });
     }];
 }
