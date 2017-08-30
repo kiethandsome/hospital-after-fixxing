@@ -14,4 +14,5 @@
 @property (assign, nonatomic) BOOL menuDisplayed;
 
 - (void)animatedMenu:(BOOL)menuDisplayed;
+
 @end

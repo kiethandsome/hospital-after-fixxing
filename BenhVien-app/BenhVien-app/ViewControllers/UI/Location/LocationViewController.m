@@ -46,7 +46,7 @@
     locationManager.desiredAccuracy = kCLLocationAccuracyHundredMeters;
     [locationManager requestWhenInUseAuthorization];
     [locationManager startUpdatingLocation];
-                                                        // (NOTE)
+                                                        // (NOTE) should learn by heart.
 }
 
 
@@ -83,8 +83,9 @@
                 polyline = [GMSPolyline polylineWithPath:path];
                 polyline.strokeWidth = 3.5;
                 polyline.geodesic = true;
-                GMSStrokeStyle *blueBlack = [GMSStrokeStyle gradientFromColor:[UIColor darkGrayColor] toColor:[UIColor yellowColor]];
-                polyline.spans = @[[GMSStyleSpan spanWithStyle:blueBlack]];
+
+                GMSStrokeStyle *grayYellow = [GMSStrokeStyle gradientFromColor:[UIColor darkGrayColor] toColor:[UIColor yellowColor]];
+                polyline.spans = @[[GMSStyleSpan spanWithStyle:grayYellow]];
             }
             if (polyline) {
                 GMSMarker *marker = [GMSMarker new];

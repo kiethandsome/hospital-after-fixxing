@@ -24,6 +24,7 @@
     [super didReceiveMemoryWarning];
 }
 
+
 - (void)setUpUserInterface {
     // Setup search text field
     _searchTextField.layer.cornerRadius = 4.0;
@@ -69,7 +70,6 @@
             SearchResultViewController *view = [self.storyboard instantiateViewControllerWithIdentifier:@"SearchResultViewController"];
             view.hospitals = hospitalArray;
             [self.navigationController pushViewController:view animated:true];
-
         }
     }];
 }

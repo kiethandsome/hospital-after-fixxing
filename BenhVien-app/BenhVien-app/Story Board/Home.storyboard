@@ -1,10 +1,10 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -101,7 +101,7 @@
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="caret-down" translatesAutoresizingMaskIntoConstraints="NO" id="NVF-PC-PU7">
-                                        <rect key="frame" x="305" y="17" width="20" height="12"/>
+                                        <rect key="frame" x="305" y="16.5" width="20" height="12"/>
                                     </imageView>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -125,7 +125,7 @@
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="caret-down" translatesAutoresizingMaskIntoConstraints="NO" id="LqU-5B-8Ne">
-                                        <rect key="frame" x="305" y="17" width="20" height="12"/>
+                                        <rect key="frame" x="305" y="16.5" width="20" height="12"/>
                                     </imageView>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -198,24 +198,24 @@
                                         <rect key="frame" x="0.0" y="28" width="375" height="91"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="3hV-Mw-Cnu" id="ZRO-Ij-cru">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="90"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="90.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="splash-bg" translatesAutoresizingMaskIntoConstraints="NO" id="VM7-tN-sUq">
-                                                    <rect key="frame" x="10" y="10" width="70" height="70"/>
+                                                    <rect key="frame" x="10" y="10.5" width="70" height="70"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="70" id="Peo-FM-Ynf"/>
                                                         <constraint firstAttribute="height" constant="70" id="dem-1N-K43"/>
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Địa chỉ: 292 Trần Hưng Đạo Phường 1, Quận" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FxJ-zF-iaf" userLabel="Hospital Address">
-                                                    <rect key="frame" x="90" y="49" width="245" height="14"/>
+                                                    <rect key="frame" x="90" y="50.5" width="275" height="13.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="11"/>
                                                     <color key="textColor" red="0.35249352331606221" green="0.35249352331606221" blue="0.35249352331606221" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Điện thoại: 01206567579" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Fi-0a-QOm" userLabel="Hospital Phone">
-                                                    <rect key="frame" x="90" y="66" width="245" height="14"/>
+                                                    <rect key="frame" x="90" y="67" width="275" height="13.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="11"/>
                                                     <color key="textColor" red="0.35249352331606221" green="0.35249352331606221" blue="0.35249352331606221" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
@@ -227,7 +227,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="right-arrow" translatesAutoresizingMaskIntoConstraints="NO" id="iNM-1W-9Oy">
-                                                    <rect key="frame" x="353" y="35" width="12" height="20"/>
+                                                    <rect key="frame" x="353" y="35.5" width="12" height="20"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="12" id="H2D-HO-PAo"/>
                                                         <constraint firstAttribute="height" constant="20" id="YqD-2w-N8o"/>
@@ -240,10 +240,10 @@
                                                 <constraint firstItem="ELE-jz-nMv" firstAttribute="top" secondItem="ZRO-Ij-cru" secondAttribute="top" constant="10" id="C5I-6R-4f4"/>
                                                 <constraint firstItem="0Fi-0a-QOm" firstAttribute="leading" secondItem="VM7-tN-sUq" secondAttribute="trailing" constant="10" id="HAu-Q4-agJ"/>
                                                 <constraint firstItem="iNM-1W-9Oy" firstAttribute="centerY" secondItem="ZRO-Ij-cru" secondAttribute="centerY" id="I3T-ov-Zxg"/>
-                                                <constraint firstAttribute="trailing" secondItem="FxJ-zF-iaf" secondAttribute="trailing" constant="40" id="JVv-1G-oEJ"/>
+                                                <constraint firstAttribute="trailing" secondItem="FxJ-zF-iaf" secondAttribute="trailing" constant="10" id="JVv-1G-oEJ"/>
                                                 <constraint firstItem="VM7-tN-sUq" firstAttribute="centerY" secondItem="ZRO-Ij-cru" secondAttribute="centerY" id="S73-79-QT6"/>
                                                 <constraint firstItem="FxJ-zF-iaf" firstAttribute="leading" secondItem="VM7-tN-sUq" secondAttribute="trailing" constant="10" id="c9c-Nn-gVa"/>
-                                                <constraint firstAttribute="trailing" secondItem="0Fi-0a-QOm" secondAttribute="trailing" constant="40" id="dty-9w-QsE"/>
+                                                <constraint firstAttribute="trailing" secondItem="0Fi-0a-QOm" secondAttribute="trailing" constant="10" id="dty-9w-QsE"/>
                                                 <constraint firstAttribute="bottom" secondItem="0Fi-0a-QOm" secondAttribute="bottom" constant="10" id="eJA-Vm-Y4E"/>
                                                 <constraint firstItem="ELE-jz-nMv" firstAttribute="leading" secondItem="VM7-tN-sUq" secondAttribute="trailing" constant="10" id="en1-Xl-CE7"/>
                                                 <constraint firstItem="VM7-tN-sUq" firstAttribute="leading" secondItem="ZRO-Ij-cru" secondAttribute="leading" constant="10" id="g6R-72-DXm"/>
@@ -275,7 +275,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tGS-Tj-7rQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1076" y="-144"/>
+            <point key="canvasLocation" x="1058" y="-144"/>
         </scene>
         <!--Details View Controller-->
         <scene sceneID="57w-AT-cQ5">
@@ -404,12 +404,12 @@
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a8T-MV-boJ">
                                 <rect key="frame" x="20" y="40" width="335" height="301"/>
-                                <mutableString key="text">Ứng dụng bệnh viện cho điện thoại iOS giúp bạn tìm kiếm thông tin và đường đi đến một bệnh viện nhanh chóng và dễ dàng hơn bao giờ hết. Sau khi tìm thấy một bệnh viện tốt nhất bạn có thể nhanh chóng liên hệ đến bệnh viện tốt nhất bạn có thể nhanh chóng liên hệ đến bênh viện đó ngay trong ứng dụng để dặt chỗ khám chữa bệnh.
+                                <string key="text">Ứng dụng bệnh viện cho điện thoại iOS giúp bạn tìm kiếm thông tin và đường đi đến một bệnh viện nhanh chóng và dễ dàng hơn bao giờ hết. Sau khi tìm thấy một bệnh viện tốt nhất bạn có thể nhanh chóng liên hệ đến bệnh viện tốt nhất bạn có thể nhanh chóng liên hệ đến bênh viện đó ngay trong ứng dụng để dặt chỗ khám chữa bệnh.
 1) Bao gồm nhiều bệnh viện và phòng khám tại Việt Nam. 
 2) Chức năng tìm kiếm bệnh viện sẽ dễ sử dụng và hiệu quả cao.
 3) Hiển thị thong tin chi tiết của các cơ sở khám chữa bệnh.
 4) Hiển thị dường đi một cách rõ ràng, giúp bạn đến các cơ sở khám chữa bệnh một cách nhanh nhất.
-5) Dữ liệu được cập nhật thường xuyên, bạn cũng có thế đóng góp bằng cách thêm vào bệnh viện mới.</mutableString>
+5) Dữ liệu được cập nhật thường xuyên, bạn cũng có thế đóng góp bằng cách thêm vào bệnh viện mới.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <color key="textColor" red="0.29572971204188481" green="0.29572971204188481" blue="0.29572971204188481" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
