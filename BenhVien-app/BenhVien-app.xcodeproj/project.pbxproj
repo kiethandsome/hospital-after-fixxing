@@ -567,6 +567,7 @@
 				TargetAttributes = {
 					52EFED761F2B5859009F0E78 = {
 						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = K9BK66T8YL;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -822,6 +823,7 @@
 			baseConfigurationReference = D761F1931D9E772C659A5875 /* Pods-BenhVien-app.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = K9BK66T8YL;
 				INFOPLIST_FILE = "BenhVien-app/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -835,6 +837,7 @@
 			baseConfigurationReference = C8BFF1C3B3ADB96D2B5E3CA7 /* Pods-BenhVien-app.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = K9BK66T8YL;
 				INFOPLIST_FILE = "BenhVien-app/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

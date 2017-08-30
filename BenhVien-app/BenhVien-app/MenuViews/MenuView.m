@@ -16,12 +16,16 @@
 
 - (void)setupMenuView {
     _menuItems = [NSArray new];
-    _menuItems = @[@"con chim non trên cành cây", @"Con chim già ĩa chảy"];
+    _menuItems = @[@{@"tittle":@"Tìm kiếm", @"icon": @"search-menu-icon.png"},
+                   @{@"tittle":@"Thông tin", @"icon": @"information-menu-icon.png"}
+                   ];
     _menuTableView.delegate = self;
     _menuTableView.dataSource = self;
+    [_menuTableView setScrollEnabled:false];
+    [self.menuTableView setTableFooterView:[UIView new]];
         //// The most Important code line when using XIB file.
     _menuTableView.estimatedRowHeight = 60.0;
-    [_menuTableView registerNib:[UINib nibWithNibName:@"MenuView" bundle:nil] forCellReuseIdentifier:@"MenuViewCell"];
+    [_menuTableView registerNib:[UINib nibWithNibName:@"MenuViewCell" bundle:nil] forCellReuseIdentifier:@"MenuViewCell"];
 }
 
 #pragma mark Table view delegate
@@ -35,25 +39,26 @@
     if (!cell) {
         cell = [[MenuViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"MenuViewCell"];
     }
-    switch (indexPath.row) {
-        case 0:
-            cell.cellImageView.image = [UIImage imageNamed:@"search-menu-icon.png"];
-            break;
-        case 1:
-            cell.cellImageView.image = [UIImage imageNamed:@"information-menu-icon.png"];
-            break;
-        default:
-            break;
-    }
-    cell.cellLabel.text = self.menuItems[indexPath.row];
+    cell.cellImageView.image = [UIImage imageNamed:[self.menuItems[indexPath.row] objectForKey:@"icon"]];
+    cell.cellLabel.text = [self.menuItems[indexPath.row] objectForKey:@"tittle"];
     return cell;
 }
 
 #pragma mark table view data sources
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    
+    [tableView deselectRowAtIndexPath:indexPath animated:true];
+    self.oneDidSelectItemAtIndexPath(indexPath.row);
 }
 
 
 @end
+
+
+
+
+
+
+
+
+
