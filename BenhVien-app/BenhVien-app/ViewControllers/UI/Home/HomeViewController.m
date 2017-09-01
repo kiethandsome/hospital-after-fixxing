@@ -18,6 +18,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.title = @"Tìm kiếm";
+    if (!_isMenuDisplayed) {
+        [self.view setUserInteractionEnabled: false];
+    }
 }
 
 - (void)didReceiveMemoryWarning {

@@ -56,11 +56,10 @@
     CGFloat duration = 0.3;
     CGFloat screenWidth = [UIScreen mainScreen].bounds.size.width;
     CGRect frame = self.view.frame;
-    CGFloat posX = screenWidth * (300/375);
 
     if (menuDisplayed) {
         //// Open Menu
-        frame.origin.x = posX;
+        frame.origin.x = screenWidth * 0.8;
     }else {
         //// Close Menu
         frame.origin.x = 0.0;

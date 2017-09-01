@@ -36,7 +36,7 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     MenuViewCell *cell = (MenuViewCell *)[tableView dequeueReusableCellWithIdentifier:@"MenuViewCell"];
     if (!cell) {
-        cell = [[MenuViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"MenuViewCell"];
+        cell = [[MenuViewCell alloc] initWithStyle: UITableViewCellStyleDefault reuseIdentifier:@"MenuViewCell"];
     }
     cell.cellImageView.image = [UIImage imageNamed:[self.menuItems[indexPath.row] objectForKey:@"icon"]];
     cell.cellLabel.text = [self.menuItems[indexPath.row] objectForKey:@"tittle"];
