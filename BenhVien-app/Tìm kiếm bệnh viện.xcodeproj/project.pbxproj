@@ -572,7 +572,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 52EFED721F2B5859009F0E78 /* Build configuration list for PBXProject "BenhVien-app" */;
+			buildConfigurationList = 52EFED721F2B5859009F0E78 /* Build configuration list for PBXProject "Tìm kiếm bệnh viện" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -849,7 +849,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		52EFED721F2B5859009F0E78 /* Build configuration list for PBXProject "BenhVien-app" */ = {
+		52EFED721F2B5859009F0E78 /* Build configuration list for PBXProject "Tìm kiếm bệnh viện" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				52EFED8C1F2B5859009F0E78 /* Debug */,

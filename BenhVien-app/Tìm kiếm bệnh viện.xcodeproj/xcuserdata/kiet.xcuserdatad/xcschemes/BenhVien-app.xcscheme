@@ -17,7 +17,7 @@
                BlueprintIdentifier = "52EFED761F2B5859009F0E78"
                BuildableName = "BenhVien-app.app"
                BlueprintName = "BenhVien-app"
-               ReferencedContainer = "container:BenhVien-app.xcodeproj">
+               ReferencedContainer = "container:Ti&#x300;m kie&#x302;&#x301;m be&#x323;&#x302;nh vie&#x323;&#x302;n.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -35,7 +35,7 @@
             BlueprintIdentifier = "52EFED761F2B5859009F0E78"
             BuildableName = "BenhVien-app.app"
             BlueprintName = "BenhVien-app"
-            ReferencedContainer = "container:BenhVien-app.xcodeproj">
+            ReferencedContainer = "container:Ti&#x300;m kie&#x302;&#x301;m be&#x323;&#x302;nh vie&#x323;&#x302;n.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -58,7 +58,7 @@
             BlueprintIdentifier = "52EFED761F2B5859009F0E78"
             BuildableName = "BenhVien-app.app"
             BlueprintName = "BenhVien-app"
-            ReferencedContainer = "container:BenhVien-app.xcodeproj">
+            ReferencedContainer = "container:Ti&#x300;m kie&#x302;&#x301;m be&#x323;&#x302;nh vie&#x323;&#x302;n.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -77,7 +77,7 @@
             BlueprintIdentifier = "52EFED761F2B5859009F0E78"
             BuildableName = "BenhVien-app.app"
             BlueprintName = "BenhVien-app"
-            ReferencedContainer = "container:BenhVien-app.xcodeproj">
+            ReferencedContainer = "container:Ti&#x300;m kie&#x302;&#x301;m be&#x323;&#x302;nh vie&#x323;&#x302;n.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
