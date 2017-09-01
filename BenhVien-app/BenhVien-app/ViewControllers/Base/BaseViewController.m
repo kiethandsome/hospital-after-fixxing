@@ -42,8 +42,6 @@
 - (IBAction)menuButtonPressed:(id)sender{
     BaseTabbarController *tab = (BaseTabbarController *)self.tabBarController;
     [tab animatedMenu:!tab.menuDisplayed];
-    HomeViewController *homeView = (HomeViewController *)[HomeViewController instanceFromStoryboardName:@"Home"];
-    homeView.isMenuDisplayed = tab.menuDisplayed;
 }
 
 - (IBAction)backButtonPressed:(id)sender {
