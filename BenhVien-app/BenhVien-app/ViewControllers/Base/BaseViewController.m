@@ -21,7 +21,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self setUpUserInterface];
-    // Các view Controller còn lại trong UI đều kế thừa từ lớp BAse Controller này.
+    [self.tabBarController.tabBar setHidden: YES];
 }
 
 - (void)didReceiveMemoryWarning {

@@ -17,12 +17,11 @@
 - (void)setupMenuView {
     _menuItems = [NSArray new];
     _menuItems = @[@{@"tittle":@"Tìm kiếm", @"icon": @"search-menu-icon.png"},
-                   @{@"tittle":@"Thông tin", @"icon": @"information-menu-icon.png"}
-                   ];
+                   @{@"tittle":@"Thông tin", @"icon": @"information-menu-icon.png"}];
     _menuTableView.delegate = self;
     _menuTableView.dataSource = self;
     [_menuTableView setScrollEnabled:false];
-    [self.menuTableView setTableFooterView:[UIView new]];
+    [self.menuTableView setTableFooterView: [UIView new]];
         //// The most Important code line when using XIB file.
     _menuTableView.estimatedRowHeight = 60.0;
     [_menuTableView registerNib:[UINib nibWithNibName:@"MenuViewCell" bundle:nil] forCellReuseIdentifier:@"MenuViewCell"];

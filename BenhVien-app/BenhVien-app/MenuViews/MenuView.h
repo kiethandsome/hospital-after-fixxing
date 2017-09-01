@@ -20,3 +20,8 @@
 - (void)setupMenuView;
 
 @end
+
+
+//// Cách làm : tạo một biến Block truyền vào tham số kiêu NSIteger tronng MenuTableView.
+//// implement biến block trên trong hàm Cell For Row của MEnuTableVIew delegate.
+//// ở file BAse Tabbar gọi biến Block đó và truyền vào [selected Index của tabbar] vào biến block vùa tạo

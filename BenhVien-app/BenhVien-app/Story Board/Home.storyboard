@@ -4,7 +4,6 @@
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -210,7 +209,7 @@
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Địa chỉ: 292 Trần Hưng Đạo Phường 1, Quận" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FxJ-zF-iaf" userLabel="Hospital Address">
-                                                    <rect key="frame" x="90" y="50.5" width="275" height="13.5"/>
+                                                    <rect key="frame" x="90" y="50.5" width="255" height="13.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="11"/>
                                                     <color key="textColor" red="0.35249352331606221" green="0.35249352331606221" blue="0.35249352331606221" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
@@ -222,16 +221,16 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Bệnh viện chấn thương chỉnh hình TP. Hồ Chí Minh" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ELE-jz-nMv" userLabel="Hospital Name">
-                                                    <rect key="frame" x="90" y="10" width="252" height="33.5"/>
+                                                    <rect key="frame" x="90" y="10" width="254" height="33.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="right-arrow" translatesAutoresizingMaskIntoConstraints="NO" id="iNM-1W-9Oy">
-                                                    <rect key="frame" x="353" y="35.5" width="12" height="20"/>
+                                                    <rect key="frame" x="355" y="38" width="10" height="15"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="width" constant="12" id="H2D-HO-PAo"/>
-                                                        <constraint firstAttribute="height" constant="20" id="YqD-2w-N8o"/>
+                                                        <constraint firstAttribute="width" constant="10" id="H2D-HO-PAo"/>
+                                                        <constraint firstAttribute="height" constant="15" id="YqD-2w-N8o"/>
                                                     </constraints>
                                                 </imageView>
                                             </subviews>
@@ -241,7 +240,7 @@
                                                 <constraint firstItem="ELE-jz-nMv" firstAttribute="top" secondItem="ZRO-Ij-cru" secondAttribute="top" constant="10" id="C5I-6R-4f4"/>
                                                 <constraint firstItem="0Fi-0a-QOm" firstAttribute="leading" secondItem="VM7-tN-sUq" secondAttribute="trailing" constant="10" id="HAu-Q4-agJ"/>
                                                 <constraint firstItem="iNM-1W-9Oy" firstAttribute="centerY" secondItem="ZRO-Ij-cru" secondAttribute="centerY" id="I3T-ov-Zxg"/>
-                                                <constraint firstAttribute="trailing" secondItem="FxJ-zF-iaf" secondAttribute="trailing" constant="10" id="JVv-1G-oEJ"/>
+                                                <constraint firstAttribute="trailing" secondItem="FxJ-zF-iaf" secondAttribute="trailing" constant="30" id="JVv-1G-oEJ"/>
                                                 <constraint firstItem="VM7-tN-sUq" firstAttribute="centerY" secondItem="ZRO-Ij-cru" secondAttribute="centerY" id="S73-79-QT6"/>
                                                 <constraint firstItem="FxJ-zF-iaf" firstAttribute="leading" secondItem="VM7-tN-sUq" secondAttribute="trailing" constant="10" id="c9c-Nn-gVa"/>
                                                 <constraint firstAttribute="trailing" secondItem="0Fi-0a-QOm" secondAttribute="trailing" constant="10" id="dty-9w-QsE"/>
@@ -270,13 +269,14 @@
                             <constraint firstItem="yBl-9n-WPV" firstAttribute="top" secondItem="IdP-dG-MbV" secondAttribute="top" id="oOH-48-Fjg"/>
                         </constraints>
                     </view>
+                    <extendedEdge key="edgesForExtendedLayout" bottom="YES"/>
                     <connections>
                         <outlet property="searchResultTableView" destination="yBl-9n-WPV" id="Efz-lT-Ry7"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tGS-Tj-7rQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1058" y="-144"/>
+            <point key="canvasLocation" x="1047" y="-144"/>
         </scene>
         <!--Details View Controller-->
         <scene sceneID="57w-AT-cQ5">
@@ -339,7 +339,7 @@
                             <constraint firstItem="QmC-LN-BZx" firstAttribute="leading" secondItem="07l-o2-X88" secondAttribute="leading" id="ydO-al-GrB"/>
                         </constraints>
                     </view>
-                    <extendedEdge key="edgesForExtendedLayout"/>
+                    <extendedEdge key="edgesForExtendedLayout" bottom="YES"/>
                     <connections>
                         <outlet property="searchResultTableView" destination="QmC-LN-BZx" id="swZ-71-tbb"/>
                     </connections>
@@ -379,7 +379,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="r7Q-Xn-6CC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2400.8000000000002" y="-152.47376311844079"/>
+            <point key="canvasLocation" x="2398" y="-144"/>
         </scene>
         <!--App Info View Controller-->
         <scene sceneID="dTb-wy-5ZC">

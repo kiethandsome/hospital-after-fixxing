@@ -26,13 +26,11 @@
 
 
 - (void)setUpUserInterface {
-    // Setup search text field
     _searchTextField.layer.cornerRadius = 4.0;
     _searchTextField.layer.borderWidth = 0.5;
     _searchTextField.layer.borderColor = [UIColor colorWithHex: 0xC8C7CC].CGColor;
-    // Setup Search Button
+
     self.searchButton.layer.cornerRadius = 4.0;
-    // advance Search button
     self.advanceSearchButton.layer.cornerRadius = 4.0;
     
     [self showMenuButtonItem];

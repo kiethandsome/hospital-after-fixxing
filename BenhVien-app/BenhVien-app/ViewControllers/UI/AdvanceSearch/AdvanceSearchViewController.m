@@ -91,14 +91,13 @@
 }
 
 
-
 #pragma mark - Get the Cities by The API Request to Server
 
 - (void)getCitiesFromServer {
     [self showHUD];
     
-    // Đây là hàm AsynTask nên nó sẽ ko theo thứ tự từ trên xuóng như các hàm bth, mà bỏ qa đoạn code bên dưới, chờ response từ server.
-    // khi nhận dc response từ server thì mới đi vào hàm dưới đây.
+    //// Đây là hàm AsynTask nên nó sẽ ko theo thứ tự từ trên xuóng như các hàm bth, mà bỏ qa đoạn code bên dưới, chờ response từ server.
+    //// khi nhận dc response từ server thì mới đi vào hàm dưới đây.
     
     [ApiRequest loadTheCitiesWithCompletion:^(ApiResponse *response, NSError *error) {
         NSArray *citiesArray = [response.data objectForKey:@"cities"];
@@ -144,7 +143,7 @@
     }
 }
 
-                                                // Tìm bệnh viện bằng City name và district.
+                                                //// Tìm bệnh viện bằng City name và district.
 - (void)searchHospitalByCityName:(NSString *)cityName district:(NSString *)districtName {
     
     [ApiRequest searchTheHospitalByCityName:cityName district:districtName completion:^(ApiResponse *response, NSError *error) {

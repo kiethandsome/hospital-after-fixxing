@@ -388,6 +388,7 @@
 		52EF794D1F2F5B0500522CB6 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				F68103A41F38CC0500DF48AD /* Declaration.h */,
 				52EF794E1F2F5B1600522CB6 /* Hospital.h */,
 				52EF794F1F2F5B1600522CB6 /* Hospital.m */,
 				5257AACD1F41CFBF003B2118 /* CIty.h */,
@@ -432,7 +433,6 @@
 		52EFED791F2B5859009F0E78 /* BenhVien-app */ = {
 			isa = PBXGroup;
 			children = (
-				F68103A41F38CC0500DF48AD /* Declaration.h */,
 				524267EF1F5436AA00D02685 /* MenuViews */,
 				524762B81F47225600A47ABC /* API */,
 				52EF794D1F2F5B0500522CB6 /* Model */,

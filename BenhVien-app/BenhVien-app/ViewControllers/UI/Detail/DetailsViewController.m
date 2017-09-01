@@ -66,7 +66,6 @@
         if (!error){
             Hospital *hospital = [Hospital initWithResponse:[response.data objectForKey:@"hospitalInfo"]];
             [self displayHospitalInfo:hospital];
-            
                 // Because the currentHospital from the SearchResult doesnt have longgitude and latitude,
                 // this code Line below assign the hospital from 'hospitalInfo' to the currentHospital.
             self.currentHospital = hospital;

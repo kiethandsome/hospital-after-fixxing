@@ -20,7 +20,6 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self setupMenuView];
-    [self.tabBar setHidden: true];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -43,10 +42,8 @@
 }
 
 -(void)updateViewConstraints {
-    [self.menuView autoPinEdge: ALEdgeTop
-                        toEdge: ALEdgeTop
-                        ofView: self.window]; //// top của menu sẽ dính với top của window.
-                                              //// (công dụng của PureLayout).
+        //// 
+    [self.menuView autoPinEdge: ALEdgeTop toEdge: ALEdgeTop ofView: self.window];
     [self.menuView autoPinEdge: ALEdgeBottom toEdge: ALEdgeBottom ofView: self.window];
     [self.menuView autoPinEdge: ALEdgeLeft toEdge: ALEdgeLeft ofView: self.window];
     [self.menuView autoPinEdge: ALEdgeRight toEdge: ALEdgeRight ofView: self.window];
@@ -57,24 +54,16 @@
 - (void)animatedMenu:(BOOL)menuDisplayed {
     self.menuDisplayed = menuDisplayed;
     CGFloat duration = 0.3;
-    
-        //// Set custom screen width and heigth.
     CGFloat screenWidth = [UIScreen mainScreen].bounds.size.width;
-    CGFloat screenHeight = [UIScreen mainScreen].bounds.size.height;
-    
-    
-            //// Set the First frame as a view frame.
-    CGRect frame = self.view.frame;  //// Frame là 1 điểm nằm ở góc trên bên trái của view. Frame(x,y)
-                                     //// x: khoảng cách từ Frame đến top view (origin x)
-                                     //// y: khoảng cách từ Frame đến rìa TRÁI view (origin y)
+    CGRect frame = self.view.frame;
+    CGFloat posX = screenWidth * (300/375);
+
     if (menuDisplayed) {
         //// Open Menu
-//        frame.origin.x = posX;
-        frame.origin.y = screenHeight * 0.5;
+        frame.origin.x = posX;
     }else {
         //// Close Menu
         frame.origin.x = 0.0;
-        frame.origin.y = 0.0;
     }
     [UIView animateWithDuration:duration animations: ^{
         self.view.frame = frame;
@@ -87,7 +76,7 @@
 }
 
 - (void)didSelectMenuAtIndex:(NSInteger)index {
-    [self animatedMenu:!self.menuDisplayed];
+    [self animatedMenu: !self.menuDisplayed];
     self.selectedIndex = index;
 }
 
@@ -95,15 +84,13 @@
 @end
 
 
-//
-//UIView *subView = self.viewWithManySubViews;
-//UIGraphicsBeginImageContextWithOptions(subView.bounds.size, YES, 0.0f);
-//CGContextRef context = UIGraphicsGetCurrentContext();
-//[subView.layer renderInContext:context];
-//UIImage *snapshotImage = UIGraphicsGetImageFromCurrentImageContext();
-//UIGraphicsEndImageContext();
-//
-//UIImageView *snapshotImageView = [[UIImageView alloc] initWithImage:snapshotImage];
+//    UIView *subView = self.view;
+//    UIGraphicsBeginImageContextWithOptions(subView.bounds.size , NO, 0.0);
+//    CGContextRef context = UIGraphicsGetCurrentContext();
+//    [subView.layer renderInContext: context];
+//    UIImage *snapshotImage = UIGraphicsGetImageFromCurrentImageContext();
+//    UIGraphicsEndImageContext();
+//    UIImageView *snapshotImageView = [[UIImageView alloc] initWithImage: snapshotImage];
 
 
 

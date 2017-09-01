@@ -38,9 +38,9 @@
     _slideShow.datasource = self;
     _slideShow.delegate = self;
     [_slideShow setDelay: 0.5]; // Delay between transitions
-    [_slideShow setTransitionDuration:1]; // Transition duration
-    [_slideShow setTransitionType:KASlideShowTransitionSlideVertical]; // Choose a transition type
-    [_slideShow setImagesContentMode:UIViewContentModeScaleToFill];
+    [_slideShow setTransitionDuration: 1]; // Transition duration
+    [_slideShow setTransitionType: KASlideShowTransitionSlideVertical]; // Choose a transition type
+    [_slideShow setImagesContentMode: UIViewContentModeScaleToFill];
     [_slideShow addGesture:KASlideShowGestureTap];
     
     [self.slideShow start];

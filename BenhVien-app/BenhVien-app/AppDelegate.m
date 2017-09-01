@@ -53,6 +53,7 @@
 - (void)setupHomeScreen2 {
     
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
+    
     HomeViewController *homeVc = (HomeViewController *)[HomeViewController instanceFromStoryboardName:@"Home"];
     BaseNavigationController *HomeNav = [[BaseNavigationController alloc] initWithRootViewController:homeVc];
     
@@ -61,6 +62,7 @@
     
     BaseTabbarController *tab = [BaseTabbarController new];
     tab.viewControllers = @[HomeNav, appInfoNav];
+
     self.window.rootViewController = tab;
     [self.window makeKeyAndVisible];
 }
