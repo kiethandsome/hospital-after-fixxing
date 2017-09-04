@@ -23,7 +23,6 @@
     self.searchResultTableView.dataSource = self;
     // Bỏ các các dòng ở dưới nếu hết nội dung.
     self.searchResultTableView.tableFooterView = [UIView new];
-    
 }
 
 - (void)viewWillAppear:(BOOL)animated {

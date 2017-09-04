@@ -12,7 +12,7 @@
 #import "BaseTabbarController.h"
 #import "HomeViewController.h"
 
-@interface BaseViewController ()
+@interface BaseViewController ()<UIGestureRecognizerDelegate>
 
 @end
 
@@ -23,6 +23,8 @@
     [super viewDidLoad];
     [self setUpUserInterface];
     [self.tabBarController.tabBar setHidden: YES];
+    self.navigationController.interactivePopGestureRecognizer.delegate = self;
+    self.navigationController.interactivePopGestureRecognizer.enabled = YES;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -70,7 +72,6 @@
                                otherButtonTitles:nil
                                         tapBlock:nil];
 }
-
 
 @end
 

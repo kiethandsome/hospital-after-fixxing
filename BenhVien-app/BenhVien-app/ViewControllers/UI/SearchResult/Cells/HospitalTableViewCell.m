@@ -23,8 +23,6 @@
 
 - (void)setDataForCell:(id)data {
 
-
-    
     Hospital *hospital = (Hospital *)data;
     if (hospital) {
         NSURL *URL = [NSURL URLWithString: hospital.avatar];

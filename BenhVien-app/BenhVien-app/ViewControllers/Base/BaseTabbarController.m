@@ -35,6 +35,7 @@
     self.window = [[[UIApplication sharedApplication] delegate] window];
     [self.window addSubview: _menuView];
     
+        /// sao phải là weak??
     __weak BaseTabbarController *tab = self;
     [self.menuView setOneDidSelectItemAtIndexPath:^(NSInteger index) {
         [tab didSelectMenuAtIndex: index];
@@ -42,7 +43,7 @@
 }
 
 -(void)updateViewConstraints {
-        //// 
+
     [self.menuView autoPinEdge: ALEdgeTop toEdge: ALEdgeTop ofView: self.window];
     [self.menuView autoPinEdge: ALEdgeBottom toEdge: ALEdgeBottom ofView: self.window];
     [self.menuView autoPinEdge: ALEdgeLeft toEdge: ALEdgeLeft ofView: self.window];
@@ -53,7 +54,6 @@
 
 - (void)animatedMenu:(BOOL)menuDisplayed {
     self.menuDisplayed = menuDisplayed;
-    CGFloat duration = 0.3;
     CGFloat screenWidth = [UIScreen mainScreen].bounds.size.width;
     CGRect frame = self.view.frame;
     
@@ -64,7 +64,7 @@
         //// Close Menu
         frame.origin.x = 0.0;
     }
-    [UIView animateWithDuration:duration animations: ^{
+    [UIView animateWithDuration: 0.3 animations: ^{
         self.view.frame = frame;
     }];
 }

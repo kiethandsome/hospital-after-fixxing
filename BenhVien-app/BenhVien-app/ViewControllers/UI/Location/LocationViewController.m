@@ -91,12 +91,11 @@
                 GMSMarker *marker = [GMSMarker new];
                             //// Display the hospital location with a Marker.
                 marker.position = CLLocationCoordinate2DMake(self.currentHospital.latitude, self.currentHospital.longitude);
-                            //// Marker animation, but dont see.
+                            //// Marker animation.
                 [marker setAppearAnimation:kGMSMarkerAnimationPop];
                 marker.map = _mapView;
                 polyline.map = _mapView;
             }
-            
         });
     }];
 }
