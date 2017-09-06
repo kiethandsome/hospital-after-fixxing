@@ -61,13 +61,15 @@
 
 - (void)loadHospitalData {
     [self showHUD];
+    [self.searchResultTableView setHidden: YES];
     [ApiRequest loadHospitalInfById:self.currentHospital._id completion:^(ApiResponse *response, NSError *error) {
         [self hideHUD];
+        [self.searchResultTableView setHidden: NO];
         if (!error){
             Hospital *hospital = [Hospital initWithResponse:[response.data objectForKey:@"hospitalInfo"]];
             [self displayHospitalInfo:hospital];
-                // Because the currentHospital from the SearchResult doesnt have longgitude and latitude,
-                // this code Line below assign the hospital from 'hospitalInfo' to the currentHospital.
+                /// Because the currentHospital from the SearchResult doesnt have longgitude and latitude,
+                /// this code Line below assign the hospital from 'hospitalInfo' to the currentHospital.
             self.currentHospital = hospital;
         } else {
             [self showAlertWithTitle:@"Lỗi" message:response.message];

@@ -19,4 +19,9 @@
 
 #define GoogleApiKey            @"AIzaSyCk77_rbSukbCgHqzUW4mWT2D92JhnuacE"
 
+    //// Register with email.
+#define Register                @"register"
+
+
+
 #endif /* ApiEndpoint_h */

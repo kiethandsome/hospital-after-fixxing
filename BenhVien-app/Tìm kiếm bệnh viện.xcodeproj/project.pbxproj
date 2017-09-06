@@ -60,6 +60,9 @@
 		52EFEDAE1F2B5AFF009F0E78 /* BaseNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 52EFEDAD1F2B5AFF009F0E78 /* BaseNavigationController.m */; };
 		52EFEDB11F2B5B2E009F0E78 /* BaseTabbarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 52EFEDB01F2B5B2E009F0E78 /* BaseTabbarController.m */; };
 		52EFEDBD1F2B760D009F0E78 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52EFEDBC1F2B760D009F0E78 /* Home.storyboard */; };
+		92F869731F5D7FD800F36EA1 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 92F869721F5D7FD800F36EA1 /* Login.storyboard */; };
+		92F869771F5D817D00F36EA1 /* FirstLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 92F869761F5D817D00F36EA1 /* FirstLoginViewController.m */; };
+		92F8697B1F5D81BF00F36EA1 /* SignUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 92F8697A1F5D81BF00F36EA1 /* SignUpViewController.m */; };
 		9DC49232E66798C28F9A53DB /* Pods_BenhVien_app.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 32569B39575D99C95F48922C /* Pods_BenhVien_app.framework */; };
 /* End PBXBuildFile section */
 
@@ -160,6 +163,11 @@
 		52EFEDAF1F2B5B2E009F0E78 /* BaseTabbarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseTabbarController.h; sourceTree = "<group>"; };
 		52EFEDB01F2B5B2E009F0E78 /* BaseTabbarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseTabbarController.m; sourceTree = "<group>"; };
 		52EFEDBC1F2B760D009F0E78 /* Home.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
+		92F869721F5D7FD800F36EA1 /* Login.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
+		92F869751F5D817D00F36EA1 /* FirstLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FirstLoginViewController.h; sourceTree = "<group>"; };
+		92F869761F5D817D00F36EA1 /* FirstLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FirstLoginViewController.m; sourceTree = "<group>"; };
+		92F869791F5D81BF00F36EA1 /* SignUpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SignUpViewController.h; sourceTree = "<group>"; };
+		92F8697A1F5D81BF00F36EA1 /* SignUpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SignUpViewController.m; sourceTree = "<group>"; };
 		C8BFF1C3B3ADB96D2B5E3CA7 /* Pods-BenhVien-app.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BenhVien-app.release.xcconfig"; path = "Pods/Target Support Files/Pods-BenhVien-app/Pods-BenhVien-app.release.xcconfig"; sourceTree = "<group>"; };
 		D761F1931D9E772C659A5875 /* Pods-BenhVien-app.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BenhVien-app.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BenhVien-app/Pods-BenhVien-app.debug.xcconfig"; sourceTree = "<group>"; };
 		F68103A41F38CC0500DF48AD /* Declaration.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Declaration.h; sourceTree = "<group>"; };
@@ -226,6 +234,8 @@
 		524762C31F47251000A47ABC /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				92F869741F5D816800F36EA1 /* FirstLogin */,
+				92F869781F5D81AC00F36EA1 /* SignUp */,
 				524267FA1F543E0300D02685 /* AppInfo */,
 				524762F21F47251000A47ABC /* Home */,
 				524762C41F47251000A47ABC /* AdvanceSearch */,
@@ -519,9 +529,28 @@
 			isa = PBXGroup;
 			children = (
 				52EFEDBC1F2B760D009F0E78 /* Home.storyboard */,
+				92F869721F5D7FD800F36EA1 /* Login.storyboard */,
 			);
 			name = Storyboards;
 			path = "Story Board";
+			sourceTree = "<group>";
+		};
+		92F869741F5D816800F36EA1 /* FirstLogin */ = {
+			isa = PBXGroup;
+			children = (
+				92F869751F5D817D00F36EA1 /* FirstLoginViewController.h */,
+				92F869761F5D817D00F36EA1 /* FirstLoginViewController.m */,
+			);
+			path = FirstLogin;
+			sourceTree = "<group>";
+		};
+		92F869781F5D81AC00F36EA1 /* SignUp */ = {
+			isa = PBXGroup;
+			children = (
+				92F869791F5D81BF00F36EA1 /* SignUpViewController.h */,
+				92F8697A1F5D81BF00F36EA1 /* SignUpViewController.m */,
+			);
+			path = SignUp;
 			sourceTree = "<group>";
 		};
 		E40C7788F4828548EBF192FB /* Frameworks */ = {
@@ -597,6 +626,7 @@
 			files = (
 				524762FC1F47251000A47ABC /* HospitalAddressCell.xib in Resources */,
 				524267F41F5436E800D02685 /* MenuView.xib in Resources */,
+				92F869731F5D7FD800F36EA1 /* Login.storyboard in Resources */,
 				52EFED8A1F2B5859009F0E78 /* LaunchScreen.storyboard in Resources */,
 				524763041F47251000A47ABC /* SlideShowCell.xib in Resources */,
 				52EFEDBD1F2B760D009F0E78 /* Home.storyboard in Resources */,
@@ -692,6 +722,7 @@
 				5247630C1F47251000A47ABC /* SlideShowModel.m in Sources */,
 				52EFED7F1F2B5859009F0E78 /* AppDelegate.m in Sources */,
 				524762FB1F47251000A47ABC /* HospitalAddressCell.m in Sources */,
+				92F8697B1F5D81BF00F36EA1 /* SignUpViewController.m in Sources */,
 				524762C21F47225600A47ABC /* ApiResponse.m in Sources */,
 				52EF79501F2F5B1600522CB6 /* Hospital.m in Sources */,
 				524267F81F5439BB00D02685 /* MenuViewCell.m in Sources */,
@@ -703,6 +734,7 @@
 				524762C11F47225600A47ABC /* ApiRequest.m in Sources */,
 				5257AACF1F41CFBF003B2118 /* CIty.m in Sources */,
 				524763091F47251000A47ABC /* HospitalNameModel.m in Sources */,
+				92F869771F5D817D00F36EA1 /* FirstLoginViewController.m in Sources */,
 				5247630B1F47251000A47ABC /* PhoneNumberModel.m in Sources */,
 				524763051F47251000A47ABC /* DetailsViewController.m in Sources */,
 			);

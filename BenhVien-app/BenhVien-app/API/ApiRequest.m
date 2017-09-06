@@ -62,6 +62,18 @@
                                            completion:completion];
 }
 
++ (void)registerWithEmail:(NSString *)email password:(NSString *)password city:(NSString *)city fullName:(NSString *)fullName completion:(ApiCompletionBlock)completion {
+    NSDictionary *parameters = @{@"email": email,
+                                 @"password" : password,
+                                 @"role" : @"email",
+                                 @"city": city,
+                                 @"fullName": fullName
+                                 };
+    [[ApiManager sharedClient] requestApiWithEndpoint:Register
+                                               method:POST
+                                           parameters:parameters
+                                           completion:completion];
+}
 
 @end
 

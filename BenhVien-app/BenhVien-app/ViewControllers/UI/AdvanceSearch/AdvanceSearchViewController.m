@@ -145,10 +145,11 @@
 
                                                 //// Tìm bệnh viện bằng City name và district.
 - (void)searchHospitalByCityName:(NSString *)cityName district:(NSString *)districtName {
-    
+    [self showHUD];
     [ApiRequest searchTheHospitalByCityName:cityName district:districtName completion:^(ApiResponse *response, NSError *error) {
         NSArray *hospitalArray = [response.data objectForKey:@"hospitals"];
         if (hospitalArray > 0) {
+            [self hideHUD];
             NSMutableArray *hosArray = [NSMutableArray new];
             for (NSDictionary *dict in hospitalArray) {
                 Hospital *aHospital = [Hospital initWithResponse:dict];
@@ -166,9 +167,11 @@
 
                                             // Tìm bệnh viện chỉ bằng city name.
 - (void)searchHospitalByCityName:(NSString *)cityName {
+    [self showHUD];
     [ApiRequest searchTheHospitalByTheCityName:cityName completion:^(ApiResponse *response, NSError *error) {
         NSArray *hospitalArray = [response.data valueForKey:@"hospitals"];
         if (hospitalArray > 0) {
+            [self hideHUD];
             NSMutableArray *hosArray = [NSMutableArray new];
             for (NSDictionary *dict in hospitalArray) {
                 Hospital *aHospital = [Hospital initWithResponse:dict];

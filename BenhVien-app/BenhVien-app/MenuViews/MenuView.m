@@ -17,7 +17,8 @@
 - (void)setupMenuView {
     _menuItems = [NSArray new];
     _menuItems = @[@{@"tittle":@"Tìm kiếm", @"icon": @"search-menu-icon.png"},
-                   @{@"tittle":@"Thông tin", @"icon": @"information-menu-icon.png"}];
+                   @{@"tittle":@"Thông tin", @"icon": @"information-menu-icon.png"},
+                   @{@"tittle":@"Đăng xuất", @"icon":@"logout-icon.png"}];
     _menuTableView.delegate = self;
     _menuTableView.dataSource = self;
     [_menuTableView setScrollEnabled:false];
@@ -40,6 +41,9 @@
     }
     cell.cellImageView.image = [UIImage imageNamed:[self.menuItems[indexPath.row] objectForKey:@"icon"]];
     cell.cellLabel.text = [self.menuItems[indexPath.row] objectForKey:@"tittle"];
+    UIView *bgColorView = [[UIView alloc] init];
+    bgColorView.backgroundColor = [UIColor redColor];
+    [cell setSelectedBackgroundView:bgColorView];
     return cell;
 }
 

@@ -7,13 +7,16 @@
 //
 
 #import "AppDelegate.h"
-#import "HomeViewController.h"
-#import "UIViewController+Storyboard.h"
-#import "BaseNavigationController.h"
 #import "UIColor+Hex.h"
 #import "ApiEndpoint.h"
+#import "UIViewController+Storyboard.h"
+
+        // Views Importing.
+#import "HomeViewController.h"
+#import "BaseNavigationController.h"
 #import "AppInfoViewController.h"
 #import "BaseTabbarController.h"
+#import "FirstLoginViewController.h"
 
         // Google maps Importing.
 #import <GoogleMaps/GoogleMaps.h>
@@ -28,8 +31,9 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    [self setupHomeScreen2];
     [self setupApplicationTheme];
+    [self setupHomeScreen3];
+
             // Google map places.
     [GMSPlacesClient provideAPIKey:GoogleApiKey];
             // Google maps view.
@@ -47,7 +51,6 @@
     BaseNavigationController *nav = [[BaseNavigationController alloc] initWithRootViewController:vc];
     self.window.rootViewController = nav;
     [self.window makeKeyAndVisible];
-    
 }
 
 - (void)setupHomeScreen2 {
@@ -67,13 +70,22 @@
     [self.window makeKeyAndVisible];
 }
 
+- (void)setupHomeScreen3 {
+    self.window = [[UIWindow alloc] initWithFrame: [UIScreen mainScreen].bounds];
+    
+    FirstLoginViewController *firstView = (FirstLoginViewController *)[FirstLoginViewController instanceFromStoryboardName: @"Login"];
+    
+    [self.window setRootViewController: firstView];
+    [self.window makeKeyAndVisible];
+    
+}
+
 - (void)setupApplicationTheme {
     
     [UINavigationBar appearance].barTintColor = [UIColor colorWithHex:0xd2232a];
     [UINavigationBar appearance].tintColor = [UIColor whiteColor];
     NSDictionary *tittleAtrr = [[NSDictionary alloc] initWithObjectsAndKeys:[UIColor whiteColor], NSForegroundColorAttributeName, nil];
     [UINavigationBar appearance].titleTextAttributes = tittleAtrr;
-    
 }
 
 

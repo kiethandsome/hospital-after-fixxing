@@ -35,11 +35,7 @@
     self.window = [[[UIApplication sharedApplication] delegate] window];
     [self.window addSubview: _menuView];
     
-        /// sao phải là weak??
-    __weak BaseTabbarController *tab = self;
-    [self.menuView setOneDidSelectItemAtIndexPath:^(NSInteger index) {
-        [tab didSelectMenuAtIndex: index];
-    }];
+    [self didSelectMenuAtRowIndexOfMenuTableView];
 }
 
 -(void)updateViewConstraints {
@@ -74,14 +70,22 @@
     [self animatedMenu: tab.menuDisplayed];
 }
 
-- (void)didSelectMenuAtIndex:(NSInteger)index {
-    [self animatedMenu: !self.menuDisplayed];
-    self.selectedIndex = index;
+- (void)didSelectMenuAtRowIndexOfMenuTableView {
+        /// sao phải là weak?? Tại cái đéo nào mà phải là weak :v
+    __weak BaseTabbarController *tab = self;
+    
+        /// cách implement một block
+    [self.menuView setOneDidSelectItemAtIndexPath:^(NSInteger index) {
+        
+        /// truyền vào index.row của menuTableView làm index.item của tabbar.
+        /// rồi đóng menu view.
+        [tab animatedMenu: !tab.menuDisplayed];
+        tab.selectedIndex = index;
+    }];
 }
 
 
 @end
-
 
 //    UIView *subView = self.view;
 //    UIGraphicsBeginImageContextWithOptions(subView.bounds.size , NO, 0.0);
