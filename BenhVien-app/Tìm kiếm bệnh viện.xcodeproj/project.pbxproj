@@ -60,6 +60,7 @@
 		52EFEDAE1F2B5AFF009F0E78 /* BaseNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 52EFEDAD1F2B5AFF009F0E78 /* BaseNavigationController.m */; };
 		52EFEDB11F2B5B2E009F0E78 /* BaseTabbarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 52EFEDB01F2B5B2E009F0E78 /* BaseTabbarController.m */; };
 		52EFEDBD1F2B760D009F0E78 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52EFEDBC1F2B760D009F0E78 /* Home.storyboard */; };
+		92E0EA571F62AC9500AE9C61 /* AccountViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 92E0EA561F62AC9500AE9C61 /* AccountViewController.m */; };
 		92F869731F5D7FD800F36EA1 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 92F869721F5D7FD800F36EA1 /* Login.storyboard */; };
 		92F869771F5D817D00F36EA1 /* FirstLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 92F869761F5D817D00F36EA1 /* FirstLoginViewController.m */; };
 		92F8697B1F5D81BF00F36EA1 /* SignUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 92F8697A1F5D81BF00F36EA1 /* SignUpViewController.m */; };
@@ -163,6 +164,8 @@
 		52EFEDAF1F2B5B2E009F0E78 /* BaseTabbarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseTabbarController.h; sourceTree = "<group>"; };
 		52EFEDB01F2B5B2E009F0E78 /* BaseTabbarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseTabbarController.m; sourceTree = "<group>"; };
 		52EFEDBC1F2B760D009F0E78 /* Home.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
+		92E0EA551F62AC9500AE9C61 /* AccountViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AccountViewController.h; sourceTree = "<group>"; };
+		92E0EA561F62AC9500AE9C61 /* AccountViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AccountViewController.m; sourceTree = "<group>"; };
 		92F869721F5D7FD800F36EA1 /* Login.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 		92F869751F5D817D00F36EA1 /* FirstLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FirstLoginViewController.h; sourceTree = "<group>"; };
 		92F869761F5D817D00F36EA1 /* FirstLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FirstLoginViewController.m; sourceTree = "<group>"; };
@@ -234,6 +237,7 @@
 		524762C31F47251000A47ABC /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				92E0EA541F62AC8200AE9C61 /* AccountDetails */,
 				92F869741F5D816800F36EA1 /* FirstLogin */,
 				92F869781F5D81AC00F36EA1 /* SignUp */,
 				524267FA1F543E0300D02685 /* AppInfo */,
@@ -535,6 +539,15 @@
 			path = "Story Board";
 			sourceTree = "<group>";
 		};
+		92E0EA541F62AC8200AE9C61 /* AccountDetails */ = {
+			isa = PBXGroup;
+			children = (
+				92E0EA551F62AC9500AE9C61 /* AccountViewController.h */,
+				92E0EA561F62AC9500AE9C61 /* AccountViewController.m */,
+			);
+			path = AccountDetails;
+			sourceTree = "<group>";
+		};
 		92F869741F5D816800F36EA1 /* FirstLogin */ = {
 			isa = PBXGroup;
 			children = (
@@ -712,6 +725,7 @@
 				52EFED9F1F2B5A1C009F0E78 /* UIColor+Hex.m in Sources */,
 				524763081F47251000A47ABC /* HospitalDescriptionModel.m in Sources */,
 				52EFEDB11F2B5B2E009F0E78 /* BaseTabbarController.m in Sources */,
+				92E0EA571F62AC9500AE9C61 /* AccountViewController.m in Sources */,
 				524267FD1F543E2000D02685 /* AppInfoViewController.m in Sources */,
 				52EF795D1F2F6B2700522CB6 /* HLTableViewSection.m in Sources */,
 				524762FF1F47251000A47ABC /* MapCell.m in Sources */,

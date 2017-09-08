@@ -32,7 +32,14 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     [self setupApplicationTheme];
-    [self setupHomeScreen3];
+    NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
+    if ([userDefaults objectForKey:@"isLogin"] != nil) {
+        /// Đi thẳng vào màn hình Home
+        [self setupHomeScreen2];
+    }else {
+        /// Đi vào màn hình đăng nhập.
+        [self setupHomeScreen3];
+    }
 
             // Google map places.
     [GMSPlacesClient provideAPIKey:GoogleApiKey];

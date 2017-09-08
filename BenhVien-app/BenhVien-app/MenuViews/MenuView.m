@@ -7,6 +7,7 @@
 //
 
 #import "MenuView.h"
+#import "AppDelegate.h"
 
 @interface MenuView ()<UITableViewDelegate, UITableViewDataSource>
 
@@ -26,6 +27,7 @@
         //// The most Important code line when using XIB file.
     _menuTableView.estimatedRowHeight = 60.0;
     [_menuTableView registerNib:[UINib nibWithNibName:@"MenuViewCell" bundle:nil] forCellReuseIdentifier:@"MenuViewCell"];
+    _menuTableView.userInteractionEnabled = YES;
 }
 
 #pragma mark Table view delegate
@@ -41,6 +43,7 @@
     }
     cell.cellImageView.image = [UIImage imageNamed:[self.menuItems[indexPath.row] objectForKey:@"icon"]];
     cell.cellLabel.text = [self.menuItems[indexPath.row] objectForKey:@"tittle"];
+        /// set selected Cell color.
     UIView *bgColorView = [[UIView alloc] init];
     bgColorView.backgroundColor = [UIColor redColor];
     [cell setSelectedBackgroundView:bgColorView];
@@ -51,6 +54,14 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [tableView deselectRowAtIndexPath:indexPath animated:true];
+    if (indexPath.row == 2) {
+            /// Đăng xuất về màn hình đăng nhập.
+        AppDelegate *delegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
+        [delegate setupHomeScreen3];
+            /// huỷ tonken trong userDefaults.
+        [[NSUserDefaults standardUserDefaults] setObject:nil forKey:@"isLogin"];
+        [[NSUserDefaults standardUserDefaults] synchronize];
+    }
     self.oneDidSelectItemAtIndexPath(indexPath.row);
 }
 

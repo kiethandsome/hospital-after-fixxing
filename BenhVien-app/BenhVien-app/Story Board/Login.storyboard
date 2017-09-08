@@ -373,7 +373,7 @@
                                                         <rect key="frame" x="20" y="0.0" width="345" height="45"/>
                                                         <nil key="textColor"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                        <textInputTraits key="textInputTraits"/>
+                                                        <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                                     </textField>
                                                 </subviews>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -423,6 +423,9 @@
                                         <state key="normal" title="Quên mật khẩu?">
                                             <color key="titleColor" red="1" green="0.028078071959999999" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
+                                        <connections>
+                                            <action selector="forgotPasswordButtonAction:" destination="WXe-d5-azR" eventType="touchUpInside" id="HkT-gv-3He"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.97247463464736938" green="0.9725908637046814" blue="0.97243493795394897" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -452,7 +455,11 @@
                     </view>
                     <navigationItem key="navigationItem" id="DjG-wA-Ihn"/>
                     <connections>
-                        <outlet property="passwordTextField" destination="atA-pO-9sL" id="xdq-YR-2Ye"/>
+                        <outlet property="cityTextField" destination="aeC-Qe-iR0" id="b6L-06-Xp6"/>
+                        <outlet property="emailTextField" destination="RC0-rM-oAk" id="NLT-kQ-mK0"/>
+                        <outlet property="fullNameTextField" destination="FeY-cP-9Zw" id="BkT-N8-RC4"/>
+                        <outlet property="inputPasswordTextField" destination="svf-Ig-XFj" id="pml-Di-0ze"/>
+                        <outlet property="passwordTextField" destination="atA-pO-9sL" id="Cnb-vz-j1S"/>
                         <outlet property="segmentControl" destination="Ncm-Fn-6yM" id="C9C-CO-rt5"/>
                         <outlet property="signInView" destination="Vwg-rh-it7" id="VLs-fI-kH6"/>
                         <outlet property="signUpView" destination="9UZ-Hc-nZX" id="pIA-aa-2tg"/>
@@ -461,7 +468,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Xme-8M-t2Z" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-911" y="-299"/>
+            <point key="canvasLocation" x="-889" y="-299"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="5Sc-K3-SrC">

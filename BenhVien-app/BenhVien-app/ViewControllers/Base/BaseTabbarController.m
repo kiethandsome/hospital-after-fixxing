@@ -7,6 +7,7 @@
 //
 
 #import "BaseTabbarController.h"
+#import "AppDelegate.h"
 
 @interface BaseTabbarController ()
 
@@ -33,11 +34,12 @@
             //// Take the window from AppDelegate
             //// and add a Menu View under the Tabbar.
     self.window = [[[UIApplication sharedApplication] delegate] window];
-    [self.window addSubview: _menuView];
+    [self.window addSubview: self.menuView];
     
     [self didSelectMenuAtRowIndexOfMenuTableView];
 }
 
+    /// Hàm override, hàm này mặc định dc gọi khi có sự kiện trên view xảy ra.
 -(void)updateViewConstraints {
 
     [self.menuView autoPinEdge: ALEdgeTop toEdge: ALEdgeTop ofView: self.window];
@@ -54,10 +56,10 @@
     CGRect frame = self.view.frame;
     
     if (menuDisplayed) {
-        //// Open Menu
+        /// Open Menu
         frame.origin.x = screenWidth * 0.8;
     }else {
-        //// Close Menu
+        /// Close Menu
         frame.origin.x = 0.0;
     }
     [UIView animateWithDuration: 0.3 animations: ^{
