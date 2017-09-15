@@ -11,6 +11,7 @@
 #import "BaseNavigationController.h"
 #import "ApiRequest.h"
 #import "ApiResponse.h"
+#import "ChangePasswordViewController.h"
 
 @interface FirstLoginViewController ()
 
@@ -36,5 +37,10 @@
     BaseNavigationController *nav = [[BaseNavigationController alloc] initWithRootViewController: view];
     [self presentViewController: nav animated:true completion: nil];
 }
+
+- (IBAction)facebookLoginAction:(UIButton *)sender {
+    [self showAlertWithTitle:@"Lou" message:@"Này chưa có làm má ôi!"];
+}
+
 
 @end

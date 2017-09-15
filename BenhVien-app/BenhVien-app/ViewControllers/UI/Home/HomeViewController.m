@@ -7,6 +7,7 @@
 //
 
 #import "HomeViewController.h"
+#import "UserDataManager.h"
 
 @interface HomeViewController ()
 
@@ -56,19 +57,24 @@
     [self showHUD];
     [ApiRequest searchHospitalByName:hospitalName completion:^(ApiResponse *response, NSError *error) {
         [self hideHUD];
-        NSArray *hospitalsList = [response.data objectForKey:@"hospitals"];
-        if (hospitalsList.count <= 0) {
-            [self showAlertWithTitle:@"Lỗi" message:@"Không tồn tại bệnh viện mà bạn đang tìm"];
+        if (error){
+            [self showAlertWithTitle:@"Lỗi" message:error.description];
         }else {
-            NSMutableArray *hospitalArray = [NSMutableArray new];
-            for (NSDictionary *data in hospitalsList) {
-                Hospital *hos = [Hospital initWithResponse:data];
-                [hospitalArray addObject:hos];
+            NSArray *hospitalsList = [response.data objectForKey:@"hospitals"];
+            if (hospitalsList.count <= 0) {
+                [self showAlertWithTitle:@"Lỗi" message:@"Không tồn tại bệnh viện mà bạn đang tìm"];
+            }else {
+                NSMutableArray *hospitalArray = [NSMutableArray new];
+                for (NSDictionary *data in hospitalsList) {
+                    Hospital *hos = [Hospital initWithResponse:data];
+                    [hospitalArray addObject:hos];
+                }
+                SearchResultViewController *view = [self.storyboard instantiateViewControllerWithIdentifier:@"SearchResultViewController"];
+                view.hospitals = hospitalArray;
+                [self.navigationController pushViewController:view animated:true];
             }
-            SearchResultViewController *view = [self.storyboard instantiateViewControllerWithIdentifier:@"SearchResultViewController"];
-            view.hospitals = hospitalArray;
-            [self.navigationController pushViewController:view animated:true];
         }
+
     }];
 }
 

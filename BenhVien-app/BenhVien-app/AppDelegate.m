@@ -10,6 +10,7 @@
 #import "UIColor+Hex.h"
 #import "ApiEndpoint.h"
 #import "UIViewController+Storyboard.h"
+#import "UserDataManager.h"
 
         // Views Importing.
 #import "HomeViewController.h"
@@ -17,11 +18,13 @@
 #import "AppInfoViewController.h"
 #import "BaseTabbarController.h"
 #import "FirstLoginViewController.h"
+#import "AccountViewController.h"
 
         // Google maps Importing.
 #import <GoogleMaps/GoogleMaps.h>
 #import <GooglePlaces/GooglePlaces.h>
 #import <OCGoogleDirectionsAPI/OCGoogleDirectionsAPI.h>
+#import <HNKGooglePlacesAutocomplete/HNKGooglePlacesAutocomplete.h>
 
 @interface AppDelegate ()
 
@@ -32,12 +35,12 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     [self setupApplicationTheme];
-    NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
-    if ([userDefaults objectForKey:@"isLogin"] != nil) {
-        /// Đi thẳng vào màn hình Home
+    if ([UserDataManager sharedClient].accessToken) {
+                                                /// Nếu có accessToken tức là đã đăng nhập.
+            /// Đi thẳng vào màn hình Home
         [self setupHomeScreen2];
     }else {
-        /// Đi vào màn hình đăng nhập.
+            /// Đi vào màn hình đăng nhập.
         [self setupHomeScreen3];
     }
 
@@ -47,7 +50,9 @@
     [GMSServices provideAPIKey:GoogleApiKey];
             // OC Google Direction API.
     [OCDirectionsAPIClient provideAPIKey:GoogleApiKey];
-
+    
+    [HNKGooglePlacesAutocompleteQuery setupSharedQueryWithAPIKey:GoogleApiKey];
+    
     return YES;
 }
 
@@ -70,8 +75,11 @@
     AppInfoViewController *appInfoVC = (AppInfoViewController *)[AppInfoViewController instanceFromStoryboardName:@"Home"];
     BaseNavigationController *appInfoNav = [[BaseNavigationController alloc] initWithRootViewController:appInfoVC];
     
+    AccountViewController *accVc = (AccountViewController *)[AccountViewController instanceFromStoryboardName:@"Home"];
+    BaseNavigationController *accNav = [[BaseNavigationController alloc] initWithRootViewController:accVc];
+    
     BaseTabbarController *tab = [BaseTabbarController new];
-    tab.viewControllers = @[HomeNav, appInfoNav];
+    tab.viewControllers = @[HomeNav, appInfoNav, accNav];
 
     self.window.rootViewController = tab;
     [self.window makeKeyAndVisible];

@@ -8,6 +8,7 @@
 
 #import "MenuView.h"
 #import "AppDelegate.h"
+#import "UserDataManager.h"
 
 @interface MenuView ()<UITableViewDelegate, UITableViewDataSource>
 
@@ -28,6 +29,9 @@
     _menuTableView.estimatedRowHeight = 60.0;
     [_menuTableView registerNib:[UINib nibWithNibName:@"MenuViewCell" bundle:nil] forCellReuseIdentifier:@"MenuViewCell"];
     _menuTableView.userInteractionEnabled = YES;
+    
+    self.userImageView.layer.cornerRadius = 18.0;
+    self.userImageView.clipsToBounds = YES;
 }
 
 #pragma mark Table view delegate
@@ -58,15 +62,35 @@
             /// Đăng xuất về màn hình đăng nhập.
         AppDelegate *delegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
         [delegate setupHomeScreen3];
-            /// huỷ tonken trong userDefaults.
-        [[NSUserDefaults standardUserDefaults] setObject:nil forKey:@"isLogin"];
-        [[NSUserDefaults standardUserDefaults] synchronize];
+            /// Huỷ token trong userDefaults.
+        [[UserDataManager sharedClient] clearUserData];
     }
     self.oneDidSelectItemAtIndexPath(indexPath.row);
 }
 
+- (IBAction)moveToUserInfoScreen:(UIButton *)sender {
+    self.oneDidSelectItemAtIndexPath(2);
+    /// truyền vào tham số 3 để đi đến Account vc.
+}
 
 @end
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

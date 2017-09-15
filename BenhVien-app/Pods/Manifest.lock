@@ -19,51 +19,62 @@ PODS:
   - GoogleMaps/Base (2.2.0)
   - GoogleMaps/Maps (2.2.0):
     - GoogleMaps/Base
-  - GoogleMapsKit (1.0.5)
   - GooglePlacePicker (2.2.0):
     - GoogleMaps (= 2.2.0)
     - GooglePlaces (= 2.2.0)
   - GooglePlaces (2.2.0):
     - GoogleMaps/Base (= 2.2.0)
+  - HNKGooglePlacesAutocomplete (1.2.0):
+    - AFNetworking (~> 3.0)
+    - Mantle (~> 2.0)
   - IQDropDownTextField (1.1.0)
   - IQKeyboardManager (4.0.8)
   - KASlideShow (3.0.0):
     - SDWebImage (~> 3.8)
+  - Mantle (2.1.0):
+    - Mantle/extobjc (= 2.1.0)
+  - Mantle/extobjc (2.1.0)
   - MBProgressHUD (1.0.0)
+  - NSUserDefaults+Utility (0.1.0)
   - OCGoogleDirectionsAPI (0.1.7)
   - PureLayout (3.0.2)
   - SDWebImage (3.8.2):
     - SDWebImage/Core (= 3.8.2)
   - SDWebImage/Core (3.8.2)
+  - SVProgressHUD (2.2)
 
 DEPENDENCIES:
   - AFNetworking (~> 3.0)
   - GoogleMaps
-  - GoogleMapsKit (~> 1.0)
   - GooglePlacePicker
-  - GooglePlaces
+  - HNKGooglePlacesAutocomplete
   - IQDropDownTextField (~> 1.1)
   - IQKeyboardManager (~> 4.0)
   - KASlideShow (~> 3.0)
   - MBProgressHUD (~> 1.0)
+  - NSUserDefaults+Utility (~> 0.1)
   - OCGoogleDirectionsAPI (~> 0.1)
   - PureLayout (~> 3.0)
   - SDWebImage (~> 3.8.2)
+  - SVProgressHUD (~> 2.2)
 
 SPEC CHECKSUMS:
   AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
   GoogleMaps: 104c418d61ab8a05dff06ed0784c25ea9d37da45
-  GoogleMapsKit: b5630c6678909797fc6169d7edda63cb9050d7e9
   GooglePlacePicker: 345b1aabd42c9d6d9bf2369c1bae1234d903e764
   GooglePlaces: bca867d5e9da15384c794b945e4226848bc6e9d9
+  HNKGooglePlacesAutocomplete: 1977cf89b41080aba06ff0e934eb72c01efb8e03
   IQDropDownTextField: 614f79ca905529c992045eaa112d0fc9ebb875d1
   IQKeyboardManager: 1a8189fa153bf09044355ee0ad36826f6767e7f7
   KASlideShow: d737c734ee603ed4fc7de09876d5193192e74ee4
+  Mantle: 2fa750afa478cd625a94230fbf1c13462f29395b
   MBProgressHUD: 4890f671c94e8a0f3cf959aa731e9de2f036d71a
+  NSUserDefaults+Utility: bd0b5193f25cf45fb1aed825f2be39a9904d33fe
   OCGoogleDirectionsAPI: 03c35fbedfe01506b6270a94259969bc60d6f7ce
   PureLayout: 4d550abe49a94f24c2808b9b95db9131685fe4cd
   SDWebImage: 098e97e6176540799c27e804c96653ee0833d13c
+  SVProgressHUD: 3f37f3409ddb15f35c99315ae7dc33c474aa3256
 
-PODFILE CHECKSUM: 17c7c012a3e37accd5d64a3a0b079b9aa1348d9d
+PODFILE CHECKSUM: 34b8d5e69fb97e610f41743c3a106bf6548eb0f4
 
-COCOAPODS: 1.2.1
+COCOAPODS: 1.3.1

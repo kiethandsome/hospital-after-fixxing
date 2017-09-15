@@ -7,6 +7,9 @@
 //
 
 #import "AccountViewController.h"
+#import "ChangePasswordViewController.h"
+#import "BaseNavigationController.h"
+#import "UserDataManager.h"
 
 @interface AccountViewController ()
 
@@ -17,11 +20,23 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.title = @"Tài khoản";
+    [self showMenuButtonItem];
+    self.userImageView.layer.cornerRadius = 90.0;
+    
+    self.userNameLabel.text =  [UserDataManager sharedClient].fullName;
+    self.userEmailLabel.text =  [UserDataManager sharedClient].email;
+    self.userCityLabel.text =  [UserDataManager sharedClient].city;
+
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
 }
 
+- (IBAction)changePasswordButtonAction:(UIButton *)sender {
+    ChangePasswordViewController *view = (ChangePasswordViewController *)[ChangePasswordViewController instanceFromStoryboardName:@"Home"];
+    BaseNavigationController *nav = [[BaseNavigationController alloc] initWithRootViewController:view];
+    [self presentViewController:nav animated:true completion:nil];
+}
 
 @end

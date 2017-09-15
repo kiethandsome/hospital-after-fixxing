@@ -19,6 +19,13 @@
 - (void)showHUD;
 - (void)hideHUD;
 
+// Alert.
 - (void)showAlertWithTitle:(NSString *)title message:(NSString *)message;
+
+// Navigation Bar Buttons customization.
+- (void)showLeftBarButtonItemWithTittle:(NSString *)tittle ;
+- (void)showRightBarButtonItemWithTittle:(NSString *)tittle ;
+- (IBAction)leftBarButtonAction:(id)sender;
+- (IBAction)rightBarButtonAction:(id)sender;
 
 @end

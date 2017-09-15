@@ -15,6 +15,8 @@
 
 @property (nonatomic) NSArray *menuItems;
 @property (weak, nonatomic) IBOutlet UITableView *menuTableView;
+@property (weak, nonatomic) IBOutlet UILabel *userNameLabel;
+@property (weak, nonatomic) IBOutlet UIImageView *userImageView;
 @property (nonatomic) void (^oneDidSelectItemAtIndexPath)(NSInteger index);
 
 - (void)setupMenuView;

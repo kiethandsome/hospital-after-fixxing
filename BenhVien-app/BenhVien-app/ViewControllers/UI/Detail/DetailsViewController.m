@@ -45,7 +45,6 @@
     }
 }
 
-
         // Hiển thị nút tìm đường.
 - (void)showLocationFindingButton {
     UIBarButtonItem *findingLocationButton = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"direction-icon"] style:UIBarButtonItemStylePlain target:self action:@selector(findingLocationButtonPressed:)];

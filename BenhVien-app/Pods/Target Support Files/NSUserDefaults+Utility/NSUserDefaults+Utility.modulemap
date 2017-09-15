@@ -1,0 +1,6 @@
+framework module NSUserDefaults_Utility {
+  umbrella header "NSUserDefaults+Utility-umbrella.h"
+
+  export *
+  module * { export * }
+}

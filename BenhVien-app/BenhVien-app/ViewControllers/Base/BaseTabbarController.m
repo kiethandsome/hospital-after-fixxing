@@ -78,8 +78,8 @@
     
         /// cách implement một block
     [self.menuView setOneDidSelectItemAtIndexPath:^(NSInteger index) {
-        
-        /// truyền vào index.row của menuTableView làm index.item của tabbar.
+
+        /// truyền vào indexPath.row của menuTableView làm indexPath.item của tabbar.
         /// rồi đóng menu view.
         [tab animatedMenu: !tab.menuDisplayed];
         tab.selectedIndex = index;

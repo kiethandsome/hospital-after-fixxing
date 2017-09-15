@@ -75,6 +75,15 @@
                                            completion:completion];
 }
 
++ (void)changePasswordWithEmail:(NSString *)email completion:(ApiCompletionBlock)completion {
+    NSDictionary *param = @{@"email": email};
+    [[ApiManager sharedClient] requestApiWithEndpoint:@""
+                                               method:POST
+                                           parameters:param
+                                           completion:completion];
+}
+
+
 @end
 
 

@@ -87,7 +87,7 @@
                     </connections>
                 </screenEdgePanGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="-335" y="-152"/>
+            <point key="canvasLocation" x="-1142" y="64"/>
         </scene>
         <!--Advance Search View Controller-->
         <scene sceneID="KG1-tP-F0x">
@@ -186,7 +186,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RhC-1M-Y1r" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="329" y="-152"/>
+            <point key="canvasLocation" x="-335" y="-141"/>
         </scene>
         <!--Search Result View Controller-->
         <scene sceneID="ElN-gJ-Q4m">
@@ -270,13 +270,27 @@
                                 </prototypes>
                                 <sections/>
                             </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1LH-aL-kOT">
+                                <rect key="frame" x="0.0" y="622" width="375" height="45"/>
+                                <color key="backgroundColor" red="0.22347545620000001" green="0.62083399299999997" blue="0.84101063009999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="knI-yq-LNJ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <state key="normal" title="Thêm một cơ sở y tế mới">
+                                    <color key="titleColor" red="0.9999235272" green="1" blue="0.99988287689999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.93725490196078431" green="0.93725490196078431" blue="0.93725490196078431" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="q7a-8T-IZY" firstAttribute="top" secondItem="yBl-9n-WPV" secondAttribute="bottom" id="61I-Pa-YXS"/>
                             <constraint firstAttribute="trailing" secondItem="yBl-9n-WPV" secondAttribute="trailing" id="78u-Hl-F0Y"/>
+                            <constraint firstItem="1LH-aL-kOT" firstAttribute="leading" secondItem="IdP-dG-MbV" secondAttribute="leading" id="CzK-iB-EWp"/>
+                            <constraint firstAttribute="trailing" secondItem="1LH-aL-kOT" secondAttribute="trailing" id="JqT-B2-tfg"/>
                             <constraint firstItem="yBl-9n-WPV" firstAttribute="leading" secondItem="IdP-dG-MbV" secondAttribute="leading" id="UW0-qz-Qdr"/>
                             <constraint firstItem="yBl-9n-WPV" firstAttribute="top" secondItem="IdP-dG-MbV" secondAttribute="top" id="oOH-48-Fjg"/>
+                            <constraint firstItem="q7a-8T-IZY" firstAttribute="top" secondItem="1LH-aL-kOT" secondAttribute="bottom" id="yq8-e3-MLs"/>
                         </constraints>
                     </view>
                     <extendedEdge key="edgesForExtendedLayout" bottom="YES"/>
@@ -286,7 +300,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tGS-Tj-7rQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="978" y="-152"/>
+            <point key="canvasLocation" x="329" y="-152"/>
         </scene>
         <!--Details View Controller-->
         <scene sceneID="57w-AT-cQ5">
@@ -356,7 +370,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Wtr-Vn-Mu4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1617" y="-152"/>
+            <point key="canvasLocation" x="977" y="-152"/>
         </scene>
         <!--Location View Controller-->
         <scene sceneID="9bG-Jj-gbW">
@@ -389,7 +403,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="r7Q-Xn-6CC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2266" y="-152"/>
+            <point key="canvasLocation" x="1617" y="-152"/>
         </scene>
         <!--App Info View Controller-->
         <scene sceneID="dTb-wy-5ZC">
@@ -438,10 +452,10 @@
             </objects>
             <point key="canvasLocation" x="-335" y="511"/>
         </scene>
-        <!--View Controller-->
+        <!--Account View Controller-->
         <scene sceneID="DBp-H6-PJs">
             <objects>
-                <viewController id="bWs-7w-bOB" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="AccountViewController" id="bWs-7w-bOB" customClass="AccountViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="QSK-f4-A9L"/>
                         <viewControllerLayoutGuide type="bottom" id="sCH-Vg-kCS"/>
@@ -451,15 +465,15 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="wSo-tD-kgf">
-                                <rect key="frame" x="96" y="30" width="182" height="182"/>
+                                <rect key="frame" x="96" y="40" width="182" height="182"/>
                                 <color key="backgroundColor" red="0.81319331970022435" green="0.83294203367875652" blue="0.8194589542526336" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="182" id="Ciy-mx-m89"/>
                                     <constraint firstAttribute="height" constant="182" id="Dpr-bT-4XZ"/>
                                 </constraints>
                             </imageView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oqa-hT-w2H">
-                                <rect key="frame" x="0.0" y="232" width="375" height="139"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oqa-hT-w2H" userLabel="InputView">
+                                <rect key="frame" x="0.0" y="252" width="375" height="139"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7Gq-eJ-XlI" userLabel="LineView">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="1"/>
@@ -646,6 +660,9 @@
                                 <state key="normal" title="Đổi mật khẩu">
                                     <color key="titleColor" red="0.99992352724075317" green="1" blue="0.99988287687301636" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="changePasswordButtonAction:" destination="bWs-7w-bOB" eventType="touchUpInside" id="Yzg-cU-Lbi"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.94894689321517944" green="0.94906049966812134" blue="0.94890815019607544" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -653,22 +670,28 @@
                             <constraint firstAttribute="trailing" secondItem="oqa-hT-w2H" secondAttribute="trailing" id="7gY-8Y-mPJ"/>
                             <constraint firstAttribute="trailing" secondItem="5rY-nX-Lj5" secondAttribute="trailing" id="9ni-uq-O4G"/>
                             <constraint firstItem="wSo-tD-kgf" firstAttribute="centerX" secondItem="IiP-Kj-9b4" secondAttribute="centerX" id="CsJ-eG-gCk"/>
-                            <constraint firstItem="wSo-tD-kgf" firstAttribute="top" secondItem="QSK-f4-A9L" secondAttribute="bottom" constant="10" id="LbX-zR-Fpe"/>
+                            <constraint firstItem="wSo-tD-kgf" firstAttribute="top" secondItem="QSK-f4-A9L" secondAttribute="bottom" constant="20" id="LbX-zR-Fpe"/>
                             <constraint firstItem="sCH-Vg-kCS" firstAttribute="top" secondItem="5rY-nX-Lj5" secondAttribute="bottom" id="NJm-lU-Zaw"/>
                             <constraint firstItem="oqa-hT-w2H" firstAttribute="leading" secondItem="IiP-Kj-9b4" secondAttribute="leading" id="QyX-2p-6HQ"/>
                             <constraint firstItem="5rY-nX-Lj5" firstAttribute="leading" secondItem="IiP-Kj-9b4" secondAttribute="leading" id="haR-Bt-WTp"/>
-                            <constraint firstItem="oqa-hT-w2H" firstAttribute="top" secondItem="wSo-tD-kgf" secondAttribute="bottom" constant="20" id="qqx-Vf-qYo"/>
+                            <constraint firstItem="oqa-hT-w2H" firstAttribute="top" secondItem="wSo-tD-kgf" secondAttribute="bottom" constant="30" id="qqx-Vf-qYo"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="userCityLabel" destination="kzA-2f-syU" id="dPy-kf-St9"/>
+                        <outlet property="userEmailLabel" destination="bYQ-Cc-Oih" id="zKg-DH-h8L"/>
+                        <outlet property="userImageView" destination="wSo-tD-kgf" id="Kl4-0H-4bv"/>
+                        <outlet property="userNameLabel" destination="v49-CP-eb8" id="bd5-Na-cyI"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7dB-tH-sxN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="329" y="510"/>
         </scene>
-        <!--View Controller-->
+        <!--Change Password View Controller-->
         <scene sceneID="zHO-pd-SUp">
             <objects>
-                <viewController id="inZ-1C-TmV" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ChangePasswordViewController" id="inZ-1C-TmV" customClass="ChangePasswordViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="3lo-H7-BWY"/>
                         <viewControllerLayoutGuide type="bottom" id="WmY-QW-SHC"/>
@@ -801,46 +824,15 @@
                             <constraint firstAttribute="trailing" secondItem="yF5-Lm-CcQ" secondAttribute="trailing" id="p3j-G5-Rg3"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="anotherPasswordTextField" destination="TwM-ay-sqB" id="uqA-CK-CSc"/>
+                        <outlet property="anotherPasswordTextField2" destination="avV-kv-gLK" id="V6i-4s-L4r"/>
+                        <outlet property="passwordTextField" destination="Jol-lr-Ixq" id="XF4-IP-czt"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bUT-hI-XiE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="958" y="510"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="VAb-rG-vpt">
-            <objects>
-                <viewController id="Hmo-ae-swN" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="oYu-CT-oy1"/>
-                        <viewControllerLayoutGuide type="bottom" id="oGZ-3b-nif"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="Xz3-0Z-7v0">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Vui lòng điền địa chỉ email bạn đã đăng kí tài khoản." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lbw-aG-WBx">
-                                <rect key="frame" x="20" y="35" width="335" height="36"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                <color key="textColor" red="0.32879290803108807" green="0.33225388601036265" blue="0.33225388601036265" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Jl2-J2-il1">
-                                <rect key="frame" x="57" y="109" width="240" height="128"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            </view>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="Lbw-aG-WBx" firstAttribute="leading" secondItem="Xz3-0Z-7v0" secondAttribute="leading" constant="20" id="bPf-K3-PxJ"/>
-                            <constraint firstItem="Lbw-aG-WBx" firstAttribute="top" secondItem="oYu-CT-oy1" secondAttribute="bottom" constant="15" id="c7N-dr-leU"/>
-                            <constraint firstAttribute="trailing" secondItem="Lbw-aG-WBx" secondAttribute="trailing" constant="20" id="ptG-nt-Xof"/>
-                        </constraints>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="AYY-uL-Q1X" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1617" y="503"/>
+            <point key="canvasLocation" x="977" y="519"/>
         </scene>
     </scenes>
     <resources>
