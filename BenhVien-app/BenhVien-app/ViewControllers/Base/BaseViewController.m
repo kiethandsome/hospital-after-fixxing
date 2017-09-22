@@ -47,7 +47,16 @@
     self.navigationItem.leftBarButtonItem = backButton;
 }
 
-//-------------------------------------
+- (IBAction)menuButtonPressed:(id)sender{
+    BaseTabbarController *tab = (BaseTabbarController *)self.tabBarController;
+    [tab animatedMenu:!tab.menuDisplayed];
+}
+
+- (IBAction)backButtonPressed:(id)sender {
+    [self.navigationController popViewControllerAnimated:true];
+}
+
+//----------------------------------------------------------------------
 
 - (void)showLeftBarButtonItemWithTittle:(NSString *)tittle {
     NSDictionary *attribute = @{NSFontAttributeName : [UIFont systemFontOfSize: 16]};
@@ -76,16 +85,8 @@
 - (IBAction)rightBarButtonAction:(id)sender{
     
 }
-//-------------------------------------
+//------------------------------------------------------
 
-- (IBAction)menuButtonPressed:(id)sender{
-    BaseTabbarController *tab = (BaseTabbarController *)self.tabBarController;
-    [tab animatedMenu:!tab.menuDisplayed];
-}
-
-- (IBAction)backButtonPressed:(id)sender {
-    [self.navigationController popViewControllerAnimated:true];
-}
 
 #pragma  mark - HUD show and hide
 
@@ -93,15 +94,12 @@
 //    dispatch_async(dispatch_get_main_queue(), ^{
 //        [MBProgressHUD showHUDAddedTo: self.view animated:true];
 //    });
-    [SVProgressHUD show];
+    
+        [SVProgressHUD showWithStatus:@"Loading..."];
 }
 
 - (void)hideHUD {
-//    dispatch_async(dispatch_get_main_queue(), ^{
-//        [MBProgressHUD hideHUDForView: self.view animated:false];
-//    });
     [SVProgressHUD dismiss];
-    
 }
 
 - (void)showAlertWithTitle:(NSString *)title message:(NSString *)message {

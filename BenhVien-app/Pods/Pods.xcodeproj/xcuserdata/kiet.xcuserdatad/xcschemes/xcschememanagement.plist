@@ -24,6 +24,16 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>ImagePicker-Objective-C-ImagePicker.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>ImagePicker-Objective-C.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>KASlideShow.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -72,22 +82,12 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>02DE9BFD350C17B058DC748C2EB37B91</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
 		<key>0A0DB6432481AE8288352FBC6B7DAA98</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
 		<key>13F02540FC8A0CF43F5ABC1D3650B5FD</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>362BEB6DD353404B76CE90399F8BFE32</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -102,7 +102,22 @@
 			<key>primary</key>
 			<true/>
 		</dict>
+		<key>6EA18C37F9B096A8298495929E8829FD</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>70CBCB43F27F7B5D8A5FF3E61A05C876</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>88FE151DB86558D26EB5C33548EFFD83</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>8EDCEC3AF0A7B18FD3D05FF85C4F4245</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -112,12 +127,12 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>9816FEFD012A9CBB8D374BA795F4C4BD</key>
+		<key>A2210439C6FDF324C6C8C80DC225BD3E</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>A2210439C6FDF324C6C8C80DC225BD3E</key>
+		<key>B238DABFD12A1F95A3BFE5D9D7F9FDC2</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -133,6 +148,11 @@
 			<true/>
 		</dict>
 		<key>CF671F7E57B92905F1CC91D036D6B4A7</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>D76F077310E96F8EE53560DFE12646E1</key>
 		<dict>
 			<key>primary</key>
 			<true/>

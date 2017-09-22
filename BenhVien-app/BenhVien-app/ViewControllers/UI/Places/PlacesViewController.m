@@ -51,22 +51,7 @@
 }
 
 - (void)cancelButtonAction {
-    [self.view endEditing: true];
-    [UIAlertController showAlertInViewController:self
-                                       withTitle:@"Xác nhận"
-                                         message:@"bạn chắc chắn muốn huỷ bỏ"
-                               cancelButtonTitle:@"Không"
-                          destructiveButtonTitle:@"Có"
-                               otherButtonTitles:nil
-                                        tapBlock:^(UIAlertController * _Nonnull controller, UIAlertAction * _Nonnull action, NSInteger buttonIndex) {
-                                                 if (buttonIndex == controller.cancelButtonIndex) {
-                
-                                                 } else if (buttonIndex == controller.destructiveButtonIndex) {
-                                                       [self.navigationController dismissViewControllerAnimated:true completion:nil];
-                                                 } else if (buttonIndex >= controller.firstOtherButtonIndex) {
-            
-                                                 }
-                                        }];
+    [self.navigationController dismissViewControllerAnimated:true completion:nil];
 }
 
 - (UITextField *)searchBox {
@@ -125,7 +110,7 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     HNKGooglePlacesAutocompletePlace *place = _searchResults[indexPath.row];
     if (self.block) {
-        self.block(place.name, self);
+        self.block(place.name);
         [self.navigationController dismissViewControllerAnimated:true completion:nil];
     }
 }

@@ -16,6 +16,6 @@
 
 @property (nonatomic) IBOutlet UITableView *cityTableView;
 
-@property (nonatomic) void (^block)(NSString *text, UIViewController *vc);
+@property (nonatomic) void (^block)(NSString *text);
 
 @end

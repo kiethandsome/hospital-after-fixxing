@@ -16,7 +16,7 @@
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GFd-9Y-AFq" userLabel="LineView">
                     <rect key="frame" x="0.0" y="85" width="375" height="0.5"/>
-                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <color key="backgroundColor" red="0.86826577369748215" green="0.86715307844479472" blue="0.88658909295416122" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="0.29999999999999999" id="b6E-Dr-GH0"/>
                     </constraints>
@@ -28,9 +28,9 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qtG-LN-MlK" userLabel="UserView(Cell)">
                     <rect key="frame" x="0.0" y="0.0" width="375" height="85"/>
                     <subviews>
-                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Qwu-3s-AJU" userLabel="UserImageView">
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="avatar-placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="Qwu-3s-AJU" userLabel="UserImageView">
                             <rect key="frame" x="20" y="35" width="35" height="35"/>
-                            <color key="backgroundColor" red="0.87087111398963735" green="0.31557059794895576" blue="0.22472412593897975" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <color key="backgroundColor" red="0.96464347207276557" green="1" blue="0.97854409871740899" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="35" id="9dJ-75-qzS"/>
                                 <constraint firstAttribute="width" constant="35" id="eCw-KQ-809"/>
@@ -66,7 +66,7 @@
                     </constraints>
                 </view>
             </subviews>
-            <color key="backgroundColor" red="0.87087111398963735" green="0.54379085817608708" blue="0.56112518566023417" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color key="backgroundColor" red="0.90980392156862744" green="0.56862745098039214" blue="0.58431372549019611" alpha="1" colorSpace="calibratedRGB"/>
             <constraints>
                 <constraint firstAttribute="trailing" secondItem="f3h-ZD-x2Y" secondAttribute="trailing" id="4Xe-BJ-Moe"/>
                 <constraint firstItem="qtG-LN-MlK" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="5Rb-aU-I4E"/>
@@ -91,4 +91,7 @@
             <point key="canvasLocation" x="-110.5" y="26.5"/>
         </view>
     </objects>
+    <resources>
+        <image name="avatar-placeholder" width="180" height="180"/>
+    </resources>
 </document>

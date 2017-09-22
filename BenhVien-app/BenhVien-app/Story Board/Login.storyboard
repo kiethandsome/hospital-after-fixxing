@@ -471,20 +471,23 @@
                     </view>
                     <navigationItem key="navigationItem" id="DjG-wA-Ihn"/>
                     <connections>
+                        <outlet property="avatarImageView" destination="IxI-QB-0jQ" id="9E3-Ur-7nd"/>
                         <outlet property="cityTextField" destination="aeC-Qe-iR0" id="b6L-06-Xp6"/>
                         <outlet property="emailTextField" destination="RC0-rM-oAk" id="NLT-kQ-mK0"/>
+                        <outlet property="findPhotoButton" destination="lSS-KZ-TSC" id="p4I-Lz-aEs"/>
                         <outlet property="fullNameTextField" destination="FeY-cP-9Zw" id="BkT-N8-RC4"/>
                         <outlet property="inputPasswordTextField" destination="svf-Ig-XFj" id="pml-Di-0ze"/>
                         <outlet property="passwordTextField" destination="atA-pO-9sL" id="Cnb-vz-j1S"/>
                         <outlet property="segmentControl" destination="Ncm-Fn-6yM" id="C9C-CO-rt5"/>
                         <outlet property="signInView" destination="Vwg-rh-it7" id="VLs-fI-kH6"/>
                         <outlet property="signUpView" destination="9UZ-Hc-nZX" id="pIA-aa-2tg"/>
+                        <outlet property="takePhotoButton" destination="WFE-KP-Rmm" id="nW4-t8-S6v"/>
                         <outlet property="userNameTextField" destination="SoU-m8-FOR" id="Fra-MU-PUy"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Xme-8M-t2Z" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-890.39999999999998" y="-299.10044977511245"/>
+            <point key="canvasLocation" x="-890" y="-306"/>
         </scene>
         <!--Places View Controller-->
         <scene sceneID="Qnm-qy-Jir">
@@ -544,7 +547,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4si-PY-X7A" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-162" y="-299"/>
+            <point key="canvasLocation" x="-166" y="-564"/>
         </scene>
         <!--First Login View Controller-->
         <scene sceneID="G2Y-LT-Mdf">
@@ -599,7 +602,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rsl-zy-BKR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1606" y="-299"/>
+            <point key="canvasLocation" x="-1554" y="-306"/>
         </scene>
         <!--Forgot Password View Controller-->
         <scene sceneID="tPf-5x-8wD">
@@ -674,7 +677,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vor-FX-GSP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="548" y="-306"/>
+            <point key="canvasLocation" x="-167" y="105"/>
         </scene>
     </scenes>
     <resources>

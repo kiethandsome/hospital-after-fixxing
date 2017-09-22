@@ -46,7 +46,7 @@
     locationManager.desiredAccuracy = kCLLocationAccuracyHundredMeters;
     [locationManager requestWhenInUseAuthorization];
     [locationManager startUpdatingLocation];
-                                                        // (NOTE) should learn by heart.
+                                                        /// (NOTE) should learn by heart.
 }
 
 

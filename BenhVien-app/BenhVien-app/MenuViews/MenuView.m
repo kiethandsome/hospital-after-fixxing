@@ -9,6 +9,7 @@
 #import "MenuView.h"
 #import "AppDelegate.h"
 #import "UserDataManager.h"
+#import "UIAlertController+Blocks.h"
 
 @interface MenuView ()<UITableViewDelegate, UITableViewDataSource>
 
@@ -32,6 +33,7 @@
     
     self.userImageView.layer.cornerRadius = 18.0;
     self.userImageView.clipsToBounds = YES;
+    self.userNameLabel.text = [UserDataManager sharedClient].fullName;
 }
 
 #pragma mark Table view delegate
@@ -58,20 +60,25 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [tableView deselectRowAtIndexPath:indexPath animated:true];
-    if (indexPath.row == 2) {
-            /// Đăng xuất về màn hình đăng nhập.
-        AppDelegate *delegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
-        [delegate setupHomeScreen3];
-            /// Huỷ token trong userDefaults.
-        [[UserDataManager sharedClient] clearUserData];
+    if (self.oneDidSelectItemAtIndexPath) {
+        self.oneDidSelectItemAtIndexPath(indexPath.row + 1);
     }
-    self.oneDidSelectItemAtIndexPath(indexPath.row);
+
+}
+
+- (void)logOut {
+    AppDelegate *delegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
+    [delegate setupHomeScreen3];
+        /// Huỷ token trong userDefaults.
+    [[UserDataManager sharedClient] clearUserData];
+    [self removeFromSuperview];
 }
 
 - (IBAction)moveToUserInfoScreen:(UIButton *)sender {
-    self.oneDidSelectItemAtIndexPath(2);
-    /// truyền vào tham số 3 để đi đến Account vc.
+    self.oneDidSelectItemAtIndexPath(0);
+
 }
+
 
 @end
 

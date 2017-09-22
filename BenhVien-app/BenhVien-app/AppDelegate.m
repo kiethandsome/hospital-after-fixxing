@@ -11,6 +11,8 @@
 #import "ApiEndpoint.h"
 #import "UIViewController+Storyboard.h"
 #import "UserDataManager.h"
+#import "NSUserDefaults+Utility.h"
+#import "Constant.h"
 
         // Views Importing.
 #import "HomeViewController.h"
@@ -33,27 +35,26 @@
 @implementation AppDelegate
 
 
-- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
+{
     [self setupApplicationTheme];
-    if ([UserDataManager sharedClient].accessToken) {
-                                                /// Nếu có accessToken tức là đã đăng nhập.
+    [self setupGGPlaces];
+
+    if ([UserDataManager sharedClient].accessToken && [UserDataManager sharedClient].accessToken.length >0) {      /// Nếu có accessToken tức là đã đăng nhập.
             /// Đi thẳng vào màn hình Home
         [self setupHomeScreen2];
     }else {
             /// Đi vào màn hình đăng nhập.
         [self setupHomeScreen3];
     }
-
-            // Google map places.
-    [GMSPlacesClient provideAPIKey:GoogleApiKey];
-            // Google maps view.
-    [GMSServices provideAPIKey:GoogleApiKey];
-            // OC Google Direction API.
-    [OCDirectionsAPIClient provideAPIKey:GoogleApiKey];
-    
-    [HNKGooglePlacesAutocompleteQuery setupSharedQueryWithAPIKey:GoogleApiKey];
-    
     return YES;
+}
+
+- (void)setupGGPlaces {
+    [GMSPlacesClient provideAPIKey:GoogleApiKey];
+    [GMSServices provideAPIKey:GoogleApiKey];
+    [OCDirectionsAPIClient provideAPIKey:GoogleApiKey];
+    [HNKGooglePlacesAutocompleteQuery setupSharedQueryWithAPIKey:GoogleApiKey];
 }
 
 - (void)setupHomeScreen {
@@ -79,7 +80,8 @@
     BaseNavigationController *accNav = [[BaseNavigationController alloc] initWithRootViewController:accVc];
     
     BaseTabbarController *tab = [BaseTabbarController new];
-    tab.viewControllers = @[HomeNav, appInfoNav, accNav];
+    tab.viewControllers = @[accNav, HomeNav, appInfoNav];
+    tab.selectedIndex = 1;
 
     self.window.rootViewController = tab;
     [self.window makeKeyAndVisible];

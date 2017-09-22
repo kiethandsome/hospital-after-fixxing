@@ -50,16 +50,19 @@
     [NSUserDefaults setObject:nil forKey:UserEmail];
 }
 
-                // Gán các dữ liệu của thuộc tính của UserDataManager vào UserDefalt bằng  "NSUserDefaults+Utility.h".
-                // Over write lại Setter và Getter
+    //Gán các dữ liệu của thuộc tính của UserDataManager vào UserDefalt bằng  "NSUserDefaults+Utility.h".
+    //bằng cách Over write lại Setter và Getter
+    //(Do dối tượng UserDataManager sẽ bị huỷ khi tắt ứng dụng)
+    //nên khi bật lại ứng dụng phải gán lại các giá trị đã lưu trước đó của UserDefault vào UserDataManager
 
 #pragma mark - Access Token
-
+    /// Set
 - (void)setAccessToken:(NSString *)accessToken {
     _accessToken = accessToken;
     [NSUserDefaults setObject:accessToken forKey:UserToken];
 }
-
+    /// Get (tức là thay vì lấy ra Token của User, thì lấy thẳng vào Token trong UserDefault
+    /// vì khi tắt app các thuộc tính của user sẽ trở về nil.
 - (NSString *)accessToken {
     NSString *accessToken = [NSUserDefaults stringForKey:UserToken];
     if (accessToken) {
@@ -73,11 +76,11 @@
 
 - (void)setFullName:(NSString *)fullName {
     _fullName  = fullName;
-    [NSUserDefaults setObject:fullName forKey:UserToken];
+    [NSUserDefaults setObject:fullName forKey:UserFullName];
 }
 
 - (NSString *)fullName {
-    NSString *fullName = [NSUserDefaults stringForKey:UserToken];
+    NSString *fullName = [NSUserDefaults stringForKey:UserFullName];
     if (fullName) {
         return fullName;
     }else {
@@ -116,7 +119,6 @@
         return @"";
     }
 }
-
 
 #pragma mark - Role 
 

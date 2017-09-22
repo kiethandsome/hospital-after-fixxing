@@ -9,6 +9,9 @@
 #import <UIKit/UIKit.h>
 #import "MenuView.h"
 #import <PureLayout/PureLayout.h>
+#import "AppDelegate.h"
+#import "UserDataManager.h"
+#import "UIAlertController+Blocks.h"
 
 @interface BaseTabbarController : UITabBarController
 

@@ -17,7 +17,11 @@
 #import "AppDelegate.h"
 #import "ForgotPasswordViewController.h"
 #import "PlacesViewController.h"
+#import "AccountViewController.h"
+#import "PlacesViewController.h"
+#import "UserDataManager.h"
 #import "UIAlertController+Blocks.h"
+#import "ImagePickerController.h"
 
 @interface SignUpViewController : BaseViewController
 @property (weak, nonatomic) IBOutlet UISegmentedControl *segmentControl;
@@ -33,5 +37,9 @@
 @property (weak, nonatomic) IBOutlet UITextField *emailTextField;
 @property (weak, nonatomic) IBOutlet UITextField *inputPasswordTextField;
 @property (weak, nonatomic) IBOutlet UITextField *cityTextField;
+
+@property (weak, nonatomic) IBOutlet UIButton *takePhotoButton;
+@property (weak, nonatomic) IBOutlet UIButton *findPhotoButton;
+@property (weak, nonatomic) IBOutlet UIImageView *avatarImageView;
 
 @end

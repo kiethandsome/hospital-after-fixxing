@@ -87,7 +87,7 @@
                     </connections>
                 </screenEdgePanGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="-1142" y="64"/>
+            <point key="canvasLocation" x="-1438" y="-92"/>
         </scene>
         <!--Advance Search View Controller-->
         <scene sceneID="KG1-tP-F0x">
@@ -328,6 +328,9 @@
                                         <state key="normal" title="Gọi điện">
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
+                                        <connections>
+                                            <action selector="callingButtonAction:" destination="6eY-JT-pEM" eventType="touchUpInside" id="jhT-c6-c2L"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cQ3-kW-oaF" userLabel="nut Nhan tin">
                                         <rect key="frame" x="187.5" y="0.0" width="187.5" height="50"/>
@@ -336,6 +339,9 @@
                                         <state key="normal" title="Nhắn tin">
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
+                                        <connections>
+                                            <action selector="messageButonAction:" destination="6eY-JT-pEM" eventType="touchUpInside" id="APj-0H-hIH"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -450,7 +456,7 @@
                     </connections>
                 </screenEdgePanGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="-335" y="511"/>
+            <point key="canvasLocation" x="-335" y="-809"/>
         </scene>
         <!--Account View Controller-->
         <scene sceneID="DBp-H6-PJs">
@@ -686,7 +692,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7dB-tH-sxN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="329" y="510"/>
+            <point key="canvasLocation" x="-335" y="565"/>
         </scene>
         <!--Change Password View Controller-->
         <scene sceneID="zHO-pd-SUp">
@@ -832,7 +838,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bUT-hI-XiE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="977" y="519"/>
+            <point key="canvasLocation" x="385" y="566"/>
         </scene>
     </scenes>
     <resources>

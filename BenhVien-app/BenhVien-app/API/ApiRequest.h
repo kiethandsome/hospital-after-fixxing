@@ -19,8 +19,7 @@
 + (void)searchTheHospitalByCityName:(NSString *)cityName district:(NSString *)districtName completion:(ApiCompletionBlock)completion;
 + (void)searchTheHospitalByTheCityName:(NSString *)cityName completion:(ApiCompletionBlock)completion;
 + (void)loadHospitalInfById:(NSString *)ID completion:(ApiCompletionBlock)completion;
-
-+ (void)registerWithEmail:(NSString *)email password:(NSString *)password city:(NSString *)city fullName:(NSString *)fullName completion:(ApiCompletionBlock)completion ;
-
++ (void)registerWithEmail:(NSString *)email password:(NSString *)password city:(NSString *)city fullName:(NSString *)fullName completion:(ApiCompletionBlock)completion;
++ (void)changePasswordWithUserId:(NSString *)userId oldPassword:(NSString *)oldPassword newPassword:(NSString *)newPassword completion:(ApiCompletionBlock)completion;
 
 @end

@@ -7,6 +7,7 @@
 //
 
 #import "ApiManager.h"
+#import "UserDataManager.h"
 
 @interface ApiManager()
 
@@ -33,26 +34,39 @@
     self.manager.requestSerializer = [AFHTTPRequestSerializer serializer];
 }
 
-// CÁI NỒI GÌ ĐÂY ?
+- (void)setupHeader {
+    [self.manager.requestSerializer setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
+    [self.manager.requestSerializer setValue:[self getAccessToken] forHTTPHeaderField:@"Authorization"];
+}
 
-- (void)requestApiWithEndpoint: (NSString *)endpoint method: (Apimethod)method parameters: (NSDictionary *)parameters completion: (ApiCompletionBlock)completion {
+- (NSString *)getAccessToken {
+    NSString *token = [NSString stringWithFormat:@"JWT %@", [UserDataManager sharedClient].accessToken];
+    return token;
+}
+
+
+- (void)requestApiWithEndpoint: (NSString *)endpoint method: (Apimethod)method parameters: (NSDictionary *)parameters hasAuth: (BOOL)hasAuth completion: (ApiCompletionBlock)completion {
     NSString *fullURL = [NSString stringWithFormat:@"%@%@", BaseURL,endpoint];
+    if (hasAuth) {
+        [self setupHeader];
+    }
     switch (method) {
-            case GET: {
-                [self processGetRequestWithURL:fullURL parameters:parameters completion:completion];
-                break;
-            }
-            case POST: {
-                [self processPostRequestWithURL:fullURL parameters:parameters completion:completion];
-                break;
-            }
-            case PUT: {
-                [self processPutRequestWithURL:fullURL parameters:parameters completion:completion];
-                break;
-            }
+        case GET: {
+            [self processGetRequestWithURL:fullURL parameters:parameters completion:completion];
+            break;
+        }
+        case POST: {
+            [self processPostRequestWithURL:fullURL parameters:parameters completion:completion];
+            break;
+        }
+        case PUT: {
+            [self processPutRequestWithURL:fullURL parameters:parameters completion:completion];
+            break;
+        }
         default:
             break;
     }
+    
 }
 
 #pragma mark - GET
@@ -62,11 +76,11 @@
            parameters:parameters
              progress:nil
               success:^(NSURLSessionDataTask * _Nonnull task, id _Nullable responseObject) {
-        [self processSuccessWithResponse:responseObject completion:completion];
-     }
-        failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-         [self processFailureWithError:error completion:nil];
-    }];
+                  [self processSuccessWithResponse:responseObject completion:completion];
+              }
+              failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+                  [self processFailureWithError:error completion:completion];
+              }];
 }
 
 #pragma mark - POST
@@ -76,12 +90,12 @@
             parameters:parameters
               progress:nil
                success:^(NSURLSessionDataTask * _Nonnull task, id _Nullable responseObject)
-        {
+     {
          [self processSuccessWithResponse:responseObject completion:completion];
-        }
-     failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error)
-    {
-        [self processFailureWithError:error completion:nil];
+     }
+               failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error)
+     {
+         [self processFailureWithError:error completion:completion];
      }];
 }
 
@@ -91,12 +105,12 @@
     [self.manager PUT:url
            parameters:parameters
               success:^(NSURLSessionDataTask * _Nonnull task, id _Nullable responseObject)
-        {
+     {
          [self processSuccessWithResponse:responseObject completion:completion];
-        }
-     failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-         
-     }];
+     }
+              failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+                  [self processFailureWithError:error completion:completion];
+              }];
 }
 
 #pragma mark - SUCCESS

@@ -7,7 +7,7 @@
 //
 
 #import "BaseTabbarController.h"
-#import "AppDelegate.h"
+
 
 @interface BaseTabbarController ()
 
@@ -73,17 +73,35 @@
 }
 
 - (void)didSelectMenuAtRowIndexOfMenuTableView {
-        /// sao phải là weak?? Tại cái đéo nào mà phải là weak :v
     __weak BaseTabbarController *tab = self;
     
         /// cách implement một block
     [self.menuView setOneDidSelectItemAtIndexPath:^(NSInteger index) {
-
-        /// truyền vào indexPath.row của menuTableView làm indexPath.item của tabbar.
-        /// rồi đóng menu view.
         [tab animatedMenu: !tab.menuDisplayed];
+        if (index == 3) {
+            [UIAlertController showAlertInViewController:tab
+                                               withTitle:@"Xác nhận"
+                                                 message:@"Bạn có chắc muốn đăng xuất?"
+                                       cancelButtonTitle:@"Không"
+                                  destructiveButtonTitle:@"Có"
+                                       otherButtonTitles:nil
+                                                tapBlock:^(UIAlertController * _Nonnull controller, UIAlertAction * _Nonnull action, NSInteger buttonIndex) {
+                                                    if (buttonIndex == controller.cancelButtonIndex) {
+                                                        
+                                                    } else if(buttonIndex == controller.destructiveButtonIndex) {
+                                                        [tab logOut];
+                                                    }
+           
+                                                }];
+        }
         tab.selectedIndex = index;
     }];
+}
+
+- (void)logOut {
+    AppDelegate *delegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
+    [delegate setupHomeScreen3];
+    [[UserDataManager sharedClient] clearUserData];
 }
 
 
@@ -96,6 +114,11 @@
 //    UIImage *snapshotImage = UIGraphicsGetImageFromCurrentImageContext();
 //    UIGraphicsEndImageContext();
 //    UIImageView *snapshotImageView = [[UIImageView alloc] initWithImage: snapshotImage];
+
+
+
+
+
 
 
 
