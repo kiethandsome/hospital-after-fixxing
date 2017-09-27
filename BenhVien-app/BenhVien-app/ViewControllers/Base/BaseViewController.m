@@ -35,16 +35,11 @@
     [super didReceiveMemoryWarning];
 }
 
-#pragma mark - Show Navigation Bar Button Items
+#pragma mark - Menu Button.
 
 - (void)showMenuButtonItem {
     UIBarButtonItem *menuButton = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"nav-menu"] style:UIBarButtonItemStylePlain target:self action:@selector(menuButtonPressed:)];
     self.navigationItem.leftBarButtonItem = menuButton;
-}
-
-- (void)showBackButtonItem {
-    UIBarButtonItem *backButton = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"nav-back"] style:UIBarButtonItemStylePlain target:self action:@selector(backButtonPressed:)];
-    self.navigationItem.leftBarButtonItem = backButton;
 }
 
 - (IBAction)menuButtonPressed:(id)sender{
@@ -52,11 +47,18 @@
     [tab animatedMenu:!tab.menuDisplayed];
 }
 
+#pragma mark - Back Button.
+
+- (void)showBackButtonItem {
+    UIBarButtonItem *backButton = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"nav-back"] style:UIBarButtonItemStylePlain target:self action:@selector(backButtonPressed:)];
+    self.navigationItem.leftBarButtonItem = backButton;
+}
+
 - (IBAction)backButtonPressed:(id)sender {
     [self.navigationController popViewControllerAnimated:true];
 }
 
-//----------------------------------------------------------------------
+#pragma mark - Left Bar button.
 
 - (void)showLeftBarButtonItemWithTittle:(NSString *)tittle {
     NSDictionary *attribute = @{NSFontAttributeName : [UIFont systemFontOfSize: 16]};
@@ -68,6 +70,12 @@
     [doneButton setTitleTextAttributes: attribute forState:UIControlStateNormal];
 }
 
+- (IBAction)leftBarButtonAction:(id)sender{
+    
+}
+
+#pragma mark - Right BAr button.
+
 - (void)showRightBarButtonItemWithTittle:(NSString *)tittle {
     NSDictionary *attribute = @{NSFontAttributeName : [UIFont systemFontOfSize: 16]};
     UIBarButtonItem *doneButton = [[UIBarButtonItem alloc] initWithTitle:tittle
@@ -78,22 +86,16 @@
     [doneButton setTitleTextAttributes: attribute forState:UIControlStateNormal];
 }
 
-- (IBAction)leftBarButtonAction:(id)sender{
-    
-}
-
 - (IBAction)rightBarButtonAction:(id)sender{
     
 }
-//------------------------------------------------------
 
-
-#pragma  mark - HUD show and hide
+#pragma  mark - HUD _ show and hide
 
 - (void)showHUD {
-//    dispatch_async(dispatch_get_main_queue(), ^{
-//        [MBProgressHUD showHUDAddedTo: self.view animated:true];
-//    });
+///    dispatch_async(dispatch_get_main_queue(), ^{
+///         [MBProgressHUD showHUDAddedTo: self.view animated:true];
+///    });
     
         [SVProgressHUD showWithStatus:@"Loading..."];
 }
@@ -101,6 +103,8 @@
 - (void)hideHUD {
     [SVProgressHUD dismiss];
 }
+
+#pragma mark - Alert.
 
 - (void)showAlertWithTitle:(NSString *)title message:(NSString *)message {
     [UIAlertController showAlertInViewController:self

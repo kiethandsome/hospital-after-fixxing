@@ -14,7 +14,6 @@
     UITextField *_searchTextField;
     NSArray *_searchResults;
     HNKGooglePlacesAutocompleteQuery *_query;
-    __weak SignUpViewController *_throwBackView;
 }
 
 @end
@@ -27,13 +26,15 @@
     [self showBarButtons];
     self.cityTableView.dataSource = self;
     self.cityTableView.delegate = self;
+    
     _query = [HNKGooglePlacesAutocompleteQuery sharedQuery];
-
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
 }
+
+/* show Done Button and Search text field */
 
 - (void)showBarButtons {
     NSDictionary *attribute = @{NSFontAttributeName : [UIFont systemFontOfSize: 16]};
@@ -66,7 +67,6 @@
     searchTextField.font = [UIFont systemFontOfSize: 15.0];
     searchTextField.placeholder = @"Tỉnh/Thành phố";
     searchTextField.delegate = self;
-    
     return  searchTextField;
 }
 
@@ -87,7 +87,6 @@
                                                                        }
                                                                    }
      ];
-    
     return true;
 }
 

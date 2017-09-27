@@ -44,6 +44,10 @@
         block(@"Bạn chưa xác nhận mật khẩu", false);
         return;
     }
+    if (![text2 isEqualToString:text3]) {
+        block (@"Xác nhận mật khẩu mới không đúng", false);
+        return;
+    }
     block(@"", true);
     
 }
@@ -77,7 +81,8 @@
                                   if (error) {
                                       [self showAlertWithTitle:@"Lỗi" message:error.description];
                                   } else {
-                                      
+                                      [self showAlertWithTitle:@"Thành công" message:@"Đổi mật khẩu thành công!"];
+                                      [self dismissViewControllerAnimated:true completion:nil];
                                   }
                               }];
 }

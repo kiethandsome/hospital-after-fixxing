@@ -19,8 +19,6 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.title = @"Tìm kiếm nâng cao";
-   
-
 }
 
 - (void)didReceiveMemoryWarning {
@@ -72,6 +70,8 @@
     [self.districtPicker setItemList:[self getDistrictNameFromCity:_cities[0]]];
     
 }
+
+#pragma mark - Get the City and District to Drop down Text Field.
 
                                                     // Get names of cities.
 - (NSArray *)getNameOfCities {
@@ -130,7 +130,7 @@
     }
 }
 
-#pragma mark IBActions
+#pragma mark - Button Actions.
 
 - (IBAction)searchPressed:(UIButton *)sender {
     NSString *cityName = self.cityPicker.selectedItem;
@@ -143,11 +143,13 @@
     }
 }
 
-                                                //// Tìm bệnh viện bằng City name và district.
+#pragma mark - Search By The City name and District Name
+
 - (void)searchHospitalByCityName:(NSString *)cityName district:(NSString *)districtName {
     [self showHUD];
-    [ApiRequest searchTheHospitalByCityName:cityName district:districtName completion:^(ApiResponse *response, NSError *error) {
+    [ApiRequest searchTheHospitalByCityName:cityName district:districtName page:1 completion:^(ApiResponse *response, NSError *error) {
         NSArray *hospitalArray = [response.data objectForKey:@"hospitals"];
+        NSInteger pages = [[response.data objectForKey:@"pages"] integerValue];
         if (hospitalArray > 0) {
             [self hideHUD];
             NSMutableArray *hosArray = [NSMutableArray new];
@@ -155,21 +157,20 @@
                 Hospital *aHospital = [Hospital initWithResponse:dict];
                 [hosArray addObject:aHospital];
             }
-            SearchResultViewController *vc = (SearchResultViewController *)[SearchResultViewController instanceFromStoryboardName:@"Home"];
-            vc.hospitals = hosArray;
-            [self.navigationController pushViewController:vc animated:true];
-            
+            [self goToSearchViewControllerWithHospitalsArray:hosArray city:cityName district:districtName pages:pages type:DISTRICT];
         }else {
             [self showAlertWithTitle:@"Thông báo" message:@"Không tìm thấy bệnh viện bạn yêu cầu!"];
         }
     }];
 }
 
-                                            // Tìm bệnh viện chỉ bằng city name.
+#pragma mark - Seacrh by City Name.
+
 - (void)searchHospitalByCityName:(NSString *)cityName {
     [self showHUD];
-    [ApiRequest searchTheHospitalByTheCityName:cityName completion:^(ApiResponse *response, NSError *error) {
+    [ApiRequest searchTheHospitalByTheCityName:cityName page:1 completion:^(ApiResponse *response, NSError *error) {
         NSArray *hospitalArray = [response.data valueForKey:@"hospitals"];
+        NSInteger pages = [[response.data objectForKey:@"pages"] integerValue];
         if (hospitalArray > 0) {
             [self hideHUD];
             NSMutableArray *hosArray = [NSMutableArray new];
@@ -177,17 +178,27 @@
                 Hospital *aHospital = [Hospital initWithResponse:dict];
                 [hosArray addObject:aHospital];
             }
-                //// Using this code line below,
-                //// we dont need to name the identifier for the View controller.
-            SearchResultViewController *vc = (SearchResultViewController *)[SearchResultViewController instanceFromStoryboardName:@"Home"];
-            vc.hospitals = hosArray;
-            [self.navigationController pushViewController:vc animated:true];
+            [self goToSearchViewControllerWithHospitalsArray:hosArray city:cityName district:nil pages:pages type:CITY];
         }else {
             [self showAlertWithTitle:@"Thông đít" message:@"Không tìm thấy bệnh viện bạn yêu cầu!"];
         }
     }];
 }
 
+- (void)goToSearchViewControllerWithHospitalsArray:(NSMutableArray *)hospitalArray
+                                              city:(NSString *)city
+                                          district:(NSString *)district
+                                             pages:(NSInteger)pages
+                                              type:(SearchType)type
+{
+    SearchResultViewController *vc = (SearchResultViewController *)[SearchResultViewController instanceFromStoryboardName:@"Home"];
+    vc.hospitals = hospitalArray;
+    vc.city = city;
+    vc.district = district;
+    vc.totalPage = pages;
+    vc.type = type;
+    [self.navigationController pushViewController:vc animated:true];
+}
 
 @end
 

@@ -12,8 +12,16 @@
 #import "Declaration.h"
 #import "CIty.h"
 #import "ApiRequest.h"
+#import "Constant.h"
+
+
 
 @interface AdvanceSearchViewController : BaseViewController
+
+@property (nonatomic) NSInteger currentPage;
+@property (nonatomic) NSInteger totalPage;
+@property (nonatomic) NSString *city;
+@property (nonatomic) NSString *district;
 
 @property (weak, nonatomic) IBOutlet UIButton *searchButton;
 @property (weak, nonatomic) IBOutlet UIView *CityContainerView;

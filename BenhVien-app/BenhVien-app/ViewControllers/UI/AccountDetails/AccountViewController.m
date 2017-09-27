@@ -21,12 +21,15 @@
     [super viewDidLoad];
     self.title = @"Tài khoản";
     [self showMenuButtonItem];
-    self.userImageView.layer.cornerRadius = 90.0;
+
     
     self.userNameLabel.text =  [UserDataManager sharedClient].fullName; /// Getter, lấy ra giá trị của UserDataManager.
     self.userEmailLabel.text =  [UserDataManager sharedClient].email;
     self.userCityLabel.text =  [UserDataManager sharedClient].city;
+}
 
+- (void)viewWillAppear:(BOOL)animated {
+    self.userImageView.layer.cornerRadius = 90.0;
 }
 
 - (void)didReceiveMemoryWarning {

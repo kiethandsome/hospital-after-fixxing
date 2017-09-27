@@ -18,5 +18,6 @@ pod 'HNKGooglePlacesAutocomplete'
 pod 'SVProgressHUD', '~> 2.2'
 pod 'NSUserDefaults+Utility', '~> 0.1'
 pod 'ImagePicker-Objective-C', '~> 0.0'
+pod 'SVPullToRefresh', '~> 0.4'
 
 end

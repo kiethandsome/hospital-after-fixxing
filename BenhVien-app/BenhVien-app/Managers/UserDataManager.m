@@ -50,12 +50,13 @@
     [NSUserDefaults setObject:nil forKey:UserEmail];
 }
 
-    //Gán các dữ liệu của thuộc tính của UserDataManager vào UserDefalt bằng  "NSUserDefaults+Utility.h".
-    //bằng cách Over write lại Setter và Getter
-    //(Do dối tượng UserDataManager sẽ bị huỷ khi tắt ứng dụng)
-    //nên khi bật lại ứng dụng phải gán lại các giá trị đã lưu trước đó của UserDefault vào UserDataManager
+/* Gán các dữ liệu của thuộc tính của UserDataManager vào UserDefalt bằng  "NSUserDefaults+Utility.h".
+    bằng cách Over write lại Setter và Getter
+    (Do dối tượng UserDataManager sẽ bị huỷ khi tắt ứng dụng)
+    nên khi bật lại ứng dụng phải gán lại các giá trị đã lưu trước đó của UserDefault vào UserDataManager */
 
 #pragma mark - Access Token
+
     /// Set
 - (void)setAccessToken:(NSString *)accessToken {
     _accessToken = accessToken;
@@ -151,6 +152,7 @@
         return @"";
     }
 }
+
 
 @end
 

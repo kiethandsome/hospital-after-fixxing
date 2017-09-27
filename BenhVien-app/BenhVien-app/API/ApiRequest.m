@@ -40,9 +40,10 @@
                                            completion:completion ];
 }
 
-+ (void)searchTheHospitalByCityName:(NSString *)cityName district:(NSString *)districtName completion:(ApiCompletionBlock)completion{
++ (void)searchTheHospitalByCityName:(NSString *)cityName district:(NSString *)districtName page:(NSInteger)page completion:(ApiCompletionBlock)completion {
     NSDictionary *parameters = @{@"city":cityName, 
-                                 @"district": districtName
+                                 @"district": districtName,
+                                 @"page":@(page)
                                  };
     [[ApiManager sharedClient] requestApiWithEndpoint:HospitalDistrict
                                                method:GET
@@ -51,8 +52,10 @@
                                            completion:completion ];
 }
 
-+ (void)searchTheHospitalByTheCityName:(NSString *)cityName completion:(ApiCompletionBlock)completion {
-    NSDictionary *parameters = @{@"city":cityName};
++ (void)searchTheHospitalByTheCityName:(NSString *)cityName page:(NSInteger)page completion:(ApiCompletionBlock)completion {
+    NSDictionary *parameters = @{@"city":cityName,
+                                 @"page":@(page)
+                                 };
     [[ApiManager sharedClient] requestApiWithEndpoint:searchByTheCityName
                                                method:GET
                                            parameters:parameters

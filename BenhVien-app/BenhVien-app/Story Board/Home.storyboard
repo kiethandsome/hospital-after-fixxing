@@ -270,27 +270,13 @@
                                 </prototypes>
                                 <sections/>
                             </tableView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1LH-aL-kOT">
-                                <rect key="frame" x="0.0" y="622" width="375" height="45"/>
-                                <color key="backgroundColor" red="0.22347545620000001" green="0.62083399299999997" blue="0.84101063009999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="45" id="knI-yq-LNJ"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                <state key="normal" title="Thêm một cơ sở y tế mới">
-                                    <color key="titleColor" red="0.9999235272" green="1" blue="0.99988287689999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.93725490196078431" green="0.93725490196078431" blue="0.93725490196078431" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="q7a-8T-IZY" firstAttribute="top" secondItem="yBl-9n-WPV" secondAttribute="bottom" id="61I-Pa-YXS"/>
                             <constraint firstAttribute="trailing" secondItem="yBl-9n-WPV" secondAttribute="trailing" id="78u-Hl-F0Y"/>
-                            <constraint firstItem="1LH-aL-kOT" firstAttribute="leading" secondItem="IdP-dG-MbV" secondAttribute="leading" id="CzK-iB-EWp"/>
-                            <constraint firstAttribute="trailing" secondItem="1LH-aL-kOT" secondAttribute="trailing" id="JqT-B2-tfg"/>
                             <constraint firstItem="yBl-9n-WPV" firstAttribute="leading" secondItem="IdP-dG-MbV" secondAttribute="leading" id="UW0-qz-Qdr"/>
                             <constraint firstItem="yBl-9n-WPV" firstAttribute="top" secondItem="IdP-dG-MbV" secondAttribute="top" id="oOH-48-Fjg"/>
-                            <constraint firstItem="q7a-8T-IZY" firstAttribute="top" secondItem="1LH-aL-kOT" secondAttribute="bottom" id="yq8-e3-MLs"/>
                         </constraints>
                     </view>
                     <extendedEdge key="edgesForExtendedLayout" bottom="YES"/>
@@ -483,7 +469,7 @@
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7Gq-eJ-XlI" userLabel="LineView">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="1"/>
-                                        <color key="backgroundColor" red="0.65651311528497414" green="0.65651311528497414" blue="0.65651311528497414" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="backgroundColor" red="0.80597636421319796" green="0.80597636421319796" blue="0.80597636421319796" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="1" id="fpA-Bx-Zn2"/>
                                         </constraints>
@@ -530,7 +516,7 @@
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="o1b-hx-DDh" userLabel="LineView">
                                         <rect key="frame" x="10" y="46" width="365" height="1"/>
-                                        <color key="backgroundColor" red="0.65651311528497414" green="0.65651311528497414" blue="0.65651311528497414" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="backgroundColor" red="0.80597636421319796" green="0.80597636421319796" blue="0.80597636421319796" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="1" id="km3-hT-aBk"/>
                                         </constraints>
@@ -577,7 +563,7 @@
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2p0-59-uig" userLabel="LineView">
                                         <rect key="frame" x="10" y="92" width="365" height="1"/>
-                                        <color key="backgroundColor" red="0.65651311528497414" green="0.65651311528497414" blue="0.65651311528497414" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="backgroundColor" red="0.80597636421319796" green="0.80597636421319796" blue="0.80597636421319796" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="1" id="6Xz-PO-svu"/>
                                         </constraints>
@@ -624,7 +610,7 @@
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MeI-5y-z4p" userLabel="LineView">
                                         <rect key="frame" x="0.0" y="138" width="375" height="1"/>
-                                        <color key="backgroundColor" red="0.65651311528497414" green="0.65651311528497414" blue="0.65651311528497414" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="backgroundColor" red="0.80597636421319796" green="0.80597636421319796" blue="0.80597636421319796" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="1" id="FSE-rT-z17"/>
                                         </constraints>
@@ -711,7 +697,7 @@
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UHZ-ng-1Of" userLabel="LineView">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="1"/>
-                                        <color key="backgroundColor" red="0.65197943652849744" green="0.65197943652849744" blue="0.65197943652849744" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="backgroundColor" red="0.71603347081218272" green="0.71603347081218272" blue="0.71603347081218272" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="1" id="Yvt-kW-d8d"/>
                                         </constraints>
@@ -737,7 +723,7 @@
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0ac-aR-HQK" userLabel="LineView">
                                         <rect key="frame" x="10" y="46" width="365" height="1"/>
-                                        <color key="backgroundColor" red="0.65197943652849744" green="0.65197943652849744" blue="0.65197943652849744" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="backgroundColor" red="0.71603347081218272" green="0.71603347081218272" blue="0.71603347081218272" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="1" id="UXQ-cL-I4V"/>
                                         </constraints>
@@ -763,7 +749,7 @@
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cMb-3f-SdT" userLabel="LineView">
                                         <rect key="frame" x="10" y="92" width="365" height="1"/>
-                                        <color key="backgroundColor" red="0.65197943652849744" green="0.65197943652849744" blue="0.65197943652849744" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="backgroundColor" red="0.71603347081218272" green="0.71603347081218272" blue="0.71603347081218272" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="1" id="6r1-ZJ-zmg"/>
                                         </constraints>
@@ -789,7 +775,7 @@
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Wx2-40-lfl" userLabel="LineView">
                                         <rect key="frame" x="0.0" y="138" width="375" height="1"/>
-                                        <color key="backgroundColor" red="0.65197943652849744" green="0.65197943652849744" blue="0.65197943652849744" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="backgroundColor" red="0.71603347081218272" green="0.71603347081218272" blue="0.71603347081218272" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="1" id="7QE-ST-UiS"/>
                                         </constraints>

@@ -28,13 +28,12 @@
         
         self.district = [NSMutableArray new];
         for (NSDictionary *districtData in districts) {
-            NSString *districtName = [ districtData objectForKey:@"name"];
+            NSString *districtName = [districtData objectForKey:@"name"];
             [self.district addObject:[districtName stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]]];
         }
     }else {
         self.district = [NSMutableArray new];
     }
-    
 }
 
 @end

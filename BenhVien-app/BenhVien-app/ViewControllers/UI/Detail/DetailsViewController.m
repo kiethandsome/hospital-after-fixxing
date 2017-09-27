@@ -109,8 +109,9 @@
 }
 
 - (IBAction)callingButtonAction:(UIButton *)sender {
-    NSString *URLstring = [NSString stringWithFormat:@"tel:%@", self.currentHospital.phones[0]];
-    NSString *phone = @"tel:0907344527";
+    NSString *hospitalPhoneNumber = self.currentHospital.phones[0];
+    
+    NSString *phone =  [NSString stringWithFormat:@"tel:08%@", [hospitalPhoneNumber substringFromIndex:3]];
     NSURL *URL = [NSURL URLWithString:phone];
 
     [[UIApplication sharedApplication] openURL:URL];

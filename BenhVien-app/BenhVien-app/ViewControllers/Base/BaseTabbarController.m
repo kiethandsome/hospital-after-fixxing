@@ -39,9 +39,8 @@
     [self didSelectMenuAtRowIndexOfMenuTableView];
 }
 
-    /// Hàm override, hàm này mặc định dc gọi khi có sự kiện trên view xảy ra.
+/// Hàm override, hàm này mặc định dc gọi khi có sự kiện trên view xảy ra.
 -(void)updateViewConstraints {
-
     [self.menuView autoPinEdge: ALEdgeTop toEdge: ALEdgeTop ofView: self.window];
     [self.menuView autoPinEdge: ALEdgeBottom toEdge: ALEdgeBottom ofView: self.window];
     [self.menuView autoPinEdge: ALEdgeLeft toEdge: ALEdgeLeft ofView: self.window];
@@ -67,15 +66,14 @@
     }];
 }
 
-- (void)touchesEnded:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
     BaseTabbarController *tab = (BaseTabbarController *)self.tabBarController;
     [self animatedMenu: tab.menuDisplayed];
 }
 
 - (void)didSelectMenuAtRowIndexOfMenuTableView {
     __weak BaseTabbarController *tab = self;
-    
-        /// cách implement một block
+        /* cách implement một block */
     [self.menuView setOneDidSelectItemAtIndexPath:^(NSInteger index) {
         [tab animatedMenu: !tab.menuDisplayed];
         if (index == 3) {
