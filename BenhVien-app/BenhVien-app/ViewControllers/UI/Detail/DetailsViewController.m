@@ -7,6 +7,7 @@
 //
 
 #import "DetailsViewController.h"
+#import "UIAlertController+Blocks.h"
 
 @interface DetailsViewController()
 
@@ -32,7 +33,6 @@
     [self.searchResultTableView registerCell:[MapCell class] forModel:[MapModel class]];
 }
 
-
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
 }
@@ -57,7 +57,6 @@
     [self.navigationController pushViewController: nextView animated: true];
 }
 
-
 - (void)loadHospitalData {
     [self showHUD];
     [self.searchResultTableView setHidden: YES];
@@ -68,7 +67,7 @@
             Hospital *hospital = [Hospital initWithResponse:[response.data objectForKey:@"hospitalInfo"]];
             [self displayHospitalInfo:hospital];
                 /// Because the currentHospital from the SearchResult doesnt have longgitude and latitude,
-                /// this code Line below assign the hospital from 'hospitalInfo' to the currentHospital.
+                /// this code Line below assign the hospital variable from 'hospitalInfo' to the currentHospital.
             self.currentHospital = hospital;
         } else {
             [self showAlertWithTitle:@"Lỗi" message:response.message];
@@ -110,11 +109,25 @@
 
 - (IBAction)callingButtonAction:(UIButton *)sender {
     NSString *hospitalPhoneNumber = self.currentHospital.phones[0];
-    
-    NSString *phone =  [NSString stringWithFormat:@"tel:08%@", [hospitalPhoneNumber substringFromIndex:3]];
-    NSURL *URL = [NSURL URLWithString:phone];
-
-    [[UIApplication sharedApplication] openURL:URL];
+    if (_currentHospital.phones.count == 0 ) {
+        NSString *alertTittle = @"Xin lỗi!";
+        NSString *alertMess = @"Bệnh viện này chưa được cập nhât số điện thoại";
+        [self showAlertWithTitle:alertTittle message:alertMess];
+    } else {
+        [UIAlertController showAlertInViewController:self
+                                           withTitle:@"Xác nhận"
+                                             message:@"Mở ứng dụng gọi điện?"
+                                   cancelButtonTitle:@"Không"
+                              destructiveButtonTitle:@"Có"
+                                   otherButtonTitles:nil
+                                            tapBlock:^(UIAlertController * _Nonnull controller, UIAlertAction * _Nonnull action, NSInteger buttonIndex) {
+                                                if (buttonIndex == controller.destructiveButtonIndex) {
+                                                    NSString *phone =  [NSString stringWithFormat:@"tel:%@", hospitalPhoneNumber];
+                                                    NSURL *URL = [NSURL URLWithString:phone];
+                                                    [[UIApplication sharedApplication] openURL:URL];
+                                                }
+                                            }];
+    }
 }
 
 - (IBAction)messageButonAction:(UIButton *)sender {

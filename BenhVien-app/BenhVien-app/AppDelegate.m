@@ -94,7 +94,6 @@
     
     [self.window setRootViewController: firstView];
     [self.window makeKeyAndVisible];
-    
 }
 
 - (void)setupApplicationTheme {
@@ -103,6 +102,7 @@
     [UINavigationBar appearance].tintColor = [UIColor whiteColor];
     NSDictionary *tittleAtrr = [[NSDictionary alloc] initWithObjectsAndKeys:[UIColor whiteColor], NSForegroundColorAttributeName, nil];
     [UINavigationBar appearance].titleTextAttributes = tittleAtrr;
+    
 }
 
 

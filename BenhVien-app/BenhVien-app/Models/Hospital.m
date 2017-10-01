@@ -10,6 +10,10 @@
 
 @implementation Hospital
 
+- (void)dealloc {
+    NSLog( @"[%@] dealloc", [self class]);
+}
+
 + (instancetype)initWithResponse:(NSDictionary *)response {
     Hospital *hospital = [[Hospital alloc] init];
     [hospital parseResponse:response];

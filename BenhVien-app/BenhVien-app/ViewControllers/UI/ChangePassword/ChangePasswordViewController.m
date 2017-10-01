@@ -81,8 +81,18 @@
                                   if (error) {
                                       [self showAlertWithTitle:@"Lỗi" message:error.description];
                                   } else {
-                                      [self showAlertWithTitle:@"Thành công" message:@"Đổi mật khẩu thành công!"];
-                                      [self dismissViewControllerAnimated:true completion:nil];
+                                      __weak ChangePasswordViewController *wSelf = self;
+                                      [UIAlertController showAlertInViewController:self
+                                                                         withTitle:@"Xác nhận"
+                                                                           message:@"Đổi mât khẩu thành công"
+                                                                 cancelButtonTitle:@"OK"
+                                                            destructiveButtonTitle:nil
+                                                                 otherButtonTitles:nil
+                                                                          tapBlock:^(UIAlertController * _Nonnull controller, UIAlertAction * _Nonnull action, NSInteger buttonIndex) {
+                                                                              if (buttonIndex == controller.cancelButtonIndex) {
+                                                                                  [wSelf dismissViewControllerAnimated:true completion:nil];
+                                                                              }
+                                                                          }];
                                   }
                               }];
 }

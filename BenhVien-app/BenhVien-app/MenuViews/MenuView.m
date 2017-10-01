@@ -10,8 +10,12 @@
 #import "AppDelegate.h"
 #import "UserDataManager.h"
 #import "UIAlertController+Blocks.h"
+#import "UIColor+Hex.h"
 
 @interface MenuView ()<UITableViewDelegate, UITableViewDataSource>
+{
+    UIColor *_currentColor;
+}
 
 @end
 
@@ -34,6 +38,7 @@
     self.userImageView.layer.cornerRadius = 18.0;
     self.userImageView.clipsToBounds = YES;
     self.userNameLabel.text = [UserDataManager sharedClient].fullName;
+
 }
 
 #pragma mark Table view delegate
@@ -51,7 +56,7 @@
     cell.cellLabel.text = [self.menuItems[indexPath.row] objectForKey:@"tittle"];
         /// set selected Cell color.
     UIView *bgColorView = [[UIView alloc] init];
-    bgColorView.backgroundColor = [UIColor redColor];
+    bgColorView.backgroundColor = [UIColor colorWithHex:0xd2232a];
     [cell setSelectedBackgroundView:bgColorView];
     return cell;
 }
@@ -76,9 +81,11 @@
 
 - (IBAction)moveToUserInfoScreen:(UIButton *)sender {
     self.oneDidSelectItemAtIndexPath(0);
-
 }
 
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
+    
+}
 
 @end
 

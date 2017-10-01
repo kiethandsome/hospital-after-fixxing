@@ -48,6 +48,17 @@
 
 - (void)leftBarButtonAction:(id)sender { /// huỷ
     [self.view endEditing: true];
+    
+    BOOL isChecked = [self checkAllInputContent];
+    if (isChecked == false) {
+        [self.navigationController dismissViewControllerAnimated:true completion:nil];
+    } else {
+        [self showAlertAndDismiss];
+    }
+}
+
+- (void)showAlertAndDismiss {
+    __weak SignUpViewController *wSelf = self;
     [UIAlertController showAlertInViewController:self
                                        withTitle:@"Xác nhận"
                                          message:@"bạn chắc chắn muốn huỷ bỏ?"
@@ -58,13 +69,10 @@
                                             if (buttonIndex == controller.cancelButtonIndex) {
                                                 
                                             } else if (buttonIndex == controller.destructiveButtonIndex) {
-                                                [self.navigationController dismissViewControllerAnimated:true completion:nil];
-                                            } else if (buttonIndex >= controller.firstOtherButtonIndex) {
-                                                
+                                                [wSelf.navigationController dismissViewControllerAnimated:true completion:nil];
                                             }
                                         }];
 }
-
 
 
 #pragma mark - Validate Email & Password
@@ -102,6 +110,13 @@
     block(@"", true);
 }
 
+- (BOOL)checkAllInputContent {
+    if (_userNameTextField.text.length == 0 && _passwordTextField.text.length == 0 && _emailTextField.text.length == 0 && _inputPasswordTextField.text.length == 0 && _fullNameTextField.text.length == 0 && _cityTextField.text.length == 0) {
+        return false;
+    }
+    return true;
+}
+
 #pragma mark - DONE ACTION (Xong)
 
 - (void)rightBarButtonAction:(id)sender {
@@ -113,28 +128,29 @@
 }
 
 - (void)doneActionWhenIsInSignUpView {                                          /// Đăng kí
-    [self validateWithEmail:_emailTextField.text
+    __weak SignUpViewController *wSelf = self;
+    [wSelf validateWithEmail:_emailTextField.text
                    password:_inputPasswordTextField.text
                    fullName:_fullNameTextField.text
                        city:_cityTextField.text
             completionBlock:^(NSString *message, BOOL isValidate) {
                 if (isValidate == true) {
-                    [self showHUD];
+                    [wSelf showHUD];
                     [ApiRequest registerWithEmail: _emailTextField.text
                                          password: _inputPasswordTextField.text
                                              city: _cityTextField.text
                                          fullName: _fullNameTextField.text
                                        completion: ^(ApiResponse *response, NSError *error) {
-                                           [self hideHUD];
+                                           [wSelf hideHUD];
                                            if (response.success == 1) {
                                                [[UserDataManager sharedClient] setUserData:response.data];
-                                               [self showAlertNotificationAndLogin];
+                                               [wSelf showAlertNotificationAndLogin];
                                            } else {
-                                               [self showAlertWithTitle:@"Lỗi" message:response.message];
+                                               [wSelf showAlertWithTitle:@"Lỗi" message:response.message];
                                            }
                                        }];
                 } else {
-                    [self showAlertWithTitle:@"Lỗi" message:message];
+                    [wSelf showAlertWithTitle:@"Lỗi" message:message];
                 }
             }];
 }
@@ -155,18 +171,20 @@
 }
 
 - (void)doneActionWhenIsInSignInView {                                             /// Đăng nhập.
+    __weak SignUpViewController *wSelf = self;
+
     [self validateWithEmail: _userNameTextField.text password:_passwordTextField.text completionBlock:^(NSString *message, BOOL isValidate) {
         if (isValidate == false) {
-            [self showAlertWithTitle:@"Lỗi" message: message];
+            [wSelf showAlertWithTitle:@"Lỗi" message: message];
         }
         else {
-            [self showHUD];
+            [wSelf showHUD];
             [ApiRequest loginWithEmail:_userNameTextField.text
                               password:_passwordTextField.text
                             completion:^(ApiResponse *response, NSError *error) {
-                                [self hideHUD];
+                                [wSelf hideHUD];
                                 if (response.success == 0 || [response.data isKindOfClass: [NSNull class]]) {
-                                    [self showAlertWithTitle:@"Lỗi" message:@"Tên đăng nhập hoặc mật khẩu không đúng! \nXin mời nhập lại"];
+                                    [wSelf showAlertWithTitle:@"Lỗi" message:@"Tên đăng nhập hoặc mật khẩu không đúng! \nXin mời nhập lại"];
                                 }else {
                                         /// lưu vào UserDataManager.
                                     [[UserDataManager sharedClient] setUserData:response.data];
@@ -177,6 +195,8 @@
         }
     }];
 }
+
+#pragma mark - Another Buttons Action.
 
 - (IBAction)forgotPasswordButtonAction:(id)sender {
     ForgotPasswordViewController *view = [self.storyboard instantiateViewControllerWithIdentifier:@"ForgotPasswordViewController"];
@@ -195,20 +215,9 @@
 }
 
 - (IBAction)takePhotoButtonAction:(UIButton *)sender {
-    [UIAlertController showAlertInViewController:self
-                                       withTitle:@"Xác nhận"
-                                         message:@"Mở máy ảnh?"
-                               cancelButtonTitle:@"Huỷ"
-                          destructiveButtonTitle:@"Ok"
-                               otherButtonTitles:nil
-                                        tapBlock:^(UIAlertController * _Nonnull controller, UIAlertAction * _Nonnull action, NSInteger buttonIndex) {
-                                            if (buttonIndex == 1) {
-                                                NSString *stringURL = @"youtube://watch?v=qDFzlwdAqtg";
-                                                NSURL *url = [NSURL URLWithString:stringURL];
-                                                [[UIApplication sharedApplication] openURL:url];
-                                            }
-                                        }];
-
+    NSString *stringURL = @"youtube://watch?v=qDFzlwdAqtg";
+    NSURL *url = [NSURL URLWithString:stringURL];
+    [[UIApplication sharedApplication] openURL:url];
 }
 
 - (IBAction)findPhotoButtonAction:(UIButton *)sender {

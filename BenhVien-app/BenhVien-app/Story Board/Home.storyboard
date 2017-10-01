@@ -33,7 +33,7 @@
                                     <action selector="searchButtonAction:" destination="uLX-ZL-Glp" eventType="touchUpInside" id="MWW-u9-4uX"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Nhập tên hoặc địa chỉ bệnh viện" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="WM8-uX-En2">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Nhập tên bệnh viện" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="WM8-uX-En2">
                                 <rect key="frame" x="20" y="80" width="284" height="45"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="45" id="RvU-Yy-y4Y"/>
@@ -219,20 +219,20 @@
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Địa chỉ: 292 Trần Hưng Đạo Phường 1, Quận" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FxJ-zF-iaf" userLabel="Hospital Address">
-                                                    <rect key="frame" x="90" y="50.5" width="255" height="13.5"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                                    <rect key="frame" x="90" y="48.5" width="255" height="14.5"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="light" pointSize="12"/>
                                                     <color key="textColor" red="0.35249352331606221" green="0.35249352331606221" blue="0.35249352331606221" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Điện thoại: 01206567579" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Fi-0a-QOm" userLabel="Hospital Phone">
-                                                    <rect key="frame" x="90" y="67" width="275" height="13.5"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                                    <rect key="frame" x="90" y="66" width="275" height="14.5"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="light" pointSize="12"/>
                                                     <color key="textColor" red="0.35249352331606221" green="0.35249352331606221" blue="0.35249352331606221" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Bệnh viện chấn thương chỉnh hình TP. Hồ Chí Minh" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ELE-jz-nMv" userLabel="Hospital Name">
                                                     <rect key="frame" x="90" y="10" width="254" height="33.5"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="light" pointSize="14"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -410,15 +410,15 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a8T-MV-boJ">
-                                <rect key="frame" x="20" y="40" width="335" height="301"/>
+                                <rect key="frame" x="20" y="40" width="335" height="215"/>
                                 <string key="text">Ứng dụng bệnh viện cho điện thoại iOS giúp bạn tìm kiếm thông tin và đường đi đến một bệnh viện nhanh chóng và dễ dàng hơn bao giờ hết. Sau khi tìm thấy một bệnh viện tốt nhất bạn có thể nhanh chóng liên hệ đến bệnh viện tốt nhất bạn có thể nhanh chóng liên hệ đến bênh viện đó ngay trong ứng dụng để dặt chỗ khám chữa bệnh.
 1) Bao gồm nhiều bệnh viện và phòng khám tại Việt Nam. 
 2) Chức năng tìm kiếm bệnh viện sẽ dễ sử dụng và hiệu quả cao.
 3) Hiển thị thong tin chi tiết của các cơ sở khám chữa bệnh.
 4) Hiển thị dường đi một cách rõ ràng, giúp bạn đến các cơ sở khám chữa bệnh một cách nhanh nhất.
 5) Dữ liệu được cập nhật thường xuyên, bạn cũng có thế đóng góp bằng cách thêm vào bệnh viện mới.</string>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <color key="textColor" red="0.29572971204188481" green="0.29572971204188481" blue="0.29572971204188481" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <color key="textColor" red="0.56081397898626462" green="0.56636659263959399" blue="0.56636659263959399" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
@@ -482,14 +482,14 @@
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="72" id="PMm-NG-Olo"/>
                                                 </constraints>
-                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="13"/>
-                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="13"/>
+                                                <color key="textColor" red="0.13269139709253039" green="0.1369566941624365" blue="0.13665590611587058" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TÊn em là gì" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v49-CP-eb8">
                                                 <rect key="frame" x="127" y="0.0" width="238" height="45"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="13"/>
+                                                <color key="textColor" red="0.28707978630510511" green="0.29070828045685282" blue="0.28445180829608957" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="username-icon" translatesAutoresizingMaskIntoConstraints="NO" id="mJ3-Qv-Nm0">
@@ -536,14 +536,14 @@
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="72" id="f9J-OM-biU"/>
                                                 </constraints>
-                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="13"/>
-                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="13"/>
+                                                <color key="textColor" red="0.13269139709253039" green="0.1369566941624365" blue="0.13665590611587058" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="con chim non" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bYQ-Cc-Oih">
                                                 <rect key="frame" x="127" y="0.0" width="238" height="45"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="13"/>
+                                                <color key="textColor" red="0.28707978630510511" green="0.29070828045685282" blue="0.28445180829608957" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
@@ -571,19 +571,19 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CoP-JB-ADb" userLabel="CityView">
                                         <rect key="frame" x="0.0" y="93" width="375" height="45"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Thành phố:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ccf-xE-xYy">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Thành phố" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ccf-xE-xYy">
                                                 <rect key="frame" x="20" y="0.0" width="72" height="45"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="72" id="jdR-sT-izT"/>
                                                 </constraints>
-                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="13"/>
-                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="13"/>
+                                                <color key="textColor" red="0.13269139709253039" green="0.1369566941624365" blue="0.13665590611587058" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Thành phố buồn" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kzA-2f-syU">
                                                 <rect key="frame" x="127" y="0.0" width="238" height="45"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="13"/>
+                                                <color key="textColor" red="0.28707978630510511" green="0.29070828045685282" blue="0.28445180829608957" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="location-icon" translatesAutoresizingMaskIntoConstraints="NO" id="7vT-aT-q55">
@@ -697,7 +697,7 @@
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UHZ-ng-1Of" userLabel="LineView">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="1"/>
-                                        <color key="backgroundColor" red="0.71603347081218272" green="0.71603347081218272" blue="0.71603347081218272" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="backgroundColor" red="0.85749127538071068" green="0.85749127538071068" blue="0.85749127538071068" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="1" id="Yvt-kW-d8d"/>
                                         </constraints>
@@ -709,7 +709,7 @@
                                                 <rect key="frame" x="20" y="0.0" width="355" height="45"/>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits"/>
+                                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                             </textField>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -723,7 +723,7 @@
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0ac-aR-HQK" userLabel="LineView">
                                         <rect key="frame" x="10" y="46" width="365" height="1"/>
-                                        <color key="backgroundColor" red="0.71603347081218272" green="0.71603347081218272" blue="0.71603347081218272" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="backgroundColor" red="0.85749127538071068" green="0.85749127538071068" blue="0.85749127538071068" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="1" id="UXQ-cL-I4V"/>
                                         </constraints>
@@ -749,7 +749,7 @@
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cMb-3f-SdT" userLabel="LineView">
                                         <rect key="frame" x="10" y="92" width="365" height="1"/>
-                                        <color key="backgroundColor" red="0.71603347081218272" green="0.71603347081218272" blue="0.71603347081218272" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="backgroundColor" red="0.85749127538071068" green="0.85749127538071068" blue="0.85749127538071068" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="1" id="6r1-ZJ-zmg"/>
                                         </constraints>
@@ -775,7 +775,7 @@
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Wx2-40-lfl" userLabel="LineView">
                                         <rect key="frame" x="0.0" y="138" width="375" height="1"/>
-                                        <color key="backgroundColor" red="0.71603347081218272" green="0.71603347081218272" blue="0.71603347081218272" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="backgroundColor" red="0.85749127538071068" green="0.85749127538071068" blue="0.85749127538071068" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="1" id="7QE-ST-UiS"/>
                                         </constraints>

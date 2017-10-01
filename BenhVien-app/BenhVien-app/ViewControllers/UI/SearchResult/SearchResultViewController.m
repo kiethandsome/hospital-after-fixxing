@@ -23,37 +23,33 @@
     self.title = @"Kết quả";
     self.searchResultTableView.delegate = self;
     self.searchResultTableView.dataSource = self;
-
     self.currentPage = 1;
     
-    //  Adding pull to refresh.
-    __weak SearchResultViewController *wSelf = self;
-    [self.searchResultTableView addPullToRefreshWithActionHandler:^{
-        if (wSelf.type == HOME) {
-            
-        }
-        if (wSelf.type == CITY) {
-            [wSelf refreshCity];
-        }
-        if (wSelf.type == DISTRICT) {
-            [wSelf refreshDistrict];
-        }
-    }];
-    
-    //  Adding Infinite Scrollling.
-    [self.searchResultTableView addInfiniteScrollingWithActionHandler:^{
-        if (wSelf.type == HOME) {
-            
-        }
-        if (wSelf.type == CITY) {
-            [self loadMoreCity];
-        }
-        if (wSelf.type == DISTRICT) {
-            [wSelf loadMoreDistrict];
-        }
-    }];
-    self.searchResultTableView.pullToRefreshView.arrowColor = [UIColor redColor];
-
+    if (self.type == HOME){
+        
+    } else {
+        //  Adding pull to refresh.
+        __weak SearchResultViewController *wSelf = self;
+        [wSelf.searchResultTableView addPullToRefreshWithActionHandler:^{
+            if (wSelf.type == CITY) {
+                [wSelf refreshCity];
+            }
+            if (wSelf.type == DISTRICT) {
+                [wSelf refreshDistrict];
+            }
+        }];
+        
+        //  Adding Infinite Scrollling.
+        [wSelf.searchResultTableView addInfiniteScrollingWithActionHandler:^{
+            if (wSelf.type == CITY) {
+                [wSelf loadMoreCity];
+            }
+            if (wSelf.type == DISTRICT) {
+                [wSelf loadMoreDistrict];
+            }
+        }];
+        wSelf.searchResultTableView.pullToRefreshView.arrowColor = [UIColor redColor];
+    }
 }
 
 - (void)didReceiveMemoryWarning {
@@ -67,7 +63,6 @@
     }
     self.searchResultTableView.estimatedRowHeight = 91.0;
     self.searchResultTableView.tableFooterView = [UIView new];
-
 }
 
 #pragma mark - Refresh
@@ -126,8 +121,6 @@
     }
 }
 
-
-
 #pragma mark - Table view delegate and Data sources
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
@@ -146,6 +139,7 @@
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    [tableView deselectRowAtIndexPath:indexPath animated:true];
     DetailsViewController *view = [self.storyboard instantiateViewControllerWithIdentifier:@"DetailsViewController"];
     view.currentHospital = self.hospitals[indexPath.row];
     [self.navigationController pushViewController:view animated:true];

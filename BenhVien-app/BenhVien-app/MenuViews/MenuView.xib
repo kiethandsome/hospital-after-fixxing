@@ -87,8 +87,9 @@
                 <outlet property="menuTableView" destination="f3h-ZD-x2Y" id="vWa-9U-Mq0"/>
                 <outlet property="userImageView" destination="Qwu-3s-AJU" id="hqM-fo-Kov"/>
                 <outlet property="userNameLabel" destination="bko-Rp-czK" id="P0u-ip-ZzX"/>
+                <outlet property="userView" destination="qtG-LN-MlK" id="XJq-Pc-AwT"/>
             </connections>
-            <point key="canvasLocation" x="-110.5" y="26.5"/>
+            <point key="canvasLocation" x="-312" y="-182"/>
         </view>
     </objects>
     <resources>

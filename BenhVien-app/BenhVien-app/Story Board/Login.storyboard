@@ -47,7 +47,7 @@
                                                 </constraints>
                                             </imageView>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mMQ-ZS-F8g" userLabel="ButtonView">
-                                                <rect key="frame" x="42" y="145" width="96" height="40"/>
+                                                <rect key="frame" x="42" y="155" width="96" height="30"/>
                                                 <subviews>
                                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="select-photo-btn" translatesAutoresizingMaskIntoConstraints="NO" id="boG-WB-6yX" userLabel="ButtonImageView">
                                                         <rect key="frame" x="0.0" y="0.0" width="96" height="40"/>
@@ -75,7 +75,7 @@
                                             <constraint firstItem="mMQ-ZS-F8g" firstAttribute="leading" secondItem="0Yb-Vb-Q27" secondAttribute="leading" constant="42" id="75H-9I-uNZ"/>
                                             <constraint firstAttribute="trailing" secondItem="mMQ-ZS-F8g" secondAttribute="trailing" constant="42" id="JWZ-ai-pSl"/>
                                             <constraint firstAttribute="bottom" secondItem="IxI-QB-0jQ" secondAttribute="bottom" id="N8P-0N-ga1"/>
-                                            <constraint firstItem="mMQ-ZS-F8g" firstAttribute="top" secondItem="0Yb-Vb-Q27" secondAttribute="top" constant="145" id="NGT-kx-GA4"/>
+                                            <constraint firstItem="mMQ-ZS-F8g" firstAttribute="top" secondItem="0Yb-Vb-Q27" secondAttribute="top" constant="155" id="NGT-kx-GA4"/>
                                             <constraint firstAttribute="height" constant="185" id="PxN-xw-Nsr"/>
                                             <constraint firstItem="IxI-QB-0jQ" firstAttribute="leading" secondItem="0Yb-Vb-Q27" secondAttribute="leading" id="cpm-Vi-CnL"/>
                                             <constraint firstAttribute="bottom" secondItem="mMQ-ZS-F8g" secondAttribute="bottom" id="fRm-ef-omV"/>
@@ -102,12 +102,12 @@
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits"/>
                                                     </textField>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Họ và tên:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FAP-dX-glq">
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Họ và tên" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FAP-dX-glq">
                                                         <rect key="frame" x="10" y="0.0" width="80" height="45"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="80" id="2qA-p6-Fuj"/>
                                                         </constraints>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="14"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
@@ -143,12 +143,12 @@
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Aql-oz-FqK" userLabel="email view">
                                                 <rect key="frame" x="0.0" y="47" width="375" height="45"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GTS-wq-6ld">
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GTS-wq-6ld">
                                                         <rect key="frame" x="10" y="0.0" width="80" height="45"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="80" id="hgn-TJ-PPo"/>
                                                         </constraints>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="14"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
@@ -196,12 +196,12 @@
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits"/>
                                                     </textField>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mật khẩu:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QpK-4F-OC4">
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mật khẩu" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QpK-4F-OC4">
                                                         <rect key="frame" x="10" y="0.0" width="80" height="45"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="80" id="ZTh-GR-E9o"/>
                                                         </constraints>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="14"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
@@ -243,12 +243,12 @@
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits"/>
                                                     </textField>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Thành phố:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BVf-sa-tRu">
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Thành phố" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BVf-sa-tRu">
                                                         <rect key="frame" x="10" y="0.0" width="80" height="45"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="80" id="Pps-Uq-E1Z"/>
                                                         </constraints>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="14"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
@@ -564,10 +564,10 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="first-login-bg" translatesAutoresizingMaskIntoConstraints="NO" id="UHY-SL-R8t">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
-                            <button opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="goo-nh-HIW" userLabel="LogInWithEmail">
+                            <button opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="goo-nh-HIW" userLabel="LogInWithEmail">
                                 <rect key="frame" x="27" y="592" width="320" height="45"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                <inset key="titleEdgeInsets" minX="55" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                <inset key="titleEdgeInsets" minX="70" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 <state key="normal" title="Đăng nhập hoặc đăng kí với Email" backgroundImage="btn-email">
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
@@ -575,10 +575,10 @@
                                     <action selector="EmailLoginAction:" destination="jMH-4C-WhV" eventType="touchUpInside" id="DBW-X1-UM9"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yLC-wP-hQH" userLabel="LoginWithFacbook">
+                            <button opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yLC-wP-hQH" userLabel="LoginWithFacbook">
                                 <rect key="frame" x="27" y="537" width="320" height="45"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                <inset key="titleEdgeInsets" minX="55" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                <inset key="titleEdgeInsets" minX="70" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 <state key="normal" title="Đăng nhập hoặc đăng kí với Facebook" backgroundImage="btn-facebook"/>
                                 <connections>
                                     <action selector="facebookLoginAction:" destination="jMH-4C-WhV" eventType="touchUpInside" id="9F1-kL-sbA"/>

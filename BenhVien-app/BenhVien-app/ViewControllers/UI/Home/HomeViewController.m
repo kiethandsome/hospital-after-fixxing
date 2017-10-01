@@ -25,7 +25,6 @@
     [super didReceiveMemoryWarning];
 }
 
-
 - (void)setUpUserInterface {
     _searchTextField.layer.cornerRadius = 4.0;
     _searchTextField.layer.borderWidth = 0.5;
@@ -37,8 +36,11 @@
     [self showMenuButtonItem];
 }
 
+#pragma mark - Button Pressed.
+
 - (IBAction)advanceSearchBtn:(UIButton *)sender {
     AdvanceSearchViewController *vc = (AdvanceSearchViewController *)[AdvanceSearchViewController instanceFromStoryboardName:@"Home"];
+    vc.prevViewController = self;
     [self.navigationController pushViewController:vc animated:true];
 }
 
@@ -53,7 +55,10 @@
     }];
 }
 
+#pragma mark - Search HOspital.
+
 - (void)searchHospital:(NSString *)hospitalName {
+
     [self showHUD];
     [ApiRequest searchHospitalByName:hospitalName completion:^(ApiResponse *response, NSError *error) {
         [self hideHUD];
@@ -71,10 +76,10 @@
                 }
                 SearchResultViewController *view = [self.storyboard instantiateViewControllerWithIdentifier:@"SearchResultViewController"];
                 view.hospitals = hospitalArray;
+                view.type = HOME;
                 [self.navigationController pushViewController:view animated:true];
             }
         }
-
     }];
 }
 

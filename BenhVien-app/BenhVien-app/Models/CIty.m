@@ -10,6 +10,10 @@
 
 @implementation CIty
 
+- (void)dealloc {
+    NSLog( @"[%@] dealloc", [self class]);
+}
+
 + (instancetype)initWithData:(NSDictionary *)data {
     CIty *newCity = [[CIty alloc]init];
     [newCity parseForJSONWith:data];

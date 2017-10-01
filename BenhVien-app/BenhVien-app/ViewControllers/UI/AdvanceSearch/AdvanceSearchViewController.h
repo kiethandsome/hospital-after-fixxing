@@ -14,9 +14,13 @@
 #import "ApiRequest.h"
 #import "Constant.h"
 
+@class HomeViewController;
+
 
 
 @interface AdvanceSearchViewController : BaseViewController
+
+@property (strong, nonatomic) HomeViewController *prevViewController;
 
 @property (nonatomic) NSInteger currentPage;
 @property (nonatomic) NSInteger totalPage;

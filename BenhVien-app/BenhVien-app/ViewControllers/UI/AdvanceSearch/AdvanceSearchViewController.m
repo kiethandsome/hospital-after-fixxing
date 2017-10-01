@@ -33,7 +33,7 @@
     self.searchButton.layer.cornerRadius = 4.0;
     
     _cities = [NSMutableArray new];
-    
+    self.prevViewController.testArr = _cities;
     // delegate
     self.cityPicker.delegate = self;
     self.cityPicker.dataSource = self;

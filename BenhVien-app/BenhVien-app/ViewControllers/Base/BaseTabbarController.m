@@ -12,7 +12,7 @@
 @interface BaseTabbarController ()
 
 @property (nonatomic, strong) MenuView *menuView;
-@property (strong, nonatomic) UIWindow *window;
+@property (nonatomic) BOOL didUpdateConstraint;
 
 @end
 
@@ -33,19 +33,22 @@
     [self.menuView setupMenuView];
             //// Take the window from AppDelegate
             //// and add a Menu View under the Tabbar.
-    self.window = [[[UIApplication sharedApplication] delegate] window];
-    [self.window addSubview: self.menuView];
+    UIWindow *window = [[[UIApplication sharedApplication] delegate] window];
+    [window addSubview: self.menuView];
     
     [self didSelectMenuAtRowIndexOfMenuTableView];
 }
 
 /// Hàm override, hàm này mặc định dc gọi khi có sự kiện trên view xảy ra.
 -(void)updateViewConstraints {
-    [self.menuView autoPinEdge: ALEdgeTop toEdge: ALEdgeTop ofView: self.window];
-    [self.menuView autoPinEdge: ALEdgeBottom toEdge: ALEdgeBottom ofView: self.window];
-    [self.menuView autoPinEdge: ALEdgeLeft toEdge: ALEdgeLeft ofView: self.window];
-    [self.menuView autoPinEdge: ALEdgeRight toEdge: ALEdgeRight ofView: self.window];
-
+    if (!_didUpdateConstraint) {
+        UIWindow *window = [[[UIApplication sharedApplication] delegate] window];
+        [self.menuView autoPinEdge: ALEdgeTop toEdge: ALEdgeTop ofView: window];
+        [self.menuView autoPinEdge: ALEdgeBottom toEdge: ALEdgeBottom ofView: window];
+        [self.menuView autoPinEdge: ALEdgeLeft toEdge: ALEdgeLeft ofView: window];
+        [self.menuView autoPinEdge: ALEdgeRight toEdge: ALEdgeRight ofView: window];
+        self.didUpdateConstraint = true;
+    }
     [super updateViewConstraints];
 }
 
@@ -74,7 +77,7 @@
 - (void)didSelectMenuAtRowIndexOfMenuTableView {
     __weak BaseTabbarController *tab = self;
         /* cách implement một block */
-    [self.menuView setOneDidSelectItemAtIndexPath:^(NSInteger index) {
+    [tab.menuView setOneDidSelectItemAtIndexPath:^(NSInteger index) {
         [tab animatedMenu: !tab.menuDisplayed];
         if (index == 3) {
             [UIAlertController showAlertInViewController:tab
@@ -89,7 +92,6 @@
                                                     } else if(buttonIndex == controller.destructiveButtonIndex) {
                                                         [tab logOut];
                                                     }
-           
                                                 }];
         }
         tab.selectedIndex = index;
@@ -101,7 +103,6 @@
     [delegate setupHomeScreen3];
     [[UserDataManager sharedClient] clearUserData];
 }
-
 
 @end
 
