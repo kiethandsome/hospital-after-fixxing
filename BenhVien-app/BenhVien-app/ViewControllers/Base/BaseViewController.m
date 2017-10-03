@@ -43,6 +43,7 @@
 }
 
 - (IBAction)menuButtonPressed:(id)sender{
+    [self.view endEditing:true];
     BaseTabbarController *tab = (BaseTabbarController *)self.tabBarController;
     [tab animatedMenu:!tab.menuDisplayed];
 }
@@ -55,6 +56,7 @@
 }
 
 - (IBAction)backButtonPressed:(id)sender {
+    [self.view endEditing:true];
     [self.navigationController popViewControllerAnimated:true];
 }
 
@@ -71,7 +73,7 @@
 }
 
 - (IBAction)leftBarButtonAction:(id)sender{
-    
+    [self.view endEditing:true];
 }
 
 #pragma mark - Right BAr button.
@@ -87,17 +89,13 @@
 }
 
 - (IBAction)rightBarButtonAction:(id)sender{
-    
+    [self.view endEditing:true];
 }
 
 #pragma  mark - HUD _ show and hide
 
 - (void)showHUD {
-///    dispatch_async(dispatch_get_main_queue(), ^{
-///         [MBProgressHUD showHUDAddedTo: self.view animated:true];
-///    });
-    
-        [SVProgressHUD showWithStatus:@"Loading..."];
+    [SVProgressHUD showWithStatus:@"Loading..."];
 }
 
 - (void)hideHUD {
@@ -134,7 +132,9 @@
 
 
 
-
+///    dispatch_async(dispatch_get_main_queue(), ^{
+///         [MBProgressHUD showHUDAddedTo: self.view animated:true];
+///    });
 
 
 

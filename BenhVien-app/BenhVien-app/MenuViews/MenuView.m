@@ -11,6 +11,7 @@
 #import "UserDataManager.h"
 #import "UIAlertController+Blocks.h"
 #import "UIColor+Hex.h"
+#import <QuartzCore/QuartzCore.h>
 
 @interface MenuView ()<UITableViewDelegate, UITableViewDataSource>
 {
@@ -38,7 +39,6 @@
     self.userImageView.layer.cornerRadius = 18.0;
     self.userImageView.clipsToBounds = YES;
     self.userNameLabel.text = [UserDataManager sharedClient].fullName;
-
 }
 
 #pragma mark Table view delegate
@@ -68,7 +68,6 @@
     if (self.oneDidSelectItemAtIndexPath) {
         self.oneDidSelectItemAtIndexPath(indexPath.row + 1);
     }
-
 }
 
 - (void)logOut {

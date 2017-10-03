@@ -28,6 +28,12 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qtG-LN-MlK" userLabel="UserView(Cell)">
                     <rect key="frame" x="0.0" y="0.0" width="375" height="85"/>
                     <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Jz-CA-8gp" userLabel="UserInfoButton">
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="85"/>
+                            <connections>
+                                <action selector="moveToUserInfoScreen:" destination="i5M-Pr-FkT" eventType="touchUpInside" id="paZ-wn-nax"/>
+                            </connections>
+                        </button>
                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="avatar-placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="Qwu-3s-AJU" userLabel="UserImageView">
                             <rect key="frame" x="20" y="35" width="35" height="35"/>
                             <color key="backgroundColor" red="0.96464347207276557" green="1" blue="0.97854409871740899" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -45,12 +51,6 @@
                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Jz-CA-8gp" userLabel="UserInfoButton">
-                            <rect key="frame" x="0.0" y="0.0" width="375" height="85"/>
-                            <connections>
-                                <action selector="moveToUserInfoScreen:" destination="i5M-Pr-FkT" eventType="touchUpInside" id="paZ-wn-nax"/>
-                            </connections>
-                        </button>
                     </subviews>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     <constraints>
@@ -86,10 +86,11 @@
             <connections>
                 <outlet property="menuTableView" destination="f3h-ZD-x2Y" id="vWa-9U-Mq0"/>
                 <outlet property="userImageView" destination="Qwu-3s-AJU" id="hqM-fo-Kov"/>
+                <outlet property="userInfomationButton" destination="5Jz-CA-8gp" id="Gkt-S8-PFl"/>
                 <outlet property="userNameLabel" destination="bko-Rp-czK" id="P0u-ip-ZzX"/>
                 <outlet property="userView" destination="qtG-LN-MlK" id="XJq-Pc-AwT"/>
             </connections>
-            <point key="canvasLocation" x="-312" y="-182"/>
+            <point key="canvasLocation" x="-138" y="-260"/>
         </view>
     </objects>
     <resources>

@@ -20,6 +20,8 @@
     [self.segmentControl setSelectedSegmentIndex: 0];
     [self.segmentControl addTarget: self action:@selector(segmentAction:) forControlEvents: UIControlEventValueChanged];
     [self.findPhotoButton addTarget:self action:@selector(buttonTouched:) forControlEvents:UIControlEventTouchUpInside];
+    self.avatarImageView.layer.cornerRadius = 90.0;
+    self.avatarImageView.clipsToBounds = true;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -199,12 +201,16 @@
 #pragma mark - Another Buttons Action.
 
 - (IBAction)forgotPasswordButtonAction:(id)sender {
+    [self.view endEditing:true];
+
     ForgotPasswordViewController *view = [self.storyboard instantiateViewControllerWithIdentifier:@"ForgotPasswordViewController"];
     BaseNavigationController *nav = [[BaseNavigationController alloc] initWithRootViewController:view];
     [self presentViewController:nav animated:true completion:nil];
 }
 
 - (IBAction)selectCity:(UIButton *)sender {
+    [self.view endEditing:true];
+
     PlacesViewController *view = (PlacesViewController *)[PlacesViewController instanceFromStoryboardName:@"Login"];
     [view setBlock:^(NSString *city){
         NSLog(@"%@", city);
@@ -215,6 +221,8 @@
 }
 
 - (IBAction)takePhotoButtonAction:(UIButton *)sender {
+    [self.view endEditing:true];
+
     NSString *stringURL = @"youtube://watch?v=qDFzlwdAqtg";
     NSURL *url = [NSURL URLWithString:stringURL];
     [[UIApplication sharedApplication] openURL:url];

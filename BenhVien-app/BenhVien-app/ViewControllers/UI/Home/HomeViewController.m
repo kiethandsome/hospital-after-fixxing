@@ -25,6 +25,10 @@
     [super didReceiveMemoryWarning];
 }
 
+- (void)viewWillAppear:(BOOL)animated {
+    [self.view endEditing:true];
+}
+
 - (void)setUpUserInterface {
     _searchTextField.layer.cornerRadius = 4.0;
     _searchTextField.layer.borderWidth = 0.5;
@@ -39,12 +43,16 @@
 #pragma mark - Button Pressed.
 
 - (IBAction)advanceSearchBtn:(UIButton *)sender {
+    [self.view endEditing:true];
+
     AdvanceSearchViewController *vc = (AdvanceSearchViewController *)[AdvanceSearchViewController instanceFromStoryboardName:@"Home"];
     vc.prevViewController = self;
     [self.navigationController pushViewController:vc animated:true];
 }
 
 - (IBAction)searchButtonAction:(UIButton *)sender {
+    [self.view endEditing:true];
+
     NSString *hospitalName = self.searchTextField.text;
     [self validateHospitalName:hospitalName completion:^(BOOL isValidated, NSString *message) {
         if (isValidated){

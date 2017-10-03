@@ -75,6 +75,8 @@
 }
 
 - (void)didSelectMenuAtRowIndexOfMenuTableView {
+    [self.view endEditing:true];
+    
     __weak BaseTabbarController *tab = self;
         /* cách implement một block */
     [tab.menuView setOneDidSelectItemAtIndexPath:^(NSInteger index) {

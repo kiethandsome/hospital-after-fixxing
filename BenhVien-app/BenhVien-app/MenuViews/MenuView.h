@@ -19,6 +19,7 @@
 @property (weak, nonatomic) IBOutlet UIImageView *userImageView;
 @property (nonatomic) void (^oneDidSelectItemAtIndexPath)(NSInteger index);
 @property (weak, nonatomic) IBOutlet UIView *userView;
+@property (weak, nonatomic) IBOutlet UIButton *userInfomationButton;
 
 - (void)setupMenuView;
 
