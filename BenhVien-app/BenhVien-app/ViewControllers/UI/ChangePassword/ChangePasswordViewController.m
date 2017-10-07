@@ -31,6 +31,11 @@
     [super didReceiveMemoryWarning];
 }
 
+-(void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
+    [self.view endEditing:true];
+}
+
+
 - (void)validateOldPassword:(NSString *)text1 newPassword:(NSString *)text2 confirmPassword:(NSString *)text3 completionBlock:(void (^)(NSString *message, BOOL isValidate))block {
     if (!text1 || text1.length == 0) {
         block(@"Bạn phải nhập mật khẩu cũ", false);

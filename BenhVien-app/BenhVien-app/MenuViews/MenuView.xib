@@ -28,8 +28,9 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qtG-LN-MlK" userLabel="UserView(Cell)">
                     <rect key="frame" x="0.0" y="0.0" width="375" height="85"/>
                     <subviews>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Jz-CA-8gp" userLabel="UserInfoButton">
+                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Jz-CA-8gp" userLabel="UserInfoButton">
                             <rect key="frame" x="0.0" y="0.0" width="375" height="85"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <connections>
                                 <action selector="moveToUserInfoScreen:" destination="i5M-Pr-FkT" eventType="touchUpInside" id="paZ-wn-nax"/>
                             </connections>
@@ -54,11 +55,7 @@
                     </subviews>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     <constraints>
-                        <constraint firstItem="5Jz-CA-8gp" firstAttribute="leading" secondItem="qtG-LN-MlK" secondAttribute="leading" id="OL4-5q-ePV"/>
-                        <constraint firstAttribute="trailing" secondItem="5Jz-CA-8gp" secondAttribute="trailing" id="Z1d-hr-Nsb"/>
                         <constraint firstAttribute="bottom" secondItem="bko-Rp-czK" secondAttribute="bottom" constant="20" id="djH-cZ-e3g"/>
-                        <constraint firstAttribute="bottom" secondItem="5Jz-CA-8gp" secondAttribute="bottom" id="fIf-P7-pIV"/>
-                        <constraint firstItem="5Jz-CA-8gp" firstAttribute="top" secondItem="qtG-LN-MlK" secondAttribute="top" id="gok-gc-fqs"/>
                         <constraint firstItem="bko-Rp-czK" firstAttribute="leading" secondItem="Qwu-3s-AJU" secondAttribute="trailing" constant="10" id="pmy-mY-LGi"/>
                         <constraint firstAttribute="height" constant="85" id="qhe-ek-Qxs"/>
                         <constraint firstAttribute="bottom" secondItem="Qwu-3s-AJU" secondAttribute="bottom" constant="15" id="rip-ij-ENc"/>
@@ -90,7 +87,7 @@
                 <outlet property="userNameLabel" destination="bko-Rp-czK" id="P0u-ip-ZzX"/>
                 <outlet property="userView" destination="qtG-LN-MlK" id="XJq-Pc-AwT"/>
             </connections>
-            <point key="canvasLocation" x="-138" y="-260"/>
+            <point key="canvasLocation" x="-255" y="-238"/>
         </view>
     </objects>
     <resources>

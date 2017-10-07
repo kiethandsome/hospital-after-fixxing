@@ -9,6 +9,7 @@
 #import "SearchResultViewController.h"
 #import <SVPullToRefresh/SVPullToRefresh.h>
 #import "ApiRequest.h"
+#import "UIColor+Hex.h"
 
 
 @interface SearchResultViewController()<UITableViewDelegate, UITableViewDataSource>
@@ -48,7 +49,7 @@
                 [wSelf loadMoreDistrict];
             }
         }];
-        wSelf.searchResultTableView.pullToRefreshView.arrowColor = [UIColor redColor];
+        wSelf.searchResultTableView.pullToRefreshView.arrowColor = [UIColor colorWithHex:0xd2232a];
     }
 }
 

@@ -14,10 +14,10 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = 'C222FEBE489F89EFA8BE7AE2758CECDD'
-               BlueprintName = 'PureLayout'
+               BlueprintIdentifier = '07802B11A37718F1D83FDEA3D357F4F0'
+               BlueprintName = 'ButtonBackgroundColor'
                ReferencedContainer = 'container:Pods.xcodeproj'
-               BuildableName = 'PureLayout.framework'>
+               BuildableName = 'ButtonBackgroundColor.framework'>
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>

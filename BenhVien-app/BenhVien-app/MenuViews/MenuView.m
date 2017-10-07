@@ -12,6 +12,7 @@
 #import "UIAlertController+Blocks.h"
 #import "UIColor+Hex.h"
 #import <QuartzCore/QuartzCore.h>
+#import "ButtonBackgroundColor-Swift.h"
 
 @interface MenuView ()<UITableViewDelegate, UITableViewDataSource>
 {
@@ -31,6 +32,7 @@
     _menuTableView.dataSource = self;
     [_menuTableView setScrollEnabled:false];
     [self.menuTableView setTableFooterView: [UIView new]];
+    
         //// The most Important code line when using XIB file.
     _menuTableView.estimatedRowHeight = 60.0;
     [_menuTableView registerNib:[UINib nibWithNibName:@"MenuViewCell" bundle:nil] forCellReuseIdentifier:@"MenuViewCell"];
@@ -39,6 +41,13 @@
     self.userImageView.layer.cornerRadius = 18.0;
     self.userImageView.clipsToBounds = YES;
     self.userNameLabel.text = [UserDataManager sharedClient].fullName;
+    
+    _currentColor = self.backgroundColor;
+    
+    [self.userInfomationButton bbc_backgroundColorNormal:_currentColor
+                              backgroundColorHighlighted:[UIColor colorWithHex:0xd2232a]];
+    
+
 }
 
 #pragma mark Table view delegate
@@ -82,9 +91,6 @@
     self.oneDidSelectItemAtIndexPath(0);
 }
 
-- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
-    
-}
 
 @end
 

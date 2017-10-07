@@ -38,6 +38,10 @@
     [self showLeftBarButtonItemWithTittle:@"Huỷ"];
 }
 
+-(void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
+    [self.view endEditing:true];
+}
+
 - (IBAction)segmentAction:(id)sender {
     if (self.segmentControl.selectedSegmentIndex == 0) {
         [self.signInView setHidden:NO];
@@ -63,7 +67,7 @@
     __weak SignUpViewController *wSelf = self;
     [UIAlertController showAlertInViewController:self
                                        withTitle:@"Xác nhận"
-                                         message:@"bạn chắc chắn muốn huỷ bỏ?"
+                                         message:@"Bạn chắc chắn muốn huỷ bỏ?"
                                cancelButtonTitle:@"Không"
                           destructiveButtonTitle:@"Có"
                                otherButtonTitles:nil
@@ -122,6 +126,8 @@
 #pragma mark - DONE ACTION (Xong)
 
 - (void)rightBarButtonAction:(id)sender {
+    [self.view endEditing:true];
+
     if (_segmentControl.selectedSegmentIndex == 0) {
         [self doneActionWhenIsInSignInView];
     } else {

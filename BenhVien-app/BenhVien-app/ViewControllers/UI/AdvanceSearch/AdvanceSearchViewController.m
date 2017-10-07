@@ -39,13 +39,14 @@
     self.cityPicker.dataSource = self;
     
     // Load Data
-    [self getCitiesFromServer];
+    [self readCitiesFromJsonFile];
+    [self setupCityDropDownAndDistrictDropDown];
+
 }
 
 #pragma mark Get the cities from the JSON file.
 
-- (NSMutableArray *)readCitiesFromJsonFile {
-    NSMutableArray *cities = [NSMutableArray new];
+- (void)readCitiesFromJsonFile {
     NSString *filePath = [[NSBundle mainBundle] pathForResource:@"cities" ofType:@"json"];
     NSString *JsonString = [NSString stringWithContentsOfFile:filePath encoding:NSUTF8StringEncoding error:nil];
     
@@ -56,9 +57,8 @@
     NSArray *cityArray = [JSONDIict objectForKey:@"cities"];
     for (NSDictionary *citiesDict in cityArray) {
         CIty *city = [CIty initWithData:citiesDict];
-        [cities addObject:city];
+        [_cities addObject:city];
     }
-    return cities;
 }
 
                                                     // Setup both 2 IQDropDown-s type.
@@ -133,6 +133,8 @@
 #pragma mark - Button Actions.
 
 - (IBAction)searchPressed:(UIButton *)sender {
+    [self.view endEditing:true];
+    
     NSString *cityName = self.cityPicker.selectedItem;
     NSString *districtName = self.districtPicker.selectedItem;
     
@@ -148,10 +150,10 @@
 - (void)searchHospitalByCityName:(NSString *)cityName district:(NSString *)districtName {
     [self showHUD];
     [ApiRequest searchTheHospitalByCityName:cityName district:districtName page:1 completion:^(ApiResponse *response, NSError *error) {
+        [self hideHUD];
         NSArray *hospitalArray = [response.data objectForKey:@"hospitals"];
         NSInteger pages = [[response.data objectForKey:@"pages"] integerValue];
-        if (hospitalArray > 0) {
-            [self hideHUD];
+        if (hospitalArray.count > 0) {
             NSMutableArray *hosArray = [NSMutableArray new];
             for (NSDictionary *dict in hospitalArray) {
                 Hospital *aHospital = [Hospital initWithResponse:dict];
@@ -169,10 +171,10 @@
 - (void)searchHospitalByCityName:(NSString *)cityName {
     [self showHUD];
     [ApiRequest searchTheHospitalByTheCityName:cityName page:1 completion:^(ApiResponse *response, NSError *error) {
+        [self hideHUD];
         NSArray *hospitalArray = [response.data valueForKey:@"hospitals"];
         NSInteger pages = [[response.data objectForKey:@"pages"] integerValue];
-        if (hospitalArray > 0) {
-            [self hideHUD];
+        if (hospitalArray.count > 0) {
             NSMutableArray *hosArray = [NSMutableArray new];
             for (NSDictionary *dict in hospitalArray) {
                 Hospital *aHospital = [Hospital initWithResponse:dict];
@@ -180,7 +182,7 @@
             }
             [self goToSearchViewControllerWithHospitalsArray:hosArray city:cityName district:nil pages:pages type:CITY];
         }else {
-            [self showAlertWithTitle:@"Thông đít" message:@"Không tìm thấy bệnh viện bạn yêu cầu!"];
+            [self showAlertWithTitle:@"Thông báo" message:@"Không tìm thấy bệnh viện bạn yêu cầu!"];
         }
     }];
 }

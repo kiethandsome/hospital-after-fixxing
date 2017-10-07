@@ -29,6 +29,8 @@
     [self.tabBarController.tabBar setHidden: YES];
     self.navigationController.interactivePopGestureRecognizer.delegate = self;
     self.navigationController.interactivePopGestureRecognizer.enabled = YES;
+    
+    [SVProgressHUD setDefaultMaskType:SVProgressHUDMaskTypeBlack];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -56,7 +58,6 @@
 }
 
 - (IBAction)backButtonPressed:(id)sender {
-    [self.view endEditing:true];
     [self.navigationController popViewControllerAnimated:true];
 }
 
@@ -73,7 +74,6 @@
 }
 
 - (IBAction)leftBarButtonAction:(id)sender{
-    [self.view endEditing:true];
 }
 
 #pragma mark - Right BAr button.
@@ -95,7 +95,7 @@
 #pragma  mark - HUD _ show and hide
 
 - (void)showHUD {
-    [SVProgressHUD showWithStatus:@"Loading..."];
+    [SVProgressHUD show];
 }
 
 - (void)hideHUD {
@@ -123,6 +123,7 @@
                                otherButtonTitles:nil
                                         tapBlock:nil];
 }
+
 
 
 @end

@@ -23,6 +23,14 @@
     [self setupMenuView];
 }
 
+- (void)viewWillAppear:(BOOL)animated {
+    if (self.menuDisplayed) {
+        [self.view setUserInteractionEnabled:NO];
+    } else {
+        [self.view setUserInteractionEnabled:YES];
+    }
+}
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
 }

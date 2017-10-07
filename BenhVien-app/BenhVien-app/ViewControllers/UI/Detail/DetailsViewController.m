@@ -116,7 +116,7 @@
     } else {
         [UIAlertController showAlertInViewController:self
                                            withTitle:@"Xác nhận"
-                                             message:@"Mở ứng dụng gọi điện?"
+                                             message:@"Mở ứng dụng Điện thoại?"
                                    cancelButtonTitle:@"Không"
                               destructiveButtonTitle:@"Có"
                                    otherButtonTitles:nil
@@ -133,6 +133,7 @@
 - (IBAction)messageButonAction:(UIButton *)sender {
     
 }
+
 
 
 @end

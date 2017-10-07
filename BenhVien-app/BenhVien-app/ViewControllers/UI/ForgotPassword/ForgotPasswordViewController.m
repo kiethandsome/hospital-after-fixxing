@@ -29,27 +29,18 @@
 
 - (void)rightBarButtonAction:(id)sender {
     [self.view endEditing: true];
-    [UIAlertController showAlertInViewController:self
-                                       withTitle:@"Xác nhận"
-                                         message:@"bạn chắc chắn muốn huỷ bỏ"
-                               cancelButtonTitle:@"Không"
-                          destructiveButtonTitle:@"Có"
-                               otherButtonTitles:nil
-                                        tapBlock:^(UIAlertController * _Nonnull controller, UIAlertAction * _Nonnull action, NSInteger buttonIndex) {
-                                            if (buttonIndex == controller.cancelButtonIndex) {
-                                                
-                                            } else if (buttonIndex == controller.destructiveButtonIndex) {
-                                                [self.navigationController dismissViewControllerAnimated:true completion:nil];
-                                            } else if (buttonIndex >= controller.firstOtherButtonIndex) {
-                                                
-                                            }
-                                        }];
+    [self.navigationController dismissViewControllerAnimated:true completion:nil];
 }
 
 
 - (IBAction)codeSendingAction:(UIButton *)sender {
     [self showAlertWithTitle:@"Lou" message:@"Này chưa có làm má ôi!"];
 }
+
+-(void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
+    [self.view endEditing:true];
+}
+
 
 @end
 

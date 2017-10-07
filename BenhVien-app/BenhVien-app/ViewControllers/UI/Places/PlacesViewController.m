@@ -12,7 +12,7 @@
 @interface PlacesViewController ()<UITableViewDelegate, UITableViewDataSource, UITextFieldDelegate>
 {
     UITextField *_searchTextField;
-    NSArray *_searchResults;
+    NSMutableArray *_searchResults;
     HNKGooglePlacesAutocompleteQuery *_query;
 }
 
@@ -34,7 +34,11 @@
     [super didReceiveMemoryWarning];
 }
 
-/* show Done Button and Search text field */
+- (void)setUpUserInterface {
+    self.cityTableView.tableFooterView = [UIView new];
+}
+
+/* show Done Button and Search text field in Navigation Bar */
 
 - (void)showBarButtons {
     NSDictionary *attribute = @{NSFontAttributeName : [UIFont systemFontOfSize: 16]};
@@ -52,6 +56,7 @@
 }
 
 - (void)cancelButtonAction {
+    [self.view endEditing:true];
     [self.navigationController dismissViewControllerAnimated:true completion:nil];
 }
 
@@ -73,20 +78,23 @@
 #pragma mark - UITextField delegate
 
 - (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string {
+
     NSString *searchText = [textField.text stringByReplacingCharactersInRange:range withString:string];
     [[HNKGooglePlacesAutocompleteQuery sharedQuery] fetchPlacesForSearchQuery:searchText
                                                                    completion:^(NSArray *places, NSError *error)  {
                                                                        if (error) {
                                                                            NSLog(@"ERROR: %@", error);
+                                                                           [_searchResults removeAllObjects];
+                                                                           [_cityTableView reloadData];
                                                                        } else {
                                                                            for (HNKGooglePlacesAutocompletePlace *place in places) {
                                                                                NSLog(@"%@", place);
-                                                                               _searchResults = places;
+                                                                               _searchResults = (NSMutableArray *)places;
                                                                                [_cityTableView reloadData];
                                                                            }
                                                                        }
                                                                    }
-     ];
+    ];
     return true;
 }
 
@@ -107,6 +115,8 @@
 #pragma mark - UITable View Data Source
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    [self.view endEditing:true];
+    
     HNKGooglePlacesAutocompletePlace *place = _searchResults[indexPath.row];
     if (self.block) {
         self.block(place.name);

@@ -45,7 +45,6 @@
 		52EF795D1F2F6B2700522CB6 /* HLTableViewSection.m in Sources */ = {isa = PBXBuildFile; fileRef = 52EF795A1F2F6B2700522CB6 /* HLTableViewSection.m */; };
 		52EFED7C1F2B5859009F0E78 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 52EFED7B1F2B5859009F0E78 /* main.m */; };
 		52EFED7F1F2B5859009F0E78 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 52EFED7E1F2B5859009F0E78 /* AppDelegate.m */; };
-		52EFED851F2B5859009F0E78 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52EFED831F2B5859009F0E78 /* Main.storyboard */; };
 		52EFED871F2B5859009F0E78 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 52EFED861F2B5859009F0E78 /* Assets.xcassets */; };
 		52EFED8A1F2B5859009F0E78 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52EFED881F2B5859009F0E78 /* LaunchScreen.storyboard */; };
 		52EFED9E1F2B5A1C009F0E78 /* UIAlertController+Blocks.m in Sources */ = {isa = PBXBuildFile; fileRef = 52EFED951F2B5A1C009F0E78 /* UIAlertController+Blocks.m */; };
@@ -66,6 +65,7 @@
 		92270A2C1F66AD5C007D2E17 /* PlacesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 92270A2B1F66AD5C007D2E17 /* PlacesViewController.m */; };
 		92270A2F1F66AF97007D2E17 /* CitiesTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 92270A2E1F66AF97007D2E17 /* CitiesTableViewCell.m */; };
 		92E0EA571F62AC9500AE9C61 /* AccountViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 92E0EA561F62AC9500AE9C61 /* AccountViewController.m */; };
+		92F18A951F85EBF20013B6D2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 92F18A931F85EBF20013B6D2 /* Main.storyboard */; };
 		92F869731F5D7FD800F36EA1 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 92F869721F5D7FD800F36EA1 /* Login.storyboard */; };
 		92F869771F5D817D00F36EA1 /* FirstLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 92F869761F5D817D00F36EA1 /* FirstLoginViewController.m */; };
 		92F8697B1F5D81BF00F36EA1 /* SignUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 92F8697A1F5D81BF00F36EA1 /* SignUpViewController.m */; };
@@ -143,7 +143,6 @@
 		52EFED7B1F2B5859009F0E78 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		52EFED7D1F2B5859009F0E78 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		52EFED7E1F2B5859009F0E78 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		52EFED841F2B5859009F0E78 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		52EFED861F2B5859009F0E78 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		52EFED891F2B5859009F0E78 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		52EFED8B1F2B5859009F0E78 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -183,6 +182,7 @@
 		92270A2E1F66AF97007D2E17 /* CitiesTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CitiesTableViewCell.m; sourceTree = "<group>"; };
 		92E0EA551F62AC9500AE9C61 /* AccountViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AccountViewController.h; sourceTree = "<group>"; };
 		92E0EA561F62AC9500AE9C61 /* AccountViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AccountViewController.m; sourceTree = "<group>"; };
+		92F18A941F85EBF20013B6D2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		92F869721F5D7FD800F36EA1 /* Login.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 		92F869751F5D817D00F36EA1 /* FirstLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FirstLoginViewController.h; sourceTree = "<group>"; };
 		92F869761F5D817D00F36EA1 /* FirstLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FirstLoginViewController.m; sourceTree = "<group>"; };
@@ -464,7 +464,7 @@
 				52EFED7D1F2B5859009F0E78 /* AppDelegate.h */,
 				52EFED7E1F2B5859009F0E78 /* AppDelegate.m */,
 				521538FB1F503F7300DD937A /* MyLocation.gpx */,
-				52EFED831F2B5859009F0E78 /* Main.storyboard */,
+				92F18A931F85EBF20013B6D2 /* Main.storyboard */,
 				52EFED861F2B5859009F0E78 /* Assets.xcassets */,
 				52EFED881F2B5859009F0E78 /* LaunchScreen.storyboard */,
 				52EFED8B1F2B5859009F0E78 /* Info.plist */,
@@ -711,11 +711,11 @@
 				524763041F47251000A47ABC /* SlideShowCell.xib in Resources */,
 				52EFEDBD1F2B760D009F0E78 /* Home.storyboard in Resources */,
 				92155C821F6BF9AA0096B380 /* cities.json in Resources */,
+				92F18A951F85EBF20013B6D2 /* Main.storyboard in Resources */,
 				524763021F47251000A47ABC /* PhoneNumberCell.xib in Resources */,
 				52EFED871F2B5859009F0E78 /* Assets.xcassets in Resources */,
 				524762FE1F47251000A47ABC /* HospitalDescriptionCell.xib in Resources */,
 				524762FA1F47251000A47ABC /* HospitalNameCell.xib in Resources */,
-				52EFED851F2B5859009F0E78 /* Main.storyboard in Resources */,
 				524763001F47251000A47ABC /* MapCell.xib in Resources */,
 				524267F91F5439BB00D02685 /* MenuViewCell.xib in Resources */,
 			);
@@ -752,6 +752,7 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-BenhVien-app/Pods-BenhVien-app-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/AFNetworking/AFNetworking.framework",
+				"${BUILT_PRODUCTS_DIR}/ButtonBackgroundColor/ButtonBackgroundColor.framework",
 				"${BUILT_PRODUCTS_DIR}/HNKGooglePlacesAutocomplete/HNKGooglePlacesAutocomplete.framework",
 				"${BUILT_PRODUCTS_DIR}/IQDropDownTextField/IQDropDownTextField.framework",
 				"${BUILT_PRODUCTS_DIR}/IQKeyboardManager/IQKeyboardManager.framework",
@@ -769,6 +770,7 @@
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AFNetworking.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ButtonBackgroundColor.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/HNKGooglePlacesAutocomplete.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQDropDownTextField.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManager.framework",
@@ -866,20 +868,20 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		52EFED831F2B5859009F0E78 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				52EFED841F2B5859009F0E78 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		52EFED881F2B5859009F0E78 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				52EFED891F2B5859009F0E78 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		92F18A931F85EBF20013B6D2 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				92F18A941F85EBF20013B6D2 /* Base */,
+			);
+			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
