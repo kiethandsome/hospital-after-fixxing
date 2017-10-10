@@ -56,14 +56,22 @@
                                     <action selector="advanceSearchBtn:" destination="uLX-ZL-Glp" eventType="touchUpInside" id="vng-ul-emZ"/>
                                 </connections>
                             </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ze3-vg-eS7">
+                                <rect key="frame" x="0.0" y="80" width="375" height="587"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="0.93725490196078431" green="0.93725490196078431" blue="0.93725490196078431" alpha="1" colorSpace="calibratedRGB"/>
                         <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="QUh-sK-Vuz" firstAttribute="top" secondItem="WM8-uX-En2" secondAttribute="bottom" constant="60" id="1Cu-Ug-Zdx"/>
+                            <constraint firstAttribute="trailing" secondItem="Ze3-vg-eS7" secondAttribute="trailing" id="1ww-5D-zJG"/>
                             <constraint firstItem="LOl-Ju-3Z6" firstAttribute="trailing" secondItem="jTb-no-46p" secondAttribute="trailingMargin" id="2ZI-NW-3VV"/>
                             <constraint firstItem="QUh-sK-Vuz" firstAttribute="leading" secondItem="jTb-no-46p" secondAttribute="leading" constant="20" id="6h0-kv-QXj"/>
                             <constraint firstItem="LOl-Ju-3Z6" firstAttribute="top" secondItem="9Zf-rb-j5T" secondAttribute="bottom" constant="60" id="Bso-Cu-Jc0"/>
+                            <constraint firstItem="wq6-SP-SG7" firstAttribute="top" secondItem="Ze3-vg-eS7" secondAttribute="bottom" id="TT0-ec-Eca"/>
+                            <constraint firstItem="Ze3-vg-eS7" firstAttribute="leading" secondItem="jTb-no-46p" secondAttribute="leading" id="Ygx-6y-Imr"/>
+                            <constraint firstItem="Ze3-vg-eS7" firstAttribute="top" secondItem="9Zf-rb-j5T" secondAttribute="bottom" constant="60" id="aiU-fG-WC6"/>
                             <constraint firstAttribute="trailing" secondItem="QUh-sK-Vuz" secondAttribute="trailing" constant="20" id="bFK-Oy-HE7"/>
                             <constraint firstItem="LOl-Ju-3Z6" firstAttribute="leading" secondItem="WM8-uX-En2" secondAttribute="trailing" constant="10" id="cZd-UF-6sq"/>
                             <constraint firstItem="WM8-uX-En2" firstAttribute="leading" secondItem="jTb-no-46p" secondAttribute="leading" constant="20" id="rN5-d8-NZ7"/>
@@ -76,6 +84,7 @@
                     <extendedEdge key="edgesForExtendedLayout" bottom="YES"/>
                     <connections>
                         <outlet property="advanceSearchButton" destination="QUh-sK-Vuz" id="z26-5o-Fds"/>
+                        <outlet property="maskView" destination="Ze3-vg-eS7" id="cYh-WJ-JVi"/>
                         <outlet property="searchButton" destination="LOl-Ju-3Z6" id="cAs-qm-07h"/>
                         <outlet property="searchTextField" destination="WM8-uX-En2" id="VMK-df-HK4"/>
                     </connections>
@@ -88,7 +97,7 @@
                     </connections>
                 </screenEdgePanGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="-1087" y="-108"/>
+            <point key="canvasLocation" x="-1087.2" y="-108.39580209895054"/>
         </scene>
         <!--Advance Search View Controller-->
         <scene sceneID="KG1-tP-F0x">

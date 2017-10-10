@@ -50,6 +50,10 @@
             }
         }];
         wSelf.searchResultTableView.pullToRefreshView.arrowColor = [UIColor colorWithHex:0xd2232a];
+        [wSelf.searchResultTableView.pullToRefreshView setTitle:@"Thả ra" forState:SVPullToRefreshStateTriggered];
+        [wSelf.searchResultTableView.pullToRefreshView setTitle:@"Kéo giữ để làm mới" forState:SVPullToRefreshStateStopped];
+        [wSelf.searchResultTableView.pullToRefreshView setTitle:@"Đang làm mới..." forState:SVPullToRefreshStateLoading];
+        
     }
 }
 

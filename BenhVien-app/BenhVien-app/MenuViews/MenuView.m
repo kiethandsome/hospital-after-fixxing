@@ -47,7 +47,6 @@
     [self.userInfomationButton bbc_backgroundColorNormal:_currentColor
                               backgroundColorHighlighted:[UIColor colorWithHex:0xd2232a]];
     
-
 }
 
 #pragma mark Table view delegate
@@ -64,9 +63,10 @@
     cell.cellImageView.image = [UIImage imageNamed:[self.menuItems[indexPath.row] objectForKey:@"icon"]];
     cell.cellLabel.text = [self.menuItems[indexPath.row] objectForKey:@"tittle"];
         /// set selected Cell color.
-    UIView *bgColorView = [[UIView alloc] init];
+    UIView *bgColorView = [UIView new];
     bgColorView.backgroundColor = [UIColor colorWithHex:0xd2232a];
     [cell setSelectedBackgroundView:bgColorView];
+    bgColorView = nil;
     return cell;
 }
 

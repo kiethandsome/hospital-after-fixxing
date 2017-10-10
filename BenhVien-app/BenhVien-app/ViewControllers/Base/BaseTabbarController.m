@@ -23,14 +23,6 @@
     [self setupMenuView];
 }
 
-- (void)viewWillAppear:(BOOL)animated {
-    if (self.menuDisplayed) {
-        [self.view setUserInteractionEnabled:NO];
-    } else {
-        [self.view setUserInteractionEnabled:YES];
-    }
-}
-
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
 }
@@ -80,6 +72,7 @@
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
     BaseTabbarController *tab = (BaseTabbarController *)self.tabBarController;
     [self animatedMenu: tab.menuDisplayed];
+    [self.view endEditing:true];
 }
 
 - (void)didSelectMenuAtRowIndexOfMenuTableView {

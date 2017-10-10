@@ -25,6 +25,10 @@
     [super didReceiveMemoryWarning];
 }
 
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
+    [self.view endEditing:true];
+}
+
 - (void)setUpUserInterface {
     [self showBackButtonItem];
     // setup city container view
@@ -201,6 +205,7 @@
     vc.type = type;
     [self.navigationController pushViewController:vc animated:true];
 }
+
 
 @end
 

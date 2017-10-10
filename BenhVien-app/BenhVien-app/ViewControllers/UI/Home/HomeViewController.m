@@ -8,9 +8,12 @@
 
 #import "HomeViewController.h"
 #import "UserDataManager.h"
+#import "BaseTabbarController.h"
 
 @interface HomeViewController ()
-
+{
+    BaseTabbarController *tab;
+}
 @end
 
 @implementation HomeViewController
@@ -19,14 +22,31 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.title = @"Tìm kiếm";
+    [self.maskView setHidden:YES];
+    tab = (BaseTabbarController *)self.tabBarController;
+}
+
+- (void)menuButtonPressed:(id)sender {
+    [self.view endEditing:true];
+
+    [tab animatedMenu: !tab.menuDisplayed];
+    if (tab.menuDisplayed) {
+        [self.maskView setHidden:NO];
+    } else {
+        [self.maskView setHidden:YES];
+    }
+}
+
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
+    if (tab.menuDisplayed) {
+        [tab animatedMenu:!tab.menuDisplayed];
+        [self.maskView setHidden:YES];
+    }
+    [self.view endEditing:true];
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-}
-
-- (void)viewWillAppear:(BOOL)animated {
-    [self.view endEditing:true];
 }
 
 - (void)setUpUserInterface {
@@ -47,7 +67,7 @@
 
     AdvanceSearchViewController *vc = (AdvanceSearchViewController *)[AdvanceSearchViewController instanceFromStoryboardName:@"Home"];
     vc.prevViewController = self;
-    [self.navigationController pushViewController:vc animated:true];
+    [self.navigationController pushViewController:vc animated:YES];
 }
 
 - (IBAction)searchButtonAction:(UIButton *)sender {

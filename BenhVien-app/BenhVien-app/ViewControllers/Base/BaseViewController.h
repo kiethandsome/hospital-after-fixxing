@@ -14,6 +14,7 @@
 // Tạo 2 phương thức hiển thị nút MEnu và nút Back cho các màn hình.
 - (void)showMenuButtonItem;
 - (void)showBackButtonItem;
+- (IBAction)menuButtonPressed:(id)sender;
 
 // HUD.
 - (void)showHUD;

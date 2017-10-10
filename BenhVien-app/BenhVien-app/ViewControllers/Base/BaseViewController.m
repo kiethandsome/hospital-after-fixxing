@@ -28,7 +28,6 @@
     [self setUpUserInterface];
     [self.tabBarController.tabBar setHidden: YES];
     self.navigationController.interactivePopGestureRecognizer.delegate = self;
-    self.navigationController.interactivePopGestureRecognizer.enabled = YES;
     
     [SVProgressHUD setDefaultMaskType:SVProgressHUDMaskTypeBlack];
 }
@@ -95,7 +94,7 @@
 #pragma  mark - HUD _ show and hide
 
 - (void)showHUD {
-    [SVProgressHUD show];
+    [SVProgressHUD showWithStatus:@"Đang tải..."];
 }
 
 - (void)hideHUD {
@@ -134,7 +133,7 @@
 
 
 ///    dispatch_async(dispatch_get_main_queue(), ^{
-///         [MBProgressHUD showHUDAddedTo: self.view animated:true];
+///
 ///    });
 
 

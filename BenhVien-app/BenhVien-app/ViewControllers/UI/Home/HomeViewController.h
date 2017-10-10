@@ -24,5 +24,6 @@
 @property (weak, nonatomic) IBOutlet UIButton *advanceSearchButton;
 @property (nonatomic) BOOL isMenuDisplayed;
 @property (nonatomic) SearchType *type;
+@property (strong, nonatomic) IBOutlet UIView *maskView;
 
 @end
